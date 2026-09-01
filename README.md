@@ -167,6 +167,4 @@ Nada de esto está oculto ni fingido: cada fase de desarrollo se ha
 probado de verdad (no solo "compila") antes de darse por completada, y
 las carencias se han dejado documentadas en vez de simuladas.
 
-## Autor
 
-Creado por **Danny Jesús Minaya Ramos**.
