@@ -1,0 +1,66 @@
+import subprocess
+import time
+import requests
+
+
+class OllamaManager:
+
+    def __init__(self):
+        self.url = "http://127.0.0.1:11434"
+
+
+    def is_running(self):
+
+        try:
+            r = requests.get(
+                self.url,
+                timeout=3
+            )
+
+            return r.status_code == 200
+
+        except Exception:
+            return False
+
+
+    def start(self):
+
+        if self.is_running():
+            print("✓ Ollama activo")
+            return True
+
+
+        print("⚙ Intentando iniciar Ollama...")
+
+
+        try:
+
+            subprocess.Popen(
+                [
+                    "/run/host/usr/local/bin/ollama",
+                    "serve"
+                ],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL
+            )
+
+
+            time.sleep(5)
+
+
+            if self.is_running():
+                print("✓ Ollama iniciado")
+                return True
+
+
+        except FileNotFoundError:
+
+            print("⚠ Ollama ya debe estar iniciado externamente")
+
+
+        except Exception as e:
+
+            print("Error Ollama:", e)
+
+
+        return False

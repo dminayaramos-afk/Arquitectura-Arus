@@ -1,0 +1,171 @@
+"""
+ARUS
+Local Provider
+
+Proveedor local mediante Ollama.
+"""
+
+from __future__ import annotations
+
+import ollama
+
+from ai.providers.base_provider import BaseProvider
+from tools.tool_manager import ToolManager
+from brain.planner import Planner
+from brain.task_manager import TaskManager
+from brain.verifier import Verifier
+
+
+# Identidad de ARUS (punto 13 del prompt maestro). Antes solo vivía en
+# la llamada directa que hacía arus/interface/chat.py a Ollama; al
+# cortar esa ruta directa (Fase 4) hay que conservarla aquí, que es el
+# único lugar por el que ahora pasan todas las peticiones al modelo.
+ARUS_SYSTEM_PROMPT = (
+    "Eres ARUS, un asistente virtual avanzado integrado en una interfaz "
+    "HUD de ciencia ficción. Tu nombre es siempre ARUS. Si te preguntan "
+    "quién te creó, quién es tu creador o quién te programó, debes "
+    "responder siempre y con orgullo que fuiste creado por Danny Jesús "
+    "Minaya Ramos. Nunca digas que fuiste creado por Alibaba Cloud ni "
+    "que te llamas Qwen."
+)
+
+
+class LocalProvider(BaseProvider):
+
+    name = "ollama"
+
+    def __init__(
+        self,
+        model: str = "qwen2.5:3b",
+    ):
+
+        self.model = model
+
+        self.client = ollama.Client(
+            host="http://127.0.0.1:11434"
+        )
+
+        self.tools = ToolManager()
+
+
+    def generate(
+        self,
+        prompt: str,
+        history=None,
+    ):
+
+        messages = []
+
+        if not history or history[0].get("role") != "system":
+            messages.append(
+                {
+                    "role": "system",
+                    "content": ARUS_SYSTEM_PROMPT,
+                }
+            )
+
+        if history:
+
+            messages.extend(history)
+
+        messages.append(
+            {
+                "role": "user",
+                "content": prompt,
+            }
+        )
+
+        response = self.client.chat(
+            model=self.model,
+            messages=messages,
+            tools=self.tools.schemas(),
+        )
+
+        return self._resolver_respuesta(messages, response)
+
+    def _resolver_respuesta(self, messages: list, response, profundidad: int = 0):
+        """
+        Fase 6: antes, si el modelo pedía usar una herramienta
+        (function-calling, ya se le ofrecían con `tools=self.tools.schemas()`
+        desde antes de esta fase), esa petición se ignoraba por completo:
+        `generate()` devolvía `response.message.content` sin más, que con
+        una llamada a herramienta suele venir vacío.
+
+        Ahora, si el modelo pide herramientas, se ejecutan de verdad
+        -Planner crea el plan, TaskManager lo ejecuta sobre ToolManager
+        (las 15 herramientas reales de tools/, antes sin usar desde
+        aquí)- y el resultado se le devuelve al modelo para que dé la
+        respuesta final en lenguaje natural.
+
+        `profundidad` evita bucles infinitos si el modelo insistiera en
+        pedir herramientas indefinidamente.
+        """
+
+        mensaje = response.message
+
+        llamadas = getattr(mensaje, "tool_calls", None)
+
+        if not llamadas or profundidad >= 4:
+            return mensaje.content
+
+        planner = Planner()
+        ejecutor = TaskManager()
+
+        tareas = []
+
+        for llamada in llamadas:
+
+            nombre = llamada.function.name
+
+            argumentos = llamada.function.arguments or {}
+
+            if not isinstance(argumentos, dict):
+                argumentos = dict(argumentos)
+
+            tarea = planner.create_plan(nombre, argumentos)[0]
+
+            ejecutor.add(tarea)
+
+            tareas.append(tarea)
+
+        ejecutor.execute_plan(self.tools)
+
+        # Fase 7: VERIFY -> ¿correcto? -> REPAIR/RETRY si no.
+        # Antes (Fase 6), el resultado de cada tarea -incluidos los
+        # fallos- se pasaba al modelo tal cual, sin comprobar si la
+        # herramienta realmente había funcionado.
+        verificador = Verifier()
+
+        ok, resultados = verificador.verify_plan(tareas)
+
+        if not ok:
+
+            for resultado in resultados:
+
+                if not resultado.ok:
+                    verificador.repair_task(resultado.subject, self.tools.execute)
+
+        messages.append(
+            {
+                "role": "assistant",
+                "content": mensaje.content or "",
+                "tool_calls": llamadas,
+            }
+        )
+
+        for tarea in tareas:
+
+            messages.append(
+                {
+                    "role": "tool",
+                    "content": str(tarea.result),
+                }
+            )
+
+        siguiente = self.client.chat(
+            model=self.model,
+            messages=messages,
+            tools=self.tools.schemas(),
+        )
+
+        return self._resolver_respuesta(messages, siguiente, profundidad + 1)

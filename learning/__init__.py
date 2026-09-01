@@ -1,0 +1,5 @@
+from learning.manager.learning_manager import LearningManager
+from learning.repositories.sqlite_repository import SQLiteKnowledgeRepository
+
+repository=SQLiteKnowledgeRepository()
+learning_manager=LearningManager(repository)

@@ -1,0 +1,227 @@
+[1mdiff --git a/arus/interface/chat.py b/arus/interface/chat.py[m
+[1mindex 6d7f88e..7ea8c2d 100644[m
+[1m--- a/arus/interface/chat.py[m
+[1m+++ b/arus/interface/chat.py[m
+[36m@@ -1,10 +1,8 @@[m
+ """[m
+ ARUS[m
+[31m-Chat Interface[m
+[31m-Phase 38[m
+[32m+[m[32mChat Identity & Chat Interface[m
+ """[m
+ [m
+[31m-[m
+ from PySide6.QtWidgets import ([m
+     QWidget,[m
+     QVBoxLayout,[m
+[36m@@ -13,109 +11,154 @@[m [mfrom PySide6.QtWidgets import ([m
+     QPushButton[m
+ )[m
+ [m
+[32m+[m[32mfrom conversations.conversation_manager import ConversationManager[m
+ [m
+[31m-class ChatWidget(QWidget):[m
+ [m
+[32m+[m[32mclass ChatWidget(QWidget):[m
+ [m
+     def __init__(self, controller=None):[m
+[31m-[m
+         super().__init__()[m
+[31m-[m
+         self.controller = controller[m
+ [m
+[32m+[m[32m        # ----------------------------------------------------[m
+[32m+[m[32m        # ARUS FASE 2[m
+[32m+[m[32m        # Sistema persistente de conversaciones.[m
+[32m+[m[32m        # ----------------------------------------------------[m
+[32m+[m[32m        self.conversation_manager = ConversationManager()[m
+[32m+[m[32m        self.conversation_id = self.conversation_manager.create([m
+[32m+[m[32m            title="Nueva conversación"[m
+[32m+[m[32m        )[m
+ [m
+         layout = QVBoxLayout()[m
+ [m
+[31m-[m
+         self.history = QTextEdit()[m
+         self.history.setReadOnly(True)[m
+ [m
+[31m-[m
+         self.input = QLineEdit()[m
+[31m-[m
+         self.input.setFocus()[m
+[32m+[m[32m        self.input.returnPressed.connect(self.send)[m
+ [m
+[31m-        self.input.returnPressed.connect([m
+[31m-            self.send[m
+[31m-        )[m
+[31m-[m
+[31m-[m
+[31m-        self.button = QPushButton([m
+[31m-            "Enviar"[m
+[31m-        )[m
+[31m-[m
+[31m-[m
+[31m-        self.button.clicked.connect([m
+[31m-            self.send[m
+[31m-        )[m
+[31m-[m
+[31m-[m
+[31m-        layout.addWidget([m
+[31m-            self.history[m
+[31m-        )[m
+[31m-[m
+[31m-        layout.addWidget([m
+[31m-            self.input[m
+[31m-        )[m
+[31m-[m
+[31m-        layout.addWidget([m
+[31m-            self.button[m
+[31m-        )[m
+[32m+[m[32m        self.button = QPushButton("Enviar")[m
+[32m+[m[32m        self.button.clicked.connect(self.send)[m
+ [m
+[32m+[m[32m        layout.addWidget(self.history)[m
+[32m+[m[32m        layout.addWidget(self.input)[m
+[32m+[m[32m        layout.addWidget(self.button)[m
+ [m
+[31m-        self.setLayout([m
+[31m-            layout[m
+[31m-        )[m
+[32m+[m[32m        self.setLayout(layout)[m
+ [m
+         self.setStyleSheet("""[m
+[31m-[m
+         QWidget{[m
+             background:#020611;[m
+             color:#00E5FF;[m
+         }[m
+[31m-[m
+         QTextEdit{[m
+             background:#010817;[m
+             color:#00E5FF;[m
+             border:1px solid #0077AA;[m
+         }[m
+[31m-[m
+         QLineEdit{[m
+             background:#010817;[m
+             color:#00FFFF;[m
+             border:1px solid #0077AA;[m
+         }[m
+[31m-[m
+         QPushButton{[m
+             background:#02172F;[m
+             color:#00E5FF;[m
+         }[m
+[31m-[m
+         """)[m
+ [m
+[31m-[m
+[31m-[m
+     def add_message(self, text):[m
+[31m-[m
+[31m-        self.history.append([m
+[31m-            text[m
+[31m-        )[m
+[31m-[m
+[31m-[m
+[32m+[m[32m        self.history.append(text)[m
+ [m
+     def send(self):[m
+[31m-        text = self.input.text()[m
+[32m+[m[32m        text = self.input.text().strip()[m
+[32m+[m
+         if text:[m
+[32m+[m[32m            # ------------------------------------------------[m
+[32m+[m[32m            # INTERFAZ ORIGINAL[m
+[32m+[m[32m            # ------------------------------------------------[m
+             self.history.append("Usuario: " + text)[m
+[32m+[m
+[32m+[m[32m            # ------------------------------------------------[m
+[32m+[m[32m            # ARUS FASE 2[m
+[32m+[m[32m            # Guardar mensaje del usuario inmediatamente.[m
+[32m+[m[32m            # ------------------------------------------------[m
+[32m+[m[32m            try:[m
+[32m+[m[32m                self.conversation_manager.save([m
+[32m+[m[32m                    "user",[m
+[32m+[m[32m                    text,[m
+[32m+[m[32m                    conversation_id=self.conversation_id[m
+[32m+[m[32m                )[m
+[32m+[m[32m            except Exception as exc:[m
+[32m+[m[32m                print([m
+[32m+[m[32m                    f"[ConversationManager] "[m
+[32m+[m[32m                    f"Error guardando usuario: {exc}"[m
+[32m+[m[32m                )[m
+[32m+[m
+             response = None[m
+[32m+[m
+[32m+[m[32m            # ------------------------------------------------[m
+[32m+[m[32m            # OLLAMA — FLUJO ORIGINAL CONSERVADO[m
+[32m+[m[32m            # ------------------------------------------------[m
+             try:[m
+                 import requests[m
+[31m-                res = requests.post("http://localhost:11434/api/generate", json={"model": "qwen2.5:3b", "prompt": text, "stream": False}, timeout=30)[m
+[32m+[m
+[32m+[m[32m                res = requests.post([m
+[32m+[m[32m                    "http://127.0.0.1:11434/api/generate",[m
+[32m+[m[32m                    json={[m
+[32m+[m[32m                        "model": "qwen2.5:3b",[m
+[32m+[m[32m                        "prompt": text,[m
+[32m+[m[32m                        "system": ([m
+[32m+[m[32m                            "Eres ARUS, un asistente virtual avanzado "[m
+[32m+[m[32m                            "integrado en una interfaz HUD de ciencia "[m
+[32m+[m[32m                            "ficción. Tu nombre es siempre ARUS. "[m
+[32m+[m[32m                            "Si te preguntan quién te creó, quién es "[m
+[32m+[m[32m                            "tu creador o quién te programó, debes "[m
+[32m+[m[32m                            "responder siempre y con orgullo que fuiste "[m
+[32m+[m[32m                            "creado por Danny Jesús Minaya Ramos. "[m
+[32m+[m[32m                            "Nunca digas que fuiste creado por Alibaba "[m
+[32m+[m[32m                            "Cloud ni que te llamas Qwen."[m
+[32m+[m[32m                        ),[m
+[32m+[m[32m                        "stream": False[m
+[32m+[m[32m                    },[m
+[32m+[m[32m                    timeout=120[m
+[32m+[m[32m                )[m
+[32m+[m
+                 if res.status_code == 200:[m
+                     response = res.json().get("response")[m
+[31m-            except Exception:[m
+[31m-                pass[m
+[32m+[m[32m                else:[m
+[32m+[m[32m                    response = f"Error HTTP {res.status_code}"[m
+[32m+[m
+[32m+[m[32m            except Exception as e:[m
+[32m+[m[32m                response = f"Error de conexión: {str(e)}"[m
+[32m+[m
+             if not response:[m
+[31m-                response = "¡Hola! ¿En qué te puedo ayudar hoy?"[m
+[31m-            self.history.append("ARUS: " + str(response).strip())[m
+[31m-            self.input.clear()[m
+\ No newline at end of file[m
+[32m+[m[32m                response = ([m
+[32m+[m[32m                    "No se pudo procesar la respuesta "[m
+[32m+[m[32m                    "del modelo local."[m
+[32m+[m[32m                )[m
+[32m+[m
+[32m+[m[32m            # ------------------------------------------------[m
+[32m+[m[32m            # ARUS FASE 2[m
+[32m+[m[32m            # Guardar respuesta del asistente.[m
+[32m+[m[32m            # ------------------------------------------------[m
+[32m+[m[32m            response = str(response).strip()[m
+[32m+[m
+[32m+[m[32m            try:[m
+[32m+[m[32m                self.conversation_manager.save([m
+[32m+[m[32m                    "assistant",[m
+[32m+[m[32m                    response,[m
+[32m+[m[32m                    conversation_id=self.conversation_id[m
+[32m+[m[32m                )[m
+[32m+[m[32m            except Exception as exc:[m
+[32m+[m[32m                print([m
+[32m+[m[32m                    f"[ConversationManager] "[m
+[32m+[m[32m                    f"Error guardando assistant: {exc}"[m
+[32m+[m[32m                )[m
+[32m+[m
+[32m+[m[32m            # ------------------------------------------------[m
+[32m+[m[32m            # INTERFAZ ORIGINAL[m
+[32m+[m[32m            # ------------------------------------------------[m
+[32m+[m[32m            self.history.append("ARUS: " + response)[m
+[32m+[m[32m            self.input.clear()[m

@@ -1,0 +1,14 @@
+{
+    "language": "es",
+    "theme": "dark",
+    "ai_provider": "none",
+    "ai_providers": {
+        "ollama": {
+            "type": "ollama",
+            "host": "http://127.0.0.1:11434",
+            "model": "qwen3:4b",
+            "auto_start": false
+        }
+    },
+    "debug": false
+}

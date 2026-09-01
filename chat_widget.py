@@ -1,0 +1,463 @@
+from PySide6.QtCore import Qt, QPoint, Signal, QPropertyAnimation, QEasingCurve
+from PySide6.QtWidgets import (
+    QWidget, QVBoxLayout, QHBoxLayout, QLabel, 
+    QPushButton, QScrollArea, QLineEdit, QMenu, QMessageBox, QApplication
+)
+
+class ChatWidget(QWidget):
+    """Componente de chat avanzado con autoscroll inteligente y diseño fluido tipo IA."""
+    def __init__(self, controller, parent=None):
+        super().__init__(parent)
+        self.controller = controller
+        self._user_scrolled_up = False
+
+        # ARUS MARK 9, sección 5: única ampliación visual permitida
+        # (copiar mensaje / copiar conversación). Se guarda el texto
+        # plano de cada turno en orden, para poder copiar la
+        # conversación completa sin recorrer el árbol de widgets.
+        self._conversation_texts = []
+        
+        layout = QVBoxLayout()
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(8)
+        self.setLayout(layout)
+
+        self.message_area = QScrollArea()
+        self.message_area.setWidgetResizable(True)
+        self.message_area.setStyleSheet("background: transparent; border: none;")
+
+        # ARUS MARK 9, sección 5: clic derecho sobre el área de
+        # mensajes -> "Copiar conversación completa". No añade ningún
+        # botón ni cambia el estilo/tamaño/posición de nada existente.
+        self.message_area.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.message_area.customContextMenuRequested.connect(self._mostrar_menu_conversacion)
+        
+        # Conectar cambios de scroll para detectar si el usuario subió manualmente
+        bar = self.message_area.verticalScrollBar()
+        bar.valueChanged.connect(self._on_scroll_value_changed)
+        
+        self.msg_content = QWidget()
+        self.msg_layout = QVBoxLayout()
+        self.msg_layout.setContentsMargins(10, 10, 10, 10)
+        self.msg_layout.setSpacing(10)
+        self.msg_layout.addStretch()
+        self.msg_content.setLayout(self.msg_layout)
+        self.message_area.setWidget(self.msg_content)
+        
+        layout.addWidget(self.message_area, 1)
+
+        input_container = QHBoxLayout()
+        input_container.setContentsMargins(0, 0, 0, 0)
+        input_container.setSpacing(6)
+
+        self.btn_plus = QPushButton("+")
+        self.btn_plus.setFixedSize(36, 36)
+        self.btn_plus.setCursor(Qt.PointingHandCursor)
+        self.btn_plus.setStyleSheet("""
+            QPushButton {
+                background-color: #020B18;
+                color: #00E5FF;
+                border: 1px solid #004D73;
+                border-radius: 18px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #004D73;
+                color: #FFFFFF;
+                border-color: #00E5FF;
+            }
+        """)
+        self.btn_plus.clicked.connect(self.mostrar_menu_adjuntos)
+
+        self.input = QLineEdit()
+        self.input.setPlaceholderText("Preguntarle a ARUS...")
+        self.input.setFixedHeight(38)
+        self.input.setStyleSheet("""
+            QLineEdit {
+                background-color: #01040a;
+                color: #00E5FF;
+                border: 1px solid #004D73;
+                border-radius: 19px;
+                padding-left: 14px;
+                padding-right: 14px;
+                font-size: 13px;
+            }
+            QLineEdit:focus {
+                border: 1px solid #00E5FF;
+            }
+        """)
+        self.input.returnPressed.connect(self.send)
+
+        input_container.addWidget(self.btn_plus)
+        input_container.addWidget(self.input, 1)
+        layout.addLayout(input_container)
+
+    def _on_scroll_value_changed(self, value):
+        bar = self.message_area.verticalScrollBar()
+        # Si el usuario se aleja más de 25 píxeles del final, asumimos que está leyendo arriba
+        if bar.maximum() - value > 25:
+            self._user_scrolled_up = True
+        else:
+            self._user_scrolled_up = False
+
+    def scroll_to_bottom(self, force=False):
+        # Asegurar que Qt procese el nuevo widget añadido y actualice el rango del scrollbar
+        from PySide6.QtCore import QTimer
+        QTimer.singleShot(10, self._do_scroll)
+    def _do_scroll(self):
+        bar = self.message_area.verticalScrollBar()
+        max_val = bar.maximum()
+        
+        if self._user_scrolled_up and not hasattr(self, '_force_scroll_next'):
+            return
+        
+        if hasattr(self, '_force_scroll_next'):
+            del self._force_scroll_next
+            self._user_scrolled_up = False
+
+        if max_val == bar.value():
+            return
+        
+        self.scroll_anim = QPropertyAnimation(bar, b"value")
+        self.scroll_anim.setDuration(220)
+        self.scroll_anim.setStartValue(bar.value())
+        self.scroll_anim.setEndValue(max_val)
+        self.scroll_anim.setEasingCurve(QEasingCurve.OutCubic)
+        self.scroll_anim.start()
+
+        
+        # Si el usuario está leyendo hacia arriba, no forzamos el autoscroll a menos que sea un mensaje propio (force=True)
+        if self._user_scrolled_up and not force:
+            return
+
+        if max_val == bar.value():
+            return
+        
+        self.scroll_anim = QPropertyAnimation(bar, b"value")
+        self.scroll_anim.setDuration(220)
+        self.scroll_anim.setStartValue(bar.value())
+        self.scroll_anim.setEndValue(max_val)
+        self.scroll_anim.setEasingCurve(QEasingCurve.OutCubic)
+        self.scroll_anim.start()
+
+    def mostrar_menu_adjuntos(self):
+        menu = QMenu(self)
+        menu.setStyleSheet("""
+            QMenu {
+                background-color: #020B18;
+                color: #00E5FF;
+                border: 1px solid #004D73;
+                border-radius: 10px;
+                padding: 6px;
+            }
+            QMenu::item {
+                padding: 8px 25px;
+                border-radius: 6px;
+                margin: 2px 0px;
+            }
+            QMenu::item:selected {
+                background-color: #004D73;
+                color: #FFFFFF;
+            }
+        """)
+
+        act_subir = menu.addAction("📎 Subir archivos")
+        act_drive = menu.addAction("🔺 Agregar desde Drive")
+        menu.addSeparator()
+        act_img = menu.addAction("🎨 Crear imagen")
+        act_canvas = menu.addAction("🖼️ Canvas")
+        act_learn = menu.addAction("📖 Aprendizaje guiado")
+
+        pos = self.btn_plus.mapToGlobal(QPoint(0, -185))
+        action = menu.exec(pos)
+
+        if action == act_subir:
+            QMessageBox.information(self, "ARUS", "Seleccionar archivos locales...")
+        elif action == act_drive:
+            QMessageBox.information(self, "ARUS", "Conectando con Google Drive...")
+        elif action == act_img:
+            QMessageBox.information(self, "ARUS", "Módulo de creación de imágenes activado.")
+        elif action == act_canvas:
+            QMessageBox.information(self, "ARUS", "Abriendo espacio de trabajo Canvas.")
+        elif action == act_learn:
+            QMessageBox.information(self, "ARUS", "Iniciando aprendizaje guiado.")
+
+    def add_message(self, text):
+        if text.startswith("Usuario: "):
+            self.add_user_message(text.replace("Usuario: ", "", 1))
+        elif text.startswith("ARUS: "):
+            self.add_arus_message(text.replace("ARUS: ", "✨ ARUS: ", 1))
+        else:
+            self.add_arus_message(text)
+
+    def add_user_message(self, text):
+        lbl = QLabel(text)
+        lbl.setWordWrap(True)
+        lbl.setStyleSheet("""
+            QLabel {
+                background-color: #00334d;
+                color: #FFFFFF;
+                border: 1px solid #00E5FF;
+                border-radius: 12px;
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+        """)
+
+        # ARUS MARK 9, sección 5: seleccionar con el ratón + copiar
+        # (Ctrl+C nativo) y menú "Copiar mensaje" al clic derecho.
+        # No cambia estilo, tamaño ni posición del QLabel.
+        self._habilitar_copia(lbl)
+
+        self._conversation_texts.append(f"Usuario: {text}")
+        
+        container = QHBoxLayout()
+        container.addStretch()
+        container.addWidget(lbl)
+        
+        wrapper = QWidget()
+        wrapper.setLayout(container)
+        
+        self.msg_layout.insertWidget(self.msg_layout.count() - 1, wrapper)
+        # Forzar autoscroll cuando envía el usuario
+        self._user_scrolled_up = False
+        self.scroll_to_bottom(force=True)
+
+    def add_arus_message(self, text):
+        lbl = QLabel(text)
+        lbl.setWordWrap(True)
+        lbl.setStyleSheet("""
+            QLabel {
+                background-color: #020B18;
+                color: #B0E6FF;
+                border: 1px solid #004D73;
+                border-radius: 12px;
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+        """)
+
+        self._habilitar_copia(lbl)
+
+        self._conversation_texts.append(f"ARUS: {text}")
+        
+        container = QHBoxLayout()
+        container.addWidget(lbl)
+        container.addStretch()
+        
+        wrapper = QWidget()
+        wrapper.setLayout(container)
+        
+        self.msg_layout.insertWidget(self.msg_layout.count() - 1, wrapper)
+        self.scroll_to_bottom()
+
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        # Si el usuario no estaba leyendo arriba, mantenemos el scroll abajo al redimensionar
+        if not self._user_scrolled_up:
+            bar = self.message_area.verticalScrollBar()
+            bar.setValue(bar.maximum())
+
+
+    def show_typing_indicator(self):
+        if hasattr(self, '_typing_wrapper') and self._typing_wrapper:
+            return
+        
+        from PySide6.QtCore import QTimer
+        self._typing_dots = 1
+        
+        self._typing_lbl = QLabel("· · ·")
+        self._typing_lbl.setWordWrap(True)
+        self._typing_lbl.setStyleSheet("""
+            QLabel {
+                background-color: #010710;
+                color: #00B4D8;
+                border: 1px solid #00344D;
+                border-radius: 10px;
+                padding: 6px 12px;
+                font-size: 14px;
+                letter-spacing: 6px;
+            }
+        """)
+        
+        container = QHBoxLayout()
+        container.addWidget(self._typing_lbl)
+        container.addStretch()
+        
+        self._typing_wrapper = QWidget()
+        self._typing_wrapper.setLayout(container)
+        
+        self.msg_layout.insertWidget(self.msg_layout.count() - 1, self._typing_wrapper)
+        self.scroll_to_bottom()
+        
+        self._typing_timer = QTimer(self)
+        self._typing_timer.timeout.connect(self._update_typing_animation)
+        self._typing_timer.start(450)
+
+    def _update_typing_animation(self):
+        if not hasattr(self, '_typing_lbl') or not self._typing_lbl:
+            return
+        patterns = ["● ○ ○", "○ ● ○", "○ ○ ●", "● ● ○", "○ ● ●", "● ○ ●"]
+        self._typing_dots = (self._typing_dots + 1) % len(patterns)
+        self._typing_lbl.setText(patterns[self._typing_dots])
+
+    def hide_typing_indicator(self):
+        if hasattr(self, '_typing_timer') and self._typing_timer:
+            self._typing_timer.stop()
+            self._typing_timer.deleteLater()
+            self._typing_timer = None
+            
+        if hasattr(self, '_typing_wrapper') and self._typing_wrapper:
+            self.msg_layout.removeWidget(self._typing_wrapper)
+            self._typing_wrapper.deleteLater()
+            self._typing_wrapper = None
+            self._typing_lbl = None
+
+    def clear(self):
+        while self.msg_layout.count() > 1:
+            item = self.msg_layout.takeAt(0)
+            if item.widget():
+                item.widget().deleteLater()
+
+        self._conversation_texts = []
+
+    # ------------------------------------------------------------------
+    # ARUS MARK 9, sección 5: copiar mensaje / copiar conversación.
+    # Único añadido visual permitido -- ningún botón ni cambio de
+    # estilo/tamaño/posición; solo selección nativa y menús
+    # contextuales (clic derecho), que no alteran el aspecto de la
+    # interfaz en reposo.
+    # ------------------------------------------------------------------
+
+    def _habilitar_copia(self, label: QLabel):
+
+        from PySide6.QtCore import Qt as _Qt
+
+        label.setTextInteractionFlags(
+            _Qt.TextSelectableByMouse | _Qt.TextSelectableByKeyboard
+        )
+        label.setCursor(_Qt.IBeamCursor)
+        label.setContextMenuPolicy(_Qt.CustomContextMenu)
+        label.customContextMenuRequested.connect(
+            lambda pos, lbl=label: self._mostrar_menu_mensaje(lbl, pos)
+        )
+
+    def _mostrar_menu_mensaje(self, label: QLabel, pos):
+
+        menu = QMenu(self)
+        menu.setStyleSheet("""
+            QMenu {
+                background-color: #020B18;
+                color: #00E5FF;
+                border: 1px solid #004D73;
+                border-radius: 10px;
+                padding: 6px;
+            }
+            QMenu::item {
+                padding: 8px 25px;
+                border-radius: 6px;
+                margin: 2px 0px;
+            }
+            QMenu::item:selected {
+                background-color: #004D73;
+                color: #FFFFFF;
+            }
+        """)
+
+        accion_copiar = menu.addAction("📋 Copiar mensaje")
+
+        elegida = menu.exec(label.mapToGlobal(pos))
+
+        if elegida == accion_copiar:
+
+            texto = label.selectedText() or label.text()
+
+            QApplication.clipboard().setText(texto)
+
+    def _mostrar_menu_conversacion(self, pos):
+
+        menu = QMenu(self)
+        menu.setStyleSheet("""
+            QMenu {
+                background-color: #020B18;
+                color: #00E5FF;
+                border: 1px solid #004D73;
+                border-radius: 10px;
+                padding: 6px;
+            }
+            QMenu::item {
+                padding: 8px 25px;
+                border-radius: 6px;
+                margin: 2px 0px;
+            }
+            QMenu::item:selected {
+                background-color: #004D73;
+                color: #FFFFFF;
+            }
+        """)
+
+        accion_copiar_todo = menu.addAction("📋 Copiar conversación completa")
+
+        elegida = menu.exec(self.message_area.mapToGlobal(pos))
+
+        if elegida == accion_copiar_todo:
+
+            self.copy_full_conversation()
+
+    def copy_full_conversation(self):
+        """
+        Copia toda la conversación (en orden) al portapapeles como
+        texto plano, lista para pegar fuera de ARUS. Expuesto también
+        como método público por si el propietario quiere ofrecerlo
+        desde otro punto de la interfaz más adelante (p.ej. un atajo
+        de teclado) sin tener que reescribir esta lógica.
+        """
+
+        texto_completo = "\n\n".join(self._conversation_texts)
+
+        QApplication.clipboard().setText(texto_completo)
+
+        return texto_completo
+
+    def send(self):
+        txt = self.input.text().strip()
+
+        if not txt:
+            return
+
+        self.add_user_message(txt)
+        self.input.clear()
+
+        self.show_typing_indicator()
+
+        from PySide6.QtCore import QTimer
+
+        def procesar_respuesta():
+            self.hide_typing_indicator()
+
+            try:
+                # CONEXIÓN REAL:
+                # ChatWidget -> ARUSController -> Brain
+                if hasattr(self.controller, "process"):
+                    resp = self.controller.process(txt)
+
+                    # Brain puede devolver AgentResponse
+                    if hasattr(resp, "answer"):
+                        resp = resp.answer
+
+                    self.add_arus_message(f"✨ ARUS: {resp}")
+                else:
+                    self.add_arus_message(
+                        "✨ ARUS: Error: el controlador no tiene "
+                        "el método process()."
+                    )
+
+            except Exception as e:
+                self.add_arus_message(
+                    f"✨ ARUS: Error procesando la solicitud: {e}"
+                )
+
+        QTimer.singleShot(100, procesar_respuesta)
+

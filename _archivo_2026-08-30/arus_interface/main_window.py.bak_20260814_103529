@@ -1,0 +1,993 @@
+import requests
+import subprocess
+import os
+import time
+import json
+from datetime import datetime
+import psutil
+from PySide6.QtCore import Qt, QTimer, QPoint, QEasingCurve, QVariantAnimation, Signal
+from PySide6.QtWidgets import (
+    QMainWindow, QWidget, QHBoxLayout, QVBoxLayout,
+    QLabel, QPushButton, QFrame, QProgressBar, QApplication, QSplitter,
+    QListWidget, QListWidgetItem, QMenu, QInputDialog, QMessageBox, QScrollArea
+    )
+    # try:
+from duckduckgo_search import DDGS
+    #     except ImportError:
+    DDGS = None
+from arus.interface.core_visual import NeuralCore
+from chat_widget import ChatWidget
+from arus.interface.controller import ARUSController
+from arus.interface.adaptive import AdaptiveInterface
+from arus.devices.profile import DeviceProfile
+from arus.core.voice import VoiceCore
+
+
+class ChatItemWidget(QWidget):
+    """Widget para cada chat con título y menú de tres puntos (⋮)."""
+
+    super().__init__(parent)
+    self.chat_id = chat_id
+    self.parent_window = parent_window
+
+    layout = QHBoxLayout()
+    layout.setContentsMargins(8, 4, 4, 4)
+
+    self.lbl_title = QLabel(f"💬 {title}")
+    self.lbl_title.setStyleSheet("border: none; color: #00E5FF; font-size: 12px;")
+
+    self.btn_dots = QPushButton("⋮")
+    self.btn_dots.setFixedSize(24, 24)
+    self.btn_dots.setStyleSheet("""
+    QPushButton {
+    background-color: transparent;
+    color: #00E5FF;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    }
+    QPushButton:hover {
+    background-color: #004D73;
+    border-radius: 4px;
+    color: #FFFFFF;
+    }
+    """)
+    self.btn_dots.clicked.connect(self.mostrar_menu_opciones)
+
+    layout.addWidget(self.lbl_title, 1)
+    layout.addWidget(self.btn_dots)
+    self.setLayout(layout)
+
+    def mostrar_menu_opciones(self):
+        menu = QMenu(self)
+        menu.setStyleSheet("""
+        QMenu {
+        background-color: #020B18;
+        color: #00E5FF;
+        border: 1px solid #004D73;
+        border-radius: 8px;
+        padding: 4px;
+        }
+        QMenu::item {
+        padding: 6px 20px;
+        border-radius: 4px;
+        }
+        QMenu::item:selected {
+        background-color: #004D73;
+        color: #FFFFFF;
+        }
+        """)
+
+        act_share = menu.addAction("🔗 Compartir conversación")
+        act_pin = menu.addAction("📌 Fijar")
+        act_rename = menu.addAction("✏️ Cambiar nombre")
+        act_delete = menu.addAction("🗑 Borrar")
+
+        pos = self.btn_dots.mapToGlobal(QPoint(0, self.btn_dots.height()))
+        action = menu.exec(pos)
+
+        if action == act_rename:
+        self.parent_window.renombrar_chat(self.chat_id)
+        elif action == act_delete:
+        self.parent_window.borrar_chat(self.chat_id)
+        elif action == act_pin:
+        QMessageBox.information(self, "ARUS", "Conversación fijada.")
+        elif action == act_share:
+        QMessageBox.information(self, "ARUS", "Enlace de conversación copiado al portapapeles.")
+
+
+class ARUSActivityWidget(QFrame):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.notifications = []
+        self.historial_layout = None
+        self.chat_widget = None
+        self.btn_nuevo_chat = None
+
+        super().__init__(parent)
+        self.notifications = []
+        self.notifications = []
+        self.historial_layout = None
+        self.chat_widget = None
+        self.btn_nuevo_chat = None
+
+
+    def update_style(self):
+        if not self.data.get("read", False):
+        self.setStyleSheet("""
+        NotificationCard {
+        background-color: #03152A;
+        border: 1px solid #00E5FF;
+        border-radius: 6px;
+        }
+        NotificationCard:hover {
+        background-color: #002B40;
+        }
+        """)
+        else:
+        self.setStyleSheet("""
+        NotificationCard {
+        background-color: #010A14;
+        border: 1px solid #004D73;
+        border-radius: 6px;
+        }
+        NotificationCard:hover {
+        background-color: #021224;
+        }
+        """)
+
+    def mark_as_read(self):
+        self.data["read"] = True
+        self.dot_indicator.setText("⚪")
+        self.update_style()
+
+    def mousePressEvent(self, event):
+        if event.button() == Qt.LeftButton:
+        self.mark_as_read()
+        self.clicked.emit(self.data)
+        super().mousePressEvent(event)
+
+
+class ARUSActivityWidget:
+    def crear_nuevo_chat(self):
+        if hasattr(self, 'chat_widget') and hasattr(self.chat_widget, 'clear'):
+        self.chat_widget.clear()
+        if hasattr(self, 'historial_layout'):
+from PySide6.QtWidgets import QLabel
+    lbl = QLabel("Conversación nueva")
+    lbl.setStyleSheet("color: #B0E6FF; padding: 6px; font-size: 12px;")
+    self.historial_layout.insertWidget(0, lbl)
+    print("Nuevo chat creado con éxito")
+class ARUSActivityWidget(QFrame):
+
+    super().__init__(parent)
+    self.notifications = []
+    self.notifications = []
+    self.historial_layout = None
+    self.chat_widget = None
+    self.btn_nuevo_chat = None
+
+    super().__init__(parent)
+    self.notifications = []
+
+    """Bandeja de actividad con opciones de maximizar/expandir (🗖 / 🗗) y cerrar (✖)."""
+
+    action_triggered = Signal(dict)
+
+
+    super().__init__(parent)
+
+    def crear_nuevo_chat(self):
+        if hasattr(self, 'chat_widget') and hasattr(self.chat_widget, 'clear'):
+        self.chat_widget.clear()
+        if hasattr(self, 'historial_layout'):
+from PySide6.QtWidgets import QLabel
+    lbl = QLabel("Conversación nueva")
+    lbl.setStyleSheet("color: #B0E6FF; padding: 6px; font-size: 12px;")
+    self.historial_layout.insertWidget(0, lbl)
+    print("Nuevo chat creado con éxito")
+
+    # Botón Nuevo chat añadido dinámicamente
+    self.btn_nuevo_chat = QPushButton("＋ Nuevo chat")
+    self.btn_nuevo_chat.setCursor(Qt.PointingHandCursor)
+    self.btn_nuevo_chat.setStyleSheet("""
+    QPushButton {
+    background-color: #00334d;
+    color: #00E5FF;
+    border: 1px solid #00E5FF;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 6px;
+    }
+    QPushButton:hover {
+    background-color: #00E5FF;
+    color: #020B18;
+    }
+    """)
+    self.btn_nuevo_chat.clicked.connect(self.crear_nuevo_chat)
+
+    self.notifications = []
+    self.is_maximized = False
+
+    self.default_width = 300
+    self.default_height = 350
+
+    self.setFixedWidth(self.default_width)
+    self.setFixedHeight(self.default_height)
+    self.setStyleSheet("""
+    ARUSActivityWidget {
+    background-color: #020B18;
+    border: 1px solid #00E5FF;
+    border-radius: 10px;
+    }
+    """)
+
+    self.main_layout = QVBoxLayout()
+    self.main_layout.setContentsMargins(10, 8, 10, 8)
+    self.main_layout.setSpacing(6)
+    self.setLayout(self.main_layout)
+
+    # Header con Título, Botón Maximizar/Restaurar y Botón Cerrar
+    self.header_layout = QHBoxLayout()
+    self.header_layout.setContentsMargins(0, 0, 0, 0)
+
+    self.lbl_panel_title = QLabel("🔔 Centro de Actividad")
+    self.lbl_panel_title.setStyleSheet("font-weight: bold; color: #00E5FF; font-size: 12px; border: none;")
+
+    self.btn_expand = QPushButton("🗖")
+    self.btn_expand.setFixedSize(22, 22)
+    self.btn_expand.setCursor(Qt.PointingHandCursor)
+    self.btn_expand.setToolTip("Expandir / Restaurar")
+    self.btn_expand.setStyleSheet("""
+    QPushButton {
+    background-color: transparent;
+    color: #00E5FF;
+    border: none;
+    font-weight: bold;
+    font-size: 12px;
+    }
+    QPushButton:hover {
+    background-color: #004D73;
+    color: #FFFFFF;
+    border-radius: 4px;
+    }
+    """)
+    self.btn_expand.clicked.connect(self.toggle_expand_size)
+
+    self.btn_close = QPushButton("✖")
+    self.btn_close.setFixedSize(22, 22)
+    self.btn_close.setCursor(Qt.PointingHandCursor)
+    self.btn_close.setStyleSheet("""
+    QPushButton {
+    background-color: transparent;
+    color: #00E5FF;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+    }
+    QPushButton:hover {
+    background-color: #004D73;
+    color: #FFFFFF;
+    border-radius: 4px;
+    }
+    """)
+    self.btn_close.clicked.connect(self.hide_panel)
+
+    self.header_layout.addWidget(self.lbl_panel_title, 1)
+    self.header_layout.addWidget(self.btn_expand)
+    self.header_layout.addWidget(self.btn_close)
+    self.main_layout.addLayout(self.header_layout)
+
+    # Contenedor con scroll
+    self.scroll_area = QScrollArea()
+    self.scroll_area.setWidgetResizable(True)
+    self.scroll_area.setStyleSheet("""
+    QScrollArea {
+    border: none;
+    background-color: transparent;
+    }
+    QScrollBar:vertical {
+    border: none;
+    background: #01040a;
+    width: 6px;
+    border-radius: 3px;
+    }
+    QScrollBar::handle:vertical {
+    background: #004D73;
+    border-radius: 3px;
+    }
+    QScrollBar::handle:vertical:hover {
+    background: #00E5FF;
+    }
+    """)
+
+    self.cards_holder = QWidget()
+    self.cards_layout = QVBoxLayout()
+    self.cards_layout.setContentsMargins(0, 0, 0, 0)
+    self.cards_layout.setSpacing(6)
+    self.cards_layout.addStretch()
+    self.cards_holder.setLayout(self.cards_layout)
+
+    self.scroll_area.setWidget(self.cards_holder)
+    self.main_layout.addWidget(self.scroll_area)
+
+    self.setVisible(False)
+
+    def hide_panel(self):
+        self.setVisible(False)
+
+    def toggle_panel(self):
+        self.setVisible(not self.isVisible())
+        if self.isVisible():
+        self.raise_()
+
+    def toggle_expand_size(self):
+        self.is_maximized = not self.is_maximized
+        if self.parent():
+        parent_h = self.parent().height()
+
+        if self.is_maximized:
+        target_w = 380
+        target_h = max(450, parent_h - 40)
+        self.btn_expand.setText("🗗")
+        else:
+        target_w = self.default_width
+        target_h = self.default_height
+        self.btn_expand.setText("🗖")
+
+        self.setFixedWidth(target_w)
+        self.setFixedHeight(target_h)
+        self.move(15, parent_h - target_h - 15)
+
+    def add_notification(self, category, title, detail, time_str="", metadata=None):
+        icons = {
+        "msg": "💬",
+        "reminder": "⏰",
+        "note": "🧠",
+        "file": "📂",
+        "search": "🔎",
+        "task": "✅",
+        "alert": "⚠️"
+        }
+        notif = {
+        "type": category,
+        "icon": icons.get(category, "🔔"),
+        "title": title,
+        "detail": detail,
+        "time": time_str if time_str else datetime.now().strftime("%H:%M"),
+        "read": False,
+        "metadata": metadata or {}
+        }
+        self.notifications.insert(0, notif)
+
+        card = NotificationCard(notif)
+        card.clicked.connect(self._on_card_clicked)
+        self.cards_layout.insertWidget(0, card)
+
+    def _on_card_clicked(self, notif_data):
+        self.action_triggered.emit(notif_data)
+
+
+class ARUSWindow(QMainWindow):
+
+
+    super().__init__()
+
+    self.ollama_process = None
+    self.iniciar_ollama_automatico()
+
+    self.voice = VoiceCore()
+    self.adaptive = AdaptiveInterface()
+    self.device_profile = DeviceProfile()
+    self.device = self.device_profile.create()
+    self.interface_mode = self.adaptive.select(self.device.capabilities)
+
+    self.setWindowTitle("ARUS")
+    self.resize(1450, 950)
+    self.setMinimumSize(1000, 650)
+
+    self.history_file = "chat_history.json"
+    self.current_chat_id = None
+    self.history_target_width = 260
+    self.is_history_open = False
+
+    self._last_net_io = psutil.net_io_counters()
+    self._last_net_time = time.time()
+
+    self._last_disk_io = psutil.disk_io_counters()
+    self._last_disk_time = time.time()
+
+    estilo_hud = """
+    QMainWindow, QWidget {
+    background-color: #010814;
+    color: #00E5FF;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+    }
+    QFrame {
+    background-color: #020B18;
+    border: 1px solid #004D73;
+    border-radius: 10px;
+    }
+    QLabel {
+    background-color: transparent;
+    color: #00E5FF;
+    }
+    QProgressBar {
+    background-color: #01040a;
+    color: #FFFFFF;
+    border: 1px solid #004D73;
+    border-radius: 5px;
+    text-align: center;
+    height: 12px;
+    font-size: 10px;
+    font-weight: bold;
+    }
+    QProgressBar::chunk {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #0083B0, stop:1 #00E5FF);
+    border-radius: 4px;
+    }
+    QPushButton {
+    background-color: #020B18;
+    color: #00E5FF;
+    border: 1px solid #004D73;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: bold;
+    }
+    QPushButton:hover {
+    background-color: #004D73;
+    border-color: #00E5FF;
+    color: #FFFFFF;
+    }
+    QSplitter::handle {
+    background-color: #004D73;
+    border-radius: 3px;
+    margin: 2px;
+    }
+    QSplitter::handle:hover {
+    background-color: #00E5FF;
+    }
+    QListWidget {
+    background-color: #01040a;
+    border: 1px solid #004D73;
+    border-radius: 5px;
+    color: #00E5FF;
+    }
+    QListWidget::item:selected {
+    background-color: #002B40;
+    border-radius: 5px;
+    }
+    """
+    self.setStyleSheet(estilo_hud)
+    if QApplication.instance():
+    QApplication.instance().setStyleSheet(estilo_hud)
+
+    self.central = QWidget()
+    self.setCentralWidget(self.central)
+    self.main_layout = QVBoxLayout()
+    self.main_layout.setContentsMargins(15, 15, 15, 15)
+    self.main_layout.setSpacing(15)
+    self.central.setLayout(self.main_layout)
+
+    # Barra Superior Centrada
+    self.top_bar = QFrame()
+    self.top_bar.setFixedHeight(55)
+    self.top_layout = QHBoxLayout()
+    self.top_layout.setContentsMargins(20, 0, 20, 0)
+    self.top_bar.setLayout(self.top_layout)
+
+    # Bloque Izquierdo
+    self.left_top_widget = QWidget()
+    self.left_top_layout = QHBoxLayout()
+    self.left_top_layout.setContentsMargins(0, 0, 0, 0)
+    self.left_top_layout.setSpacing(10)
+    self.left_top_widget.setLayout(self.left_top_layout)
+
+    self.btn_history = QPushButton("📜 Historial")
+    self.btn_history.setFixedHeight(30)
+    self.btn_history.clicked.connect(self.toggle_history_panel)
+
+    self.lbl_sub_status = QLabel("CORE ONLINE")
+    self.lbl_sub_status.setStyleSheet("font-size: 11px; color: #004D73; border: none;")
+
+    self.left_top_layout.addWidget(self.btn_history)
+    self.left_top_layout.addWidget(self.lbl_sub_status)
+    self.left_top_layout.addStretch()
+
+    # Título Central Interactivo (Actúa como Botón)
+    self.btn_title = QPushButton("◈   A R U S   ◈")
+    self.btn_title.setCursor(Qt.PointingHandCursor)
+    self.btn_title.setStyleSheet("""
+    QPushButton {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00E5FF;
+    letter-spacing: 4px;
+    }
+    QPushButton:hover {
+    color: #FFFFFF;
+    }
+    """)
+    self.btn_title.clicked.connect(self.toggle_activity_center)
+
+    # Bloque Derecho
+    self.right_top_widget = QWidget()
+    self.right_top_layout = QHBoxLayout()
+    self.right_top_layout.setContentsMargins(0, 0, 0, 0)
+    self.right_top_widget.setLayout(self.right_top_layout)
+
+    self.lbl_clock = QLabel("--:--:--")
+    self.lbl_clock.setStyleSheet("font-family: monospace; font-size: 13px; border: none;")
+    self.clock = self.lbl_clock
+
+    self.right_top_layout.addStretch()
+    self.right_top_layout.addWidget(self.lbl_clock)
+
+    self.top_layout.addWidget(self.left_top_widget, 1)
+    self.top_layout.addWidget(self.btn_title, 1)
+    self.top_layout.addWidget(self.right_top_widget, 1)
+
+    self.main_layout.addWidget(self.top_bar)
+
+    self.body_widget = QWidget()
+    self.body_layout = QHBoxLayout()
+    self.body_layout.setContentsMargins(0, 0, 0, 0)
+    self.body_layout.setSpacing(15)
+    self.body_widget.setLayout(self.body_layout)
+    self.main_layout.addWidget(self.body_widget, 1)
+
+    self.main_splitter = QSplitter(Qt.Horizontal)
+    self.body_layout.addWidget(self.main_splitter)
+
+    # Panel de historial
+    self.history_panel = QFrame()
+    self.history_panel_layout = QVBoxLayout()
+    self.history_panel.setLayout(self.history_panel_layout)
+
+    lbl_hist_title = QLabel("Recientes")
+    lbl_hist_title.setStyleSheet("font-weight: bold; color: #00E5FF; font-size: 14px; border: none;")
+    self.history_panel_layout.addWidget(lbl_hist_title)
+
+    self.list_history = QListWidget()
+    self.history_panel_layout.addWidget(self.list_history)
+    self.list_history.itemClicked.connect(self.cargar_chat_seleccionado)
+
+    self.main_splitter.addWidget(self.history_panel)
+
+    self.core = NeuralCore()
+    self.core.setMinimumSize(400, 400)
+    self.main_splitter.addWidget(self.core)
+
+    self.right_panel = QFrame()
+    self.right_layout = QVBoxLayout()
+    self.right_layout.setContentsMargins(12, 12, 12, 12)
+    self.right_layout.setSpacing(12)
+    self.right_panel.setLayout(self.right_layout)
+
+    self.chat_splitter = QSplitter(Qt.Vertical)
+    self.right_layout.addWidget(self.chat_splitter)
+
+    self.controller = ARUSController(self.core)
+    self.chat = ChatWidget(self.controller)
+    self.chat_splitter.addWidget(self.chat)
+
+    self.sys_container = QWidget()
+    self.sys_layout = QVBoxLayout()
+    self.sys_layout.setContentsMargins(0, 0, 0, 0)
+    self.sys_layout.setSpacing(6)
+    self.sys_container.setLayout(self.sys_layout)
+
+    self.cpu_label = QLabel("⚡ CPU: 0%")
+    self.cpu_label.setStyleSheet("font-weight: bold; color: #00E5FF; border: none;")
+    self.cpu_bar = QProgressBar()
+    self.cpu_bar.setRange(0, 100)
+
+    self.ram_label = QLabel("💾 RAM: 0%")
+    self.ram_label.setStyleSheet("font-weight: bold; color: #00E5FF; border: none;")
+    self.ram_bar = QProgressBar()
+    self.ram_bar.setRange(0, 100)
+
+    self.disk_label = QLabel("💽 DISCO (SSD): 0 KB/s")
+    self.disk_label.setStyleSheet("font-weight: bold; color: #00E5FF; border: none;")
+    self.disk_bar = QProgressBar()
+    self.disk_bar.setRange(0, 100)
+
+    self.info_frame_layout = QHBoxLayout()
+    self.temp_label = QLabel("🌡 TEMP: --°C")
+    self.temp_label.setStyleSheet("font-weight: bold; color: #00E5FF; border: none;")
+
+    self.net_label = QLabel("🌐 RED: ↓ 0 KB/s")
+    self.net_label.setStyleSheet("font-weight: bold; color: #00E5FF; border: none; font-size: 11px;")
+
+    self.sys_layout.addWidget(self.cpu_label)
+    self.sys_layout.addWidget(self.cpu_bar)
+    self.sys_layout.addWidget(self.ram_label)
+    self.sys_layout.addWidget(self.ram_bar)
+    self.sys_layout.addWidget(self.disk_label)
+    self.sys_layout.addWidget(self.disk_bar)
+
+    self.info_frame_layout.addWidget(self.temp_label)
+    self.info_frame_layout.addStretch()
+    self.info_frame_layout.addWidget(self.net_label)
+    self.sys_layout.addLayout(self.info_frame_layout)
+
+    self.btn_layout = QHBoxLayout()
+    self.btn_layout.setSpacing(8)
+
+    self.btn_listen = QPushButton("🎤 Escuchar")
+    self.btn_think = QPushButton("🧠 Pensar")
+    self.btn_speak = QPushButton("🗣 Hablar")
+
+    self.btn_layout.addWidget(self.btn_listen)
+    self.btn_layout.addWidget(self.btn_think)
+    self.btn_layout.addWidget(self.btn_speak)
+
+    self.sys_layout.addLayout(self.btn_layout)
+    self.chat_splitter.addWidget(self.sys_container)
+
+    self.main_splitter.addWidget(self.right_panel)
+
+    self.main_splitter.setSizes([0, 850, 450])
+    self.chat_splitter.setSizes([430, 250])
+
+    self.btn_listen.clicked.connect(self.toggle_voice)
+    self.btn_think.clicked.connect(self.open_learning)
+    self.btn_speak.clicked.connect(self.open_memory)
+
+    # Centro de Actividad Flotante en la Esquina Inferior Izquierda
+    self.activity_center = ARUSActivityWidget(self.central)
+    self.activity_center.action_triggered.connect(self.atender_notificacion)
+
+    # Cargar Notificaciones Iniciales
+    self.activity_center.add_notification("msg", "Nuevo mensaje", "Juan te ha escrito", "hace 3m")
+    self.activity_center.add_notification("reminder", "Recordatorio", "Revisar proyecto ARUS", "Hoy 18:00")
+    self.activity_center.add_notification("note", "Nota inteligente", "ARUS encontró información en RAG.", "14:10")
+
+    self.system_timer = QTimer()
+    self.system_timer.timeout.connect(self.update_system)
+    self.system_timer.start(1000)
+
+    self.core.set_state("idle")
+    self.chat.add_message("ARUS: Conectado. Búsqueda web habilitada.")
+
+    self.cargar_lista_historial()
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        if hasattr(self, "activity_center"):
+        act_h = self.activity_center.height()
+        self.activity_center.move(15, self.height() - act_h - 15)
+
+    def toggle_activity_center(self):
+        self.activity_center.toggle_panel()
+        if hasattr(self, "activity_center"):
+        act_h = self.activity_center.height()
+        self.activity_center.move(15, self.height() - act_h - 15)
+
+    def atender_notificacion(self, notif_data):
+        titulo = notif_data.get("title", "")
+        detalle = notif_data.get("detail", "")
+        self.chat.add_message(f"ARUS [Sistema]: Abrías notificación '{titulo}' - {detalle}")
+
+    def toggle_history_panel(self):
+        sizes = self.main_splitter.sizes()
+        start_w = sizes[0]
+        end_w = self.history_target_width if not self.is_history_open else 0
+
+        total_restante = sum(sizes[1:])
+        if total_restante == 0:
+        total_restante = 1
+
+        self.anim = QVariantAnimation()
+        self.anim.setDuration(250)
+        self.anim.setStartValue(start_w)
+        self.anim.setEndValue(end_w)
+        self.anim.setEasingCurve(QEasingCurve.OutCubic)
+
+    def update_sizes(value):
+        current_w = int(value)
+        s1 = int(sizes[1] * (sum(sizes) - current_w) / total_restante)
+        s2 = sum(sizes) - current_w - s1
+        self.main_splitter.setSizes([current_w, s1, s2])
+
+        self.anim.valueChanged.connect(update_sizes)
+        self.anim.start()
+
+        self.is_history_open = not self.is_history_open
+
+    def obtener_conversaciones(self):
+        if not os.path.exists(self.history_file):
+        return {}
+        #     try:
+        with open(self.history_file, "r", encoding="utf-8") as f:
+        return json.load(f)
+        #     except Exception:
+        return {}
+
+    def guardar_conversaciones(self, data):
+        #     try:
+        with open(self.history_file, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+        #     except Exception as e:
+        print(f"Error al guardar el historial: {e}")
+
+    def cargar_lista_historial(self):
+        self.list_history.clear()
+        conversaciones = self.obtener_conversaciones()
+        for chat_id, data in conversaciones.items():
+        item = QListWidgetItem(self.list_history)
+        item.setData(Qt.UserRole, chat_id)
+
+        titulo = data.get('titulo', chat_id)
+        item_widget = ChatItemWidget(chat_id, titulo, self)
+
+        item.setSizeHint(item_widget.sizeHint())
+        self.list_history.addItem(item)
+        self.list_history.setItemWidget(item, item_widget)
+
+    def cargar_chat_seleccionado(self, item):
+        chat_id = item.data(Qt.UserRole)
+        conversaciones = self.obtener_conversaciones()
+        if chat_id in conversaciones:
+        self.current_chat_id = chat_id
+        if hasattr(self.chat, "clear"):
+        self.chat.clear()
+        for msg in conversaciones[chat_id].get("mensajes", []):
+        self.chat.add_message(msg)
+
+    def borrar_chat(self, chat_id):
+        conversaciones = self.obtener_conversaciones()
+        if chat_id in conversaciones:
+        del conversaciones[chat_id]
+        self.guardar_conversaciones(conversaciones)
+        if self.current_chat_id == chat_id:
+        self.current_chat_id = None
+        if hasattr(self.chat, "clear"):
+        self.chat.clear()
+        self.cargar_lista_historial()
+
+    def renombrar_chat(self, chat_id):
+        conversaciones = self.obtener_conversaciones()
+        if chat_id in conversaciones:
+        titulo_actual = conversaciones[chat_id].get("titulo", "")
+        nuevo_nombre, ok = QInputDialog.getText(self, "Cambiar nombre", "Nuevo nombre de la conversación:", text=titulo_actual)
+        if ok and nuevo_nombre.strip():
+        conversaciones[chat_id]["titulo"] = nuevo_nombre.strip()
+        self.guardar_conversaciones(conversaciones)
+        self.cargar_lista_historial()
+
+    def guardar_mensaje_actual(self, mensaje):
+        if not self.current_chat_id:
+        self.current_chat_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        titulo_auto = mensaje.replace("Usuario: ", "").strip()
+        if len(titulo_auto) > 25:
+        titulo_auto = titulo_auto[:25] + "..."
+
+        conversaciones = self.obtener_conversaciones()
+        conversaciones[self.current_chat_id] = {
+        "titulo": titulo_auto if titulo_auto else f"Chat {datetime.now().strftime('%d/%m %H:%M')}",
+        "mensajes": []
+        }
+        else:
+        conversaciones = self.obtener_conversaciones()
+        if self.current_chat_id not in conversaciones:
+        conversaciones[self.current_chat_id] = {
+        "titulo": f"Chat {datetime.now().strftime('%d/%m %H:%M')}",
+        "mensajes": []
+        }
+
+        conversaciones[self.current_chat_id]["mensajes"].append(mensaje)
+        self.guardar_conversaciones(conversaciones)
+        self.cargar_lista_historial()
+
+    def buscar_en_web(self, query):
+        if not DDGS:
+        return ""
+        #     try:
+        results = []
+        with DDGS() as ddgs:
+        for r in ddgs.text(query, max_results=3):
+        results.append(r.get("body", ""))
+        return "\n".join(results)
+        #     except Exception:
+        return ""
+
+    def procesar_con_ia(self, prompt_usuario):
+        #     try:
+        self.guardar_mensaje_actual(f"Usuario: {prompt_usuario}")
+        query_busqueda = prompt_usuario
+        p_lower = prompt_usuario.lower()
+        if "presidente" in p_lower or "peru" in p_lower or "chile" in p_lower:
+        query_busqueda = "presidente actual de Peru y de Chile 2026"
+
+        contexto_web = self.buscar_en_web(query_busqueda)
+        if contexto_web:
+        self.activity_center.add_notification("search", "Búsqueda Web", f"Resultados obtenidos para: {query_busqueda[:20]}...")
+
+        prompt_sistema = (
+        "Eres ARUS, un sistema inteligente con datos de geografía y política actualizados al 2026. "
+        "Chile y Perú son países de Sudamérica limítrofes. "
+        "Usa estrictamente la información de internet provista para nombrar correctamente "
+        "a los presidentes actuales de Perú y Chile sin inventar datos geográficos ni políticos."
+        )
+
+        prompt_completo = f"{prompt_sistema}\n\nDatos de internet:\n{contexto_web}\n\nPregunta: {prompt_usuario}\nRespuesta:"
+
+        response = requests.post(
+        "http://localhost:11434/api/generate",
+        json={
+        "model": "qwen2.5:3b",
+        "prompt": prompt_completo,
+        "stream": False
+        },
+        timeout=30
+        )
+        if response.status_code == 200:
+        res_txt = response.json().get("response", "Sin respuesta.").strip()
+        self.guardar_mensaje_actual(f"ARUS: {res_txt}")
+        return res_txt
+        #     except Exception as e:
+        self.activity_center.add_notification("alert", "Error Ollama", "No se pudo conectar con la IA.")
+        return "Error de conexión con el modelo."
+
+    def iniciar_ollama_automatico(self):
+        #     try:
+        res = requests.get("http://localhost:11434/", timeout=1)
+        if res.status_code == 200:
+        return
+        #     except Exception:
+        pass
+        #     try:
+        subprocess.run(["pkill", "-9", "ollama"], stderr=subprocess.DEVNULL)
+        time.sleep(0.5)
+        env = os.environ.copy()
+        env["OLLAMA_NUM_PARALLEL"] = "1"
+        env["OLLAMA_VULKAN"] = "0"
+        env["CUDA_VISIBLE_DEVICES"] = ""
+        self.ollama_process = subprocess.Popen(
+        ["ollama", "serve"],
+        env=env,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        preexec_fn=os.setsid if hasattr(os, "setsid") else None
+        )
+        time.sleep(2)
+        #     except Exception as e:
+        print(f"Error al iniciar Ollama: {e}")
+
+    def update_system(self):
+        #     try:
+        cpu = psutil.cpu_percent()
+        ram = psutil.virtual_memory().percent
+
+        now = time.time()
+        time_delta = now - self._last_disk_time
+
+        disk_io = psutil.disk_io_counters()
+        total_disk_speed = 0
+        if time_delta > 0 and disk_io and self._last_disk_io:
+        read_bytes = disk_io.read_bytes - self._last_disk_io.read_bytes
+        write_bytes = disk_io.write_bytes - self._last_disk_io.write_bytes
+        total_disk_speed = (read_bytes + write_bytes) / time_delta
+
+        self._last_disk_io = disk_io
+        self._last_disk_time = now
+
+        if total_disk_speed < 1048576:
+        disk_str = f"{total_disk_speed / 1024:.1f} KB/s"
+        else:
+        disk_str = f"{total_disk_speed / 1048576:.2f} MB/s"
+        else:
+        disk_str = "0 KB/s"
+
+        temp_str = "--°C"
+        if hasattr(psutil, "sensors_temperatures"):
+        temps = psutil.sensors_temperatures()
+        if temps:
+        for name, entries in temps.items():
+        for entry in entries:
+        if entry.current:
+        temp_str = f"{entry.current:.1f}°C"
+        break
+
+        net_io = psutil.net_io_counters()
+        net_delta = now - self._last_net_time
+        if net_delta > 0:
+        download_speed = (net_io.bytes_recv - self._last_net_io.bytes_recv) / net_delta
+        self._last_net_io = net_io
+        self._last_net_time = now
+        down_str = f"{download_speed / 1024:.1f} KB/s" if download_speed < 1048576 else f"{download_speed / 1048576:.2f} MB/s"
+        else:
+        down_str = "0 KB/s"
+
+        self.cpu_bar.setValue(int(cpu))
+        self.cpu_label.setText(f"⚡ CPU: {cpu:.0f}%")
+
+        self.ram_bar.setValue(int(ram))
+        self.ram_label.setText(f"💾 RAM: {ram:.0f}%")
+
+        disk_val = min(int((total_disk_speed / (10 * 1024 * 1024)) * 100), 100)
+        self.disk_bar.setValue(disk_val)
+        self.disk_label.setText(f"💽 DISCO (SSD): {disk_str}")
+
+        self.temp_label.setText(f"🌡 TEMP: {temp_str}")
+        self.net_label.setText(f"🌐 RED: ↓ {down_str}")
+
+        self.clock.setText(datetime.now().strftime("%H:%M:%S"))
+        #     except Exception:
+        pass
+
+    def keyPressEvent(self, event):
+        key = event.key()
+        if key in (Qt.Key_Return, Qt.Key_Enter):
+        self.core.set_state("investigating")
+        self.chat.send()
+        return
+        if key == Qt.Key_Escape:
+        self.chat.input.clear()
+        self.core.set_state("idle")
+        return
+        text = event.text()
+        if text and text.isprintable():
+        #     try:
+        self.chat.input.setFocus()
+        self.chat.input.insert(text)
+        self.core.set_state("investigating")
+        #     except Exception:
+        pass
+        return
+        super().keyPressEvent(event)
+
+    def toggle_voice(self):
+        #     try:
+        if hasattr(self.voice, "start"):
+        self.voice.start()
+        self.core.set_state("listening")
+        self.chat.add_message("ARUS: Escuchando...")
+        self.activity_center.add_notification("msg", "Voz Activada", "Escuchando orden del usuario...")
+        #     except Exception:
+        pass
+
+    def open_learning(self):
+        self.core.set_state("learning")
+        self.chat.add_message("ARUS: Pensando...")
+        self.activity_center.add_notification("note", "Procesamiento", "Análisis de patrones en ejecución.")
+
+    def open_memory(self):
+        self.core.set_state("speaking")
+        self.chat.add_message("ARUS: Voz preparada.")
+
+    def showEvent(self, event):
+        self.chat.input.setFocus()
+        self.core.set_state("idle")
+        super().showEvent(event)
+
+    def destruir_ollama_completo(self):
+        #     try:
+        if self.ollama_process:
+        self.ollama_process.terminate()
+        self.ollama_process.wait(timeout=2)
+        #     except Exception:
+        pass
+
+        #     try:
+        subprocess.run(["pkill", "-9", "-f", "ollama"], stderr=subprocess.DEVNULL)
+        #     except Exception:
+        pass
+
+    def closeEvent(self, event):
+        self.destruir_ollama_completo()
+        event.accept()
+
+        if __name__ == "__main__":
+import sys
+    app = QApplication(sys.argv)
+    window = ARUSWindow()
+    window.show()
+    sys.exit(app.exec())

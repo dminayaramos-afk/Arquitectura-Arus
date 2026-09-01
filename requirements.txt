@@ -1,0 +1,21 @@
+# Interfaz gráfica
+PySide6>=6.6
+
+# Utilidades del núcleo
+requests>=2.31
+psutil>=5.9
+
+# Proveedor de IA "ollama" (opcional: solo hace falta si usas ese tipo
+# de proveedor en config/settings.json -> ai_providers)
+ollama>=0.3
+
+# Búsqueda web real (tools/search_tool.py) y lectura de páginas
+duckduckgo_search>=5.0
+beautifulsoup4>=4.12
+
+# Voz: reconocimiento (STT) con Vosk + SpeechRecognition
+vosk>=0.3.45
+SpeechRecognition>=3.10
+
+# Visión (lectura/composición de imágenes)
+Pillow>=10.0

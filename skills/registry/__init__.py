@@ -1,0 +1,3 @@
+"""
+ARUS Skill Registry
+"""

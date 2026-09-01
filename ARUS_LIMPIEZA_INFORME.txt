@@ -1,0 +1,3877 @@
+======================================================================
+ ARUS — INFORME DE LIMPIEZA
+======================================================================
+
+IMPORTANTE:
+Este informe NO ha eliminado ningún archivo.
+Los elementos sospechosos requieren revisión manual.
+
+======================================================================
+RESUMEN
+======================================================================
+Directorios: 434
+Archivos: 1900
+Python: 1732
+Sospechosos: 6
+Vacíos: 31
+Grupos de duplicados: 212
+
+======================================================================
+ARCHIVOS SOSPECHOSOS
+======================================================================
+arus/interface/main_window.py.antes_restore_20260814_101642.bak
+arus/interface/main_window.py.broken_20260814_103840.bak
+arus/interface/main_window.py.broken_20260814_103853.bak
+main_window.py.antes_de_restaurar_20260814_101617.bak
+main_window.py.antes_de_restaurar_20260814_104315.bak
+main_window.py.antes_restauracion_20260814_104419.bak
+
+======================================================================
+ARCHIVOS VACÍOS
+======================================================================
+12288
+28672
+=
+0
+README.md
+tools/__init__.py
+security/__init__.py
+arus/__init__.py
+_backup_antes_fase6/20260812_141923/tools/calculator_tool.py
+_backup_antes_fase6/20260812_141923/tools/__init__.py
+tests/laboratory/test_laboratory_manager.py
+_backup_antes_fase14/tools/__init__.py
+_backup_antes_fase14/arus/__init__.py
+_backup_antes_fase13/tools/__init__.py
+_backup_antes_fase13/arus/__init__.py
+_backup_antes_fase11/tools/__init__.py
+_backup_antes_fase16/tools/__init__.py
+_backup_antes_fase16/security/__init__.py
+_backup_antes_fase16/arus/__init__.py
+skills/chat/__init__.py
+_backup_fase4/20260811_204635/arus/__init__.py
+_backup_antes_fase4/20260811_204755/arus/__init__.py
+_backup_antes_fase4/20260811_204742/arus/__init__.py
+_backup_antes_fase4/20260811_204733/arus/__init__.py
+_backup_antes_fase12/tools/__init__.py
+_backup_antes_fase12/arus/__init__.py
+_backup_antes_fase15/tools/__init__.py
+_backup_antes_fase15/security/__init__.py
+_backup_antes_fase15/arus/__init__.py
+_backup_antes_fase10/tools/__init__.py
+_archivo_backups/20260810_133611/arus__brain/__init__.py
+
+======================================================================
+DUPLICADOS EXACTOS
+======================================================================
+
+GRUPO 1:
+  chat_widget.py.backup_copy_text_20260814_102838
+  chat_widget.py.roto_20260814_104526
+  chat_widget.py.backup_copy_text_20260814_103239
+
+GRUPO 2:
+  _backup_antes_fix_fase6_toolagent.py
+  agents/tool_agent.py
+  _backup_antes_fase14/agents/tool_agent.py
+  _backup_antes_fase13/agents/tool_agent.py
+  _backup_antes_fase7/agents/tool_agent.py
+  _backup_antes_fase16/agents/tool_agent.py
+  _backup_antes_fase15/agents/tool_agent.py
+  _backup_antes_fase10/agents/tool_agent.py
+
+GRUPO 3:
+  _backup_antes_fase7_brain.py
+  _backup_antes_fase6/20260812_141923/brain/brain.py
+
+GRUPO 4:
+  main_window_backup.py
+  arus/interface/main_window.py.broken_20260814_103840.bak
+  arus/interface/main_window.py.bak_20260814_101709
+  arus/interface/main_window.py.bak_20260814_103529
+  arus/interface/main_window.py.antes_de_restaurar_20260814_103712
+  arus/interface/main_window.py.antes_restore_20260814_101642.bak
+
+GRUPO 5:
+  12288
+  28672
+  =
+  0
+  README.md
+  tools/__init__.py
+  security/__init__.py
+  arus/__init__.py
+  _backup_antes_fase6/20260812_141923/tools/calculator_tool.py
+  _backup_antes_fase6/20260812_141923/tools/__init__.py
+  tests/laboratory/test_laboratory_manager.py
+  _backup_antes_fase14/tools/__init__.py
+  _backup_antes_fase14/arus/__init__.py
+  _backup_antes_fase13/tools/__init__.py
+  _backup_antes_fase13/arus/__init__.py
+  _backup_antes_fase11/tools/__init__.py
+  _backup_antes_fase16/tools/__init__.py
+  _backup_antes_fase16/security/__init__.py
+  _backup_antes_fase16/arus/__init__.py
+  skills/chat/__init__.py
+  _backup_fase4/20260811_204635/arus/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/__init__.py
+  _backup_antes_fase12/tools/__init__.py
+  _backup_antes_fase12/arus/__init__.py
+  _backup_antes_fase15/tools/__init__.py
+  _backup_antes_fase15/security/__init__.py
+  _backup_antes_fase15/arus/__init__.py
+  _backup_antes_fase10/tools/__init__.py
+  _archivo_backups/20260810_133611/arus__brain/__init__.py
+
+GRUPO 6:
+  chat_widget.py
+  chat_widget.py.backup_copy_text_20260814_102745
+
+GRUPO 7:
+  interfaz.py
+  main_window.py.antes_restauracion_20260814_104419.bak
+  main_window.py
+  arus/interface/main_window.py
+
+GRUPO 8:
+  LEEME_FASE4.md
+  _backup_antes_fase4/20260811_204733/LEEME_FASE4.md
+  _backup_antes_fase4/20260811_204742/LEEME_FASE4.md
+  _backup_antes_fase4/20260811_204755/LEEME_FASE4.md
+
+GRUPO 9:
+  main_window.py.antes_de_restaurar_20260814_101617.bak
+  arus/interface/e.py
+  _backup_antes_fase14/arus/interface/e.py
+  _backup_antes_fase14/arus/interface/main_window.py
+  _backup_antes_fase13/arus/interface/main_window.py
+  _backup_antes_fase16/arus/interface/e.py
+  _backup_antes_fase16/arus/interface/main_window.py
+  _backup_fase4/20260811_204635/arus/interface/main_window.py
+  _backup_antes_fase4/20260811_204755/arus/interface/main_window.py
+  _backup_antes_fase4/20260811_204742/arus/interface/main_window.py
+  _backup_antes_fase4/20260811_204733/arus/interface/main_window.py
+  _backup_antes_fase12/arus/interface/main_window.py
+  _backup_antes_fase15/arus/interface/e.py
+  _backup_antes_fase15/arus/interface/main_window.py
+
+GRUPO 10:
+  conversations/conversation_manager.py
+  _backup_antes_fase5/20260812_141259/conversations/conversation_manager.py
+  _backup_antes_fase3/conversations/conversation_manager.py
+  _backup_fase4/20260811_204635/conversations/conversation_manager.py
+  _backup_antes_fase4/20260811_204755/conversations/conversation_manager.py
+  _backup_antes_fase4/20260811_204742/conversations/conversation_manager.py
+  _backup_antes_fase4/20260811_204733/conversations/conversation_manager.py
+
+GRUPO 11:
+  conversations/__init__.py
+  _backup_antes_fase5/20260812_141259/conversations/__init__.py
+  _backup_antes_fase3/conversations/__init__.py
+  _backup_fase4/20260811_204635/conversations/__init__.py
+  _backup_antes_fase4/20260811_204755/conversations/__init__.py
+  _backup_antes_fase4/20260811_204742/conversations/__init__.py
+  _backup_antes_fase4/20260811_204733/conversations/__init__.py
+
+GRUPO 12:
+  tools/git_tool.py
+  _backup_antes_fase14/tools/git_tool.py
+  _backup_antes_fase13/tools/git_tool.py
+  _backup_antes_fase11/tools/git_tool.py
+  _backup_antes_fase16/tools/git_tool.py
+  _backup_antes_fase12/tools/git_tool.py
+  _backup_antes_fase15/tools/git_tool.py
+  _backup_antes_fase10/tools/git_tool.py
+
+GRUPO 13:
+  tools/github_search_tool.py
+  _backup_antes_fase6/20260812_141923/tools/github_search_tool.py
+  _backup_antes_fase14/tools/github_search_tool.py
+  _backup_antes_fase13/tools/github_search_tool.py
+  _backup_antes_fase11/tools/github_search_tool.py
+  _backup_antes_fase16/tools/github_search_tool.py
+  _backup_antes_fase12/tools/github_search_tool.py
+  _backup_antes_fase15/tools/github_search_tool.py
+  _backup_antes_fase10/tools/github_search_tool.py
+
+GRUPO 14:
+  tools/tool_manager.py
+  _backup_antes_fase16/tools/tool_manager.py
+
+GRUPO 15:
+  tools/time_tool.py
+  _backup_antes_fase6/20260812_141923/tools/time_tool.py
+  _backup_antes_fase14/tools/time_tool.py
+  _backup_antes_fase13/tools/time_tool.py
+  _backup_antes_fase11/tools/time_tool.py
+  _backup_antes_fase16/tools/time_tool.py
+  _backup_antes_fase12/tools/time_tool.py
+  _backup_antes_fase15/tools/time_tool.py
+  _backup_antes_fase10/tools/time_tool.py
+
+GRUPO 16:
+  tools/project_tool.py
+  _backup_antes_fase6/20260812_141923/tools/project_tool.py
+  _backup_antes_fase14/tools/project_tool.py
+  _backup_antes_fase13/tools/project_tool.py
+  _backup_antes_fase11/tools/project_tool.py
+  _backup_antes_fase16/tools/project_tool.py
+  _backup_antes_fase12/tools/project_tool.py
+  _backup_antes_fase15/tools/project_tool.py
+  _backup_antes_fase10/tools/project_tool.py
+
+GRUPO 17:
+  tools/base_tool.py
+  _backup_antes_fase6/20260812_141923/tools/base_tool.py
+  _backup_antes_fase14/tools/base_tool.py
+  _backup_antes_fase13/tools/base_tool.py
+  _backup_antes_fase11/tools/base_tool.py
+  _backup_antes_fase16/tools/base_tool.py
+  _backup_antes_fase12/tools/base_tool.py
+  _backup_antes_fase15/tools/base_tool.py
+  _backup_antes_fase10/tools/base_tool.py
+
+GRUPO 18:
+  tools/web_reader_tool.py
+  _backup_antes_fase6/20260812_141923/tools/web_reader_tool.py
+  _backup_antes_fase14/tools/web_reader_tool.py
+  _backup_antes_fase13/tools/web_reader_tool.py
+  _backup_antes_fase11/tools/web_reader_tool.py
+  _backup_antes_fase16/tools/web_reader_tool.py
+  _backup_antes_fase12/tools/web_reader_tool.py
+  _backup_antes_fase15/tools/web_reader_tool.py
+  _backup_antes_fase10/tools/web_reader_tool.py
+
+GRUPO 19:
+  tools/find_file_tool.py
+  _backup_antes_fase6/20260812_141923/tools/find_file_tool.py
+  _backup_antes_fase14/tools/find_file_tool.py
+  _backup_antes_fase13/tools/find_file_tool.py
+  _backup_antes_fase11/tools/find_file_tool.py
+  _backup_antes_fase16/tools/find_file_tool.py
+  _backup_antes_fase12/tools/find_file_tool.py
+  _backup_antes_fase15/tools/find_file_tool.py
+  _backup_antes_fase10/tools/find_file_tool.py
+
+GRUPO 20:
+  tools/list_directory_tool.py
+  _backup_antes_fase6/20260812_141923/tools/list_directory_tool.py
+  _backup_antes_fase14/tools/list_directory_tool.py
+  _backup_antes_fase13/tools/list_directory_tool.py
+  _backup_antes_fase11/tools/list_directory_tool.py
+  _backup_antes_fase16/tools/list_directory_tool.py
+  _backup_antes_fase12/tools/list_directory_tool.py
+  _backup_antes_fase15/tools/list_directory_tool.py
+  _backup_antes_fase10/tools/list_directory_tool.py
+
+GRUPO 21:
+  tools/python_check_tool.py
+  _backup_antes_fase6/20260812_141923/tools/python_check_tool.py
+  _backup_antes_fase14/tools/python_check_tool.py
+  _backup_antes_fase13/tools/python_check_tool.py
+  _backup_antes_fase11/tools/python_check_tool.py
+  _backup_antes_fase16/tools/python_check_tool.py
+  _backup_antes_fase12/tools/python_check_tool.py
+  _backup_antes_fase15/tools/python_check_tool.py
+  _backup_antes_fase10/tools/python_check_tool.py
+
+GRUPO 22:
+  tools/shell_tool.py
+  _backup_antes_fase16/tools/shell_tool.py
+  _backup_antes_fase15/tools/shell_tool.py
+
+GRUPO 23:
+  tools/screenshot_tool.py
+  _backup_antes_fase14/tools/screenshot_tool.py
+  _backup_antes_fase13/tools/screenshot_tool.py
+  _backup_antes_fase16/tools/screenshot_tool.py
+  _backup_antes_fase15/tools/screenshot_tool.py
+
+GRUPO 24:
+  tools/calculator_tool.py
+  _backup_antes_fase14/tools/calculator_tool.py
+  _backup_antes_fase13/tools/calculator_tool.py
+  _backup_antes_fase11/tools/calculator_tool.py
+  _backup_antes_fase16/tools/calculator_tool.py
+  _backup_antes_fase12/tools/calculator_tool.py
+  _backup_antes_fase15/tools/calculator_tool.py
+  _backup_antes_fase10/tools/calculator_tool.py
+
+GRUPO 25:
+  tools/file_tool.py
+  _backup_antes_fase16/tools/file_tool.py
+  _backup_antes_fase15/tools/file_tool.py
+
+GRUPO 26:
+  tools/file_writer_tool.py
+  _backup_antes_fase16/tools/file_writer_tool.py
+  _backup_antes_fase15/tools/file_writer_tool.py
+
+GRUPO 27:
+  tools/test_runner_tool.py
+  _backup_antes_fase16/tools/test_runner_tool.py
+  _backup_antes_fase15/tools/test_runner_tool.py
+
+GRUPO 28:
+  tools/replace_text_tool.py
+  _backup_antes_fase16/tools/replace_text_tool.py
+  _backup_antes_fase15/tools/replace_text_tool.py
+
+GRUPO 29:
+  tools/github_clone_tool.py
+  _backup_antes_fase6/20260812_141923/tools/github_clone_tool.py
+  _backup_antes_fase14/tools/github_clone_tool.py
+  _backup_antes_fase13/tools/github_clone_tool.py
+  _backup_antes_fase11/tools/github_clone_tool.py
+  _backup_antes_fase16/tools/github_clone_tool.py
+  _backup_antes_fase12/tools/github_clone_tool.py
+  _backup_antes_fase15/tools/github_clone_tool.py
+  _backup_antes_fase10/tools/github_clone_tool.py
+
+GRUPO 30:
+  memory/persistent_memory.py
+  _backup_antes_fase14/memory/persistent_memory.py
+  _backup_antes_fase13/memory/persistent_memory.py
+  _backup_antes_fase5/20260812_141259/memory/persistent_memory.py
+  _backup_antes_fase16/memory/persistent_memory.py
+  _backup_antes_fase8/memory/persistent_memory.py
+  _backup_antes_fase15/memory/persistent_memory.py
+
+GRUPO 31:
+  memory/user_preferences.py
+  _backup_antes_fase14/memory/user_preferences.py
+  _backup_antes_fase13/memory/user_preferences.py
+  _backup_antes_fase16/memory/user_preferences.py
+  _backup_antes_fase8/memory/user_preferences.py
+  _backup_antes_fase15/memory/user_preferences.py
+
+GRUPO 32:
+  memory/working_memory.py
+  _backup_antes_fase14/memory/working_memory.py
+  _backup_antes_fase13/memory/working_memory.py
+  _backup_antes_fase5/20260812_141259/memory/working_memory.py
+  _backup_antes_fase16/memory/working_memory.py
+  _backup_antes_fase8/memory/working_memory.py
+  _backup_antes_fase15/memory/working_memory.py
+
+GRUPO 33:
+  memory/memory_manager.py
+  _backup_antes_fase14/memory/memory_manager.py
+  _backup_antes_fase13/memory/memory_manager.py
+  _backup_antes_fase16/memory/memory_manager.py
+  _backup_antes_fase8/memory/memory_manager.py
+  _backup_antes_fase15/memory/memory_manager.py
+
+GRUPO 34:
+  memory/semantic_memory.py
+  _backup_antes_fase14/memory/semantic_memory.py
+  _backup_antes_fase13/memory/semantic_memory.py
+  _backup_antes_fase16/memory/semantic_memory.py
+  _backup_antes_fase8/memory/semantic_memory.py
+  _backup_antes_fase15/memory/semantic_memory.py
+
+GRUPO 35:
+  memory/__init__.py
+  _backup_antes_fase14/memory/__init__.py
+  _backup_antes_fase13/memory/__init__.py
+  _backup_antes_fase5/20260812_141259/memory/__init__.py
+  _backup_antes_fase16/memory/__init__.py
+  _backup_antes_fase8/memory/__init__.py
+  _backup_antes_fase15/memory/__init__.py
+
+GRUPO 36:
+  memory/long_memory.py
+  _backup_antes_fase14/memory/long_memory.py
+  _backup_antes_fase13/memory/long_memory.py
+  _backup_antes_fase16/memory/long_memory.py
+  _backup_antes_fase8/memory/long_memory.py
+  _backup_antes_fase15/memory/long_memory.py
+
+GRUPO 37:
+  memory/task_memory.py
+  _backup_antes_fase14/memory/task_memory.py
+  _backup_antes_fase13/memory/task_memory.py
+  _backup_antes_fase16/memory/task_memory.py
+  _backup_antes_fase8/memory/task_memory.py
+  _backup_antes_fase15/memory/task_memory.py
+
+GRUPO 38:
+  security/rate_limiter.py
+  _backup_antes_fase16/security/rate_limiter.py
+  _backup_antes_fase15/security/rate_limiter.py
+
+GRUPO 39:
+  security/json_validator.py
+  _backup_antes_fase16/security/json_validator.py
+  _backup_antes_fase15/security/json_validator.py
+
+GRUPO 40:
+  security/audit_logger.py
+  _backup_antes_fase16/security/audit_logger.py
+  _backup_antes_fase15/security/audit_logger.py
+
+GRUPO 41:
+  security/shell_guard.py
+  _backup_antes_fase16/security/shell_guard.py
+  _backup_antes_fase15/security/shell_guard.py
+
+GRUPO 42:
+  security/sandbox.py
+  _backup_antes_fase16/security/sandbox.py
+  _backup_antes_fase15/security/sandbox.py
+
+GRUPO 43:
+  security/path_guard.py
+  _backup_antes_fase16/security/path_guard.py
+  _backup_antes_fase15/security/path_guard.py
+
+GRUPO 44:
+  security/permission_manager.py
+  _backup_antes_fase16/security/permission_manager.py
+  _backup_antes_fase15/security/permission_manager.py
+
+GRUPO 45:
+  plugins/plugin_manager.py
+  _backup_antes_fase16/plugins/plugin_manager.py
+
+GRUPO 46:
+  plugins/plugin.py
+  _backup_antes_fase16/plugins/plugin.py
+
+GRUPO 47:
+  plugins/__init__.py
+  _backup_antes_fase16/plugins/__init__.py
+
+GRUPO 48:
+  plugins/plugin_registry.py
+  _backup_antes_fase16/plugins/plugin_registry.py
+
+GRUPO 49:
+  brain/message_bus.py
+  _backup_antes_fase6/20260812_141923/brain/message_bus.py
+  _backup_antes_fase14/brain/message_bus.py
+  _backup_antes_fase13/brain/message_bus.py
+  _backup_antes_fase5/20260812_141259/brain/message_bus.py
+  _backup_antes_fase7/brain/message_bus.py
+  _backup_antes_fase11/brain/message_bus.py
+  _backup_antes_fase16/brain/message_bus.py
+  _backup_antes_fase8/brain/message_bus.py
+  _backup_fase4/20260811_204635/brain/message_bus.py
+  _backup_antes_fase4/20260811_204755/brain/message_bus.py
+  _backup_antes_fase4/20260811_204742/brain/message_bus.py
+  _backup_antes_fase4/20260811_204733/brain/message_bus.py
+  _backup_antes_fase12/brain/message_bus.py
+  _backup_antes_fase15/brain/message_bus.py
+  _backup_antes_fase10/brain/message_bus.py
+
+GRUPO 50:
+  brain/router.py
+  _backup_antes_fase6/20260812_141923/brain/router.py
+  _backup_antes_fase14/brain/router.py
+  _backup_antes_fase13/brain/router.py
+  _backup_antes_fase5/20260812_141259/brain/router.py
+  _backup_antes_fase7/brain/router.py
+  _backup_antes_fase11/brain/router.py
+  _backup_antes_fase16/brain/router.py
+  _backup_antes_fase8/brain/router.py
+  _backup_fase4/20260811_204635/brain/router.py
+  _backup_antes_fase4/20260811_204755/brain/router.py
+  _backup_antes_fase4/20260811_204742/brain/router.py
+  _backup_antes_fase4/20260811_204733/brain/router.py
+  _backup_antes_fase12/brain/router.py
+  _backup_antes_fase15/brain/router.py
+  _backup_antes_fase10/brain/router.py
+
+GRUPO 51:
+  brain/long_task_manager.py
+  _backup_antes_fase14/brain/long_task_manager.py
+  _backup_antes_fase16/brain/long_task_manager.py
+  _backup_antes_fase15/brain/long_task_manager.py
+
+GRUPO 52:
+  brain/planner.py
+  _backup_antes_fase6/20260812_141923/brain/planner.py
+  _backup_antes_fase14/brain/planner.py
+  _backup_antes_fase13/brain/planner.py
+  _backup_antes_fase5/20260812_141259/brain/planner.py
+  _backup_antes_fase7/brain/planner.py
+  _backup_antes_fase11/brain/planner.py
+  _backup_antes_fase16/brain/planner.py
+  _backup_antes_fase8/brain/planner.py
+  _backup_fase4/20260811_204635/brain/planner.py
+  _backup_antes_fase4/20260811_204755/brain/planner.py
+  _backup_antes_fase4/20260811_204742/brain/planner.py
+  _backup_antes_fase4/20260811_204733/brain/planner.py
+  _backup_antes_fase12/brain/planner.py
+  _backup_antes_fase15/brain/planner.py
+  _backup_antes_fase10/brain/planner.py
+
+GRUPO 53:
+  brain/verifier.py
+  _backup_antes_fase14/brain/verifier.py
+  _backup_antes_fase13/brain/verifier.py
+  _backup_antes_fase11/brain/verifier.py
+  _backup_antes_fase16/brain/verifier.py
+  _backup_antes_fase8/brain/verifier.py
+  _backup_antes_fase12/brain/verifier.py
+  _backup_antes_fase15/brain/verifier.py
+  _backup_antes_fase10/brain/verifier.py
+
+GRUPO 54:
+  brain/intent_detector.py
+  _backup_antes_fase6/20260812_141923/brain/intent_detector.py
+  _backup_antes_fase14/brain/intent_detector.py
+  _backup_antes_fase13/brain/intent_detector.py
+  _backup_antes_fase5/20260812_141259/brain/intent_detector.py
+  _backup_antes_fase7/brain/intent_detector.py
+  _backup_antes_fase11/brain/intent_detector.py
+  _backup_antes_fase16/brain/intent_detector.py
+  _backup_antes_fase8/brain/intent_detector.py
+  _backup_fase4/20260811_204635/brain/intent_detector.py
+  _backup_antes_fase4/20260811_204755/brain/intent_detector.py
+  _backup_antes_fase4/20260811_204742/brain/intent_detector.py
+  _backup_antes_fase4/20260811_204733/brain/intent_detector.py
+  _backup_antes_fase12/brain/intent_detector.py
+  _backup_antes_fase15/brain/intent_detector.py
+  _backup_antes_fase10/brain/intent_detector.py
+
+GRUPO 55:
+  brain/plan_result.py
+  _backup_antes_fase6/20260812_141923/brain/plan_result.py
+  _backup_antes_fase14/brain/plan_result.py
+  _backup_antes_fase13/brain/plan_result.py
+  _backup_antes_fase5/20260812_141259/brain/plan_result.py
+  _backup_antes_fase7/brain/plan_result.py
+  _backup_antes_fase11/brain/plan_result.py
+  _backup_antes_fase16/brain/plan_result.py
+  _backup_antes_fase8/brain/plan_result.py
+  _backup_fase4/20260811_204635/brain/plan_result.py
+  _backup_antes_fase4/20260811_204755/brain/plan_result.py
+  _backup_antes_fase4/20260811_204742/brain/plan_result.py
+  _backup_antes_fase4/20260811_204733/brain/plan_result.py
+  _backup_antes_fase12/brain/plan_result.py
+  _backup_antes_fase15/brain/plan_result.py
+  _backup_antes_fase10/brain/plan_result.py
+
+GRUPO 56:
+  brain/agent_router.py
+  _backup_antes_fase6/20260812_141923/brain/agent_router.py
+  _backup_antes_fase14/brain/agent_router.py
+  _backup_antes_fase13/brain/agent_router.py
+  _backup_antes_fase5/20260812_141259/brain/agent_router.py
+  _backup_antes_fase7/brain/agent_router.py
+  _backup_antes_fase11/brain/agent_router.py
+  _backup_antes_fase16/brain/agent_router.py
+  _backup_antes_fase8/brain/agent_router.py
+  _backup_fase4/20260811_204635/brain/agent_router.py
+  _backup_antes_fase4/20260811_204755/brain/agent_router.py
+  _backup_antes_fase4/20260811_204742/brain/agent_router.py
+  _backup_antes_fase4/20260811_204733/brain/agent_router.py
+  _backup_antes_fase12/brain/agent_router.py
+  _backup_antes_fase15/brain/agent_router.py
+  _backup_antes_fase10/brain/agent_router.py
+
+GRUPO 57:
+  brain/agent.py
+  _backup_antes_fase6/20260812_141923/brain/agent.py
+  _backup_antes_fase14/brain/agent.py
+  _backup_antes_fase13/brain/agent.py
+  _backup_antes_fase5/20260812_141259/brain/agent.py
+  _backup_antes_fase7/brain/agent.py
+  _backup_antes_fase11/brain/agent.py
+  _backup_antes_fase16/brain/agent.py
+  _backup_antes_fase8/brain/agent.py
+  _backup_fase4/20260811_204635/brain/agent.py
+  _backup_antes_fase4/20260811_204755/brain/agent.py
+  _backup_antes_fase4/20260811_204742/brain/agent.py
+  _backup_antes_fase4/20260811_204733/brain/agent.py
+  _backup_antes_fase12/brain/agent.py
+  _backup_antes_fase15/brain/agent.py
+  _backup_antes_fase10/brain/agent.py
+
+GRUPO 58:
+  brain/task_manager.py
+  _backup_antes_fase6/20260812_141923/brain/task_manager.py
+  _backup_antes_fase14/brain/task_manager.py
+  _backup_antes_fase13/brain/task_manager.py
+  _backup_antes_fase5/20260812_141259/brain/task_manager.py
+  _backup_antes_fase7/brain/task_manager.py
+  _backup_antes_fase11/brain/task_manager.py
+  _backup_antes_fase16/brain/task_manager.py
+  _backup_antes_fase8/brain/task_manager.py
+  _backup_fase4/20260811_204635/brain/task_manager.py
+  _backup_antes_fase4/20260811_204755/brain/task_manager.py
+  _backup_antes_fase4/20260811_204742/brain/task_manager.py
+  _backup_antes_fase4/20260811_204733/brain/task_manager.py
+  _backup_antes_fase12/brain/task_manager.py
+  _backup_antes_fase15/brain/task_manager.py
+  _backup_antes_fase10/brain/task_manager.py
+
+GRUPO 59:
+  brain/tool_parser.py
+  _backup_antes_fase6/20260812_141923/brain/tool_parser.py
+  _backup_antes_fase14/brain/tool_parser.py
+  _backup_antes_fase13/brain/tool_parser.py
+  _backup_antes_fase5/20260812_141259/brain/tool_parser.py
+  _backup_antes_fase7/brain/tool_parser.py
+  _backup_antes_fase11/brain/tool_parser.py
+  _backup_antes_fase16/brain/tool_parser.py
+  _backup_antes_fase8/brain/tool_parser.py
+  _backup_fase4/20260811_204635/brain/tool_parser.py
+  _backup_antes_fase4/20260811_204755/brain/tool_parser.py
+  _backup_antes_fase4/20260811_204742/brain/tool_parser.py
+  _backup_antes_fase4/20260811_204733/brain/tool_parser.py
+  _backup_antes_fase12/brain/tool_parser.py
+  _backup_antes_fase15/brain/tool_parser.py
+  _backup_antes_fase10/brain/tool_parser.py
+
+GRUPO 60:
+  brain/agent_manager.py
+  _backup_antes_fase6/20260812_141923/brain/agent_manager.py
+  _backup_antes_fase14/brain/agent_manager.py
+  _backup_antes_fase13/brain/agent_manager.py
+  _backup_antes_fase5/20260812_141259/brain/agent_manager.py
+  _backup_antes_fase7/brain/agent_manager.py
+  _backup_antes_fase11/brain/agent_manager.py
+  _backup_antes_fase16/brain/agent_manager.py
+  _backup_antes_fase8/brain/agent_manager.py
+  _backup_fase4/20260811_204635/brain/agent_manager.py
+  _backup_antes_fase4/20260811_204755/brain/agent_manager.py
+  _backup_antes_fase4/20260811_204742/brain/agent_manager.py
+  _backup_antes_fase4/20260811_204733/brain/agent_manager.py
+  _backup_antes_fase12/brain/agent_manager.py
+  _backup_antes_fase15/brain/agent_manager.py
+  _backup_antes_fase10/brain/agent_manager.py
+
+GRUPO 61:
+  brain/task.py
+  _backup_antes_fase6/20260812_141923/brain/task.py
+  _backup_antes_fase14/brain/task.py
+  _backup_antes_fase13/brain/task.py
+  _backup_antes_fase5/20260812_141259/brain/task.py
+  _backup_antes_fase7/brain/task.py
+  _backup_antes_fase11/brain/task.py
+  _backup_antes_fase16/brain/task.py
+  _backup_antes_fase8/brain/task.py
+  _backup_fase4/20260811_204635/brain/task.py
+  _backup_antes_fase4/20260811_204755/brain/task.py
+  _backup_antes_fase4/20260811_204742/brain/task.py
+  _backup_antes_fase4/20260811_204733/brain/task.py
+  _backup_antes_fase12/brain/task.py
+  _backup_antes_fase15/brain/task.py
+  _backup_antes_fase10/brain/task.py
+
+GRUPO 62:
+  brain/brain.py
+  _backup_antes_fase14/brain/brain.py
+  _backup_antes_fase16/brain/brain.py
+  _backup_antes_fase15/brain/brain.py
+
+GRUPO 63:
+  brain/__init__.py
+  _backup_antes_fase6/20260812_141923/brain/__init__.py
+  _backup_antes_fase14/brain/__init__.py
+  _backup_antes_fase13/brain/__init__.py
+  _backup_antes_fase5/20260812_141259/brain/__init__.py
+  _backup_antes_fase7/brain/__init__.py
+  _backup_antes_fase11/brain/__init__.py
+  _backup_antes_fase16/brain/__init__.py
+  _backup_antes_fase8/brain/__init__.py
+  _backup_fase4/20260811_204635/brain/__init__.py
+  _backup_antes_fase4/20260811_204755/brain/__init__.py
+  _backup_antes_fase4/20260811_204742/brain/__init__.py
+  _backup_antes_fase4/20260811_204733/brain/__init__.py
+  _backup_antes_fase12/brain/__init__.py
+  _backup_antes_fase15/brain/__init__.py
+  _backup_antes_fase10/brain/__init__.py
+
+GRUPO 64:
+  brain/message.py
+  _backup_antes_fase6/20260812_141923/brain/message.py
+  _backup_antes_fase14/brain/message.py
+  _backup_antes_fase13/brain/message.py
+  _backup_antes_fase5/20260812_141259/brain/message.py
+  _backup_antes_fase7/brain/message.py
+  _backup_antes_fase11/brain/message.py
+  _backup_antes_fase16/brain/message.py
+  _backup_antes_fase8/brain/message.py
+  _backup_fase4/20260811_204635/brain/message.py
+  _backup_antes_fase4/20260811_204755/brain/message.py
+  _backup_antes_fase4/20260811_204742/brain/message.py
+  _backup_antes_fase4/20260811_204733/brain/message.py
+  _backup_antes_fase12/brain/message.py
+  _backup_antes_fase15/brain/message.py
+  _backup_antes_fase10/brain/message.py
+
+GRUPO 65:
+  context/context_formatter.py
+  _backup_antes_fase5/20260812_141259/context/context_formatter.py
+  _backup_antes_fase3/20260811_203142/context/context_formatter.py
+  _backup_fase4/20260811_204635/context/context_formatter.py
+  _backup_antes_fase4/20260811_204755/context/context_formatter.py
+  _backup_antes_fase4/20260811_204742/context/context_formatter.py
+  _backup_antes_fase4/20260811_204733/context/context_formatter.py
+
+GRUPO 66:
+  context/context_manager.py
+  _backup_antes_fase5/20260812_141259/context/context_manager.py
+  _backup_fase4/20260811_204635/context/context_manager.py
+  _backup_antes_fase4/20260811_204755/context/context_manager.py
+  _backup_antes_fase4/20260811_204742/context/context_manager.py
+  _backup_antes_fase4/20260811_204733/context/context_manager.py
+
+GRUPO 67:
+  context/context_builder.py
+  _backup_antes_fase5/20260812_141259/context/context_builder.py
+  _backup_antes_fase3/20260811_203142/context/context_builder.py
+  _backup_fase4/20260811_204635/context/context_builder.py
+  _backup_antes_fase4/20260811_204755/context/context_builder.py
+  _backup_antes_fase4/20260811_204742/context/context_builder.py
+  _backup_antes_fase4/20260811_204733/context/context_builder.py
+
+GRUPO 68:
+  context/__init__.py
+  _backup_antes_fase5/20260812_141259/context/__init__.py
+  _backup_antes_fase3/20260811_203142/context/__init__.py
+  _backup_fase4/20260811_204635/context/__init__.py
+  _backup_antes_fase4/20260811_204755/context/__init__.py
+  _backup_antes_fase4/20260811_204742/context/__init__.py
+  _backup_antes_fase4/20260811_204733/context/__init__.py
+
+GRUPO 69:
+  context/context_retriever.py
+  _backup_antes_fase5/20260812_141259/context/context_retriever.py
+  _backup_antes_fase3/20260811_203142/context/context_retriever.py
+  _backup_fase4/20260811_204635/context/context_retriever.py
+  _backup_antes_fase4/20260811_204755/context/context_retriever.py
+  _backup_antes_fase4/20260811_204742/context/context_retriever.py
+  _backup_antes_fase4/20260811_204733/context/context_retriever.py
+
+GRUPO 70:
+  context/context_window.py
+  _backup_antes_fase5/20260812_141259/context/context_window.py
+  _backup_antes_fase3/20260811_203142/context/context_window.py
+  _backup_fase4/20260811_204635/context/context_window.py
+  _backup_antes_fase4/20260811_204755/context/context_window.py
+  _backup_antes_fase4/20260811_204742/context/context_window.py
+  _backup_antes_fase4/20260811_204733/context/context_window.py
+
+GRUPO 71:
+  agents/agent_request.py
+  _backup_antes_fase6/20260812_141923/agents/agent_request.py
+  _backup_antes_fase14/agents/agent_request.py
+  _backup_antes_fase13/agents/agent_request.py
+  _backup_antes_fase7/agents/agent_request.py
+  _backup_antes_fase16/agents/agent_request.py
+  _backup_antes_fase15/agents/agent_request.py
+  _backup_antes_fase10/agents/agent_request.py
+
+GRUPO 72:
+  agents/coder_agent.py
+  _backup_antes_fase6/20260812_141923/agents/coder_agent.py
+  _backup_antes_fase14/agents/coder_agent.py
+  _backup_antes_fase13/agents/coder_agent.py
+  _backup_antes_fase7/agents/coder_agent.py
+  _backup_antes_fase16/agents/coder_agent.py
+  _backup_antes_fase15/agents/coder_agent.py
+  _backup_antes_fase10/agents/coder_agent.py
+
+GRUPO 73:
+  agents/base_agent.py
+  _backup_antes_fase6/20260812_141923/agents/base_agent.py
+  _backup_antes_fase14/agents/base_agent.py
+  _backup_antes_fase13/agents/base_agent.py
+  _backup_antes_fase7/agents/base_agent.py
+  _backup_antes_fase16/agents/base_agent.py
+  _backup_antes_fase15/agents/base_agent.py
+  _backup_antes_fase10/agents/base_agent.py
+
+GRUPO 74:
+  agents/research_agent.py
+  _backup_antes_fase6/20260812_141923/agents/research_agent.py
+  _backup_antes_fase14/agents/research_agent.py
+  _backup_antes_fase13/agents/research_agent.py
+  _backup_antes_fase7/agents/research_agent.py
+  _backup_antes_fase16/agents/research_agent.py
+  _backup_antes_fase15/agents/research_agent.py
+  _backup_antes_fase10/agents/research_agent.py
+
+GRUPO 75:
+  agents/agent_router.py
+  _backup_antes_fase6/20260812_141923/agents/agent_router.py
+  _backup_antes_fase14/agents/agent_router.py
+  _backup_antes_fase13/agents/agent_router.py
+  _backup_antes_fase7/agents/agent_router.py
+  _backup_antes_fase16/agents/agent_router.py
+  _backup_antes_fase15/agents/agent_router.py
+  _backup_antes_fase10/agents/agent_router.py
+
+GRUPO 76:
+  agents/agent_response.py
+  _backup_antes_fase6/20260812_141923/agents/agent_response.py
+  _backup_antes_fase14/agents/agent_response.py
+  _backup_antes_fase13/agents/agent_response.py
+  _backup_antes_fase7/agents/agent_response.py
+  _backup_antes_fase16/agents/agent_response.py
+  _backup_antes_fase15/agents/agent_response.py
+  _backup_antes_fase10/agents/agent_response.py
+
+GRUPO 77:
+  agents/agent_registry.py
+  _backup_antes_fase6/20260812_141923/agents/agent_registry.py
+  _backup_antes_fase14/agents/agent_registry.py
+  _backup_antes_fase13/agents/agent_registry.py
+  _backup_antes_fase7/agents/agent_registry.py
+  _backup_antes_fase16/agents/agent_registry.py
+  _backup_antes_fase15/agents/agent_registry.py
+  _backup_antes_fase10/agents/agent_registry.py
+
+GRUPO 78:
+  agents/coordinator_agent.py
+  _backup_antes_fase6/20260812_141923/agents/coordinator_agent.py
+  _backup_antes_fase14/agents/coordinator_agent.py
+  _backup_antes_fase13/agents/coordinator_agent.py
+  _backup_antes_fase7/agents/coordinator_agent.py
+  _backup_antes_fase16/agents/coordinator_agent.py
+  _backup_antes_fase15/agents/coordinator_agent.py
+  _backup_antes_fase10/agents/coordinator_agent.py
+
+GRUPO 79:
+  agents/__init__.py
+  _backup_antes_fase6/20260812_141923/agents/__init__.py
+  _backup_antes_fase14/agents/__init__.py
+  _backup_antes_fase13/agents/__init__.py
+  _backup_antes_fase7/agents/__init__.py
+  _backup_antes_fase16/agents/__init__.py
+  _backup_antes_fase15/agents/__init__.py
+  _backup_antes_fase10/agents/__init__.py
+
+GRUPO 80:
+  agents/file_agent.py
+  _backup_antes_fase6/20260812_141923/agents/file_agent.py
+  _backup_antes_fase14/agents/file_agent.py
+  _backup_antes_fase13/agents/file_agent.py
+  _backup_antes_fase7/agents/file_agent.py
+  _backup_antes_fase16/agents/file_agent.py
+  _backup_antes_fase15/agents/file_agent.py
+  _backup_antes_fase10/agents/file_agent.py
+
+GRUPO 81:
+  ai/ollama_manager.py
+  _backup_antes_fase14/ai/ollama_manager.py
+  _backup_antes_fase13/ai/ollama_manager.py
+  _backup_antes_fase11/ai/ollama_manager.py
+  _backup_antes_fase16/ai/ollama_manager.py
+  _backup_antes_fase8/ai/ollama_manager.py
+  _backup_antes_fase12/ai/ollama_manager.py
+  _backup_antes_fase15/ai/ollama_manager.py
+  _backup_antes_fase10/ai/ollama_manager.py
+
+GRUPO 82:
+  ai/__init__.py
+  _backup_antes_fase14/ai/__init__.py
+  _backup_antes_fase13/ai/__init__.py
+  _backup_antes_fase11/ai/__init__.py
+  _backup_antes_fase16/ai/__init__.py
+  _backup_antes_fase8/ai/__init__.py
+  _backup_antes_fase12/ai/__init__.py
+  _backup_antes_fase15/ai/__init__.py
+  _backup_antes_fase10/ai/__init__.py
+
+GRUPO 83:
+  ai/model_manager.py
+  _backup_antes_fase14/ai/model_manager.py
+  _backup_antes_fase13/ai/model_manager.py
+  _backup_antes_fase11/ai/model_manager.py
+  _backup_antes_fase16/ai/model_manager.py
+  _backup_antes_fase8/ai/model_manager.py
+  _backup_antes_fase12/ai/model_manager.py
+  _backup_antes_fase15/ai/model_manager.py
+  _backup_antes_fase10/ai/model_manager.py
+
+GRUPO 84:
+  verification/verifier.py
+  _backup_antes_fase14/verification/verifier.py
+  _backup_antes_fase13/verification/verifier.py
+  _backup_antes_fase7/verification/verifier.py
+  _backup_antes_fase16/verification/verifier.py
+  _backup_antes_fase8/verification/verifier.py
+  _backup_antes_fase15/verification/verifier.py
+
+GRUPO 85:
+  verification/__init__.py
+  _backup_antes_fase14/verification/__init__.py
+  _backup_antes_fase13/verification/__init__.py
+  _backup_antes_fase7/verification/__init__.py
+  _backup_antes_fase16/verification/__init__.py
+  _backup_antes_fase8/verification/__init__.py
+  _backup_antes_fase15/verification/__init__.py
+
+GRUPO 86:
+  planning/planner.py
+  _backup_antes_fase14/planning/planner.py
+  _backup_antes_fase13/planning/planner.py
+  _backup_antes_fase7/planning/planner.py
+  _backup_antes_fase16/planning/planner.py
+  _backup_antes_fase15/planning/planner.py
+  _backup_antes_fase10/planning/planner.py
+
+GRUPO 87:
+  planning/plan_executor.py
+  _backup_antes_fase14/planning/plan_executor.py
+  _backup_antes_fase13/planning/plan_executor.py
+  _backup_antes_fase7/planning/plan_executor.py
+  _backup_antes_fase16/planning/plan_executor.py
+  _backup_antes_fase15/planning/plan_executor.py
+  _backup_antes_fase10/planning/plan_executor.py
+
+GRUPO 88:
+  planning/plan.py
+  _backup_antes_fase14/planning/plan.py
+  _backup_antes_fase13/planning/plan.py
+  _backup_antes_fase7/planning/plan.py
+  _backup_antes_fase16/planning/plan.py
+  _backup_antes_fase15/planning/plan.py
+  _backup_antes_fase10/planning/plan.py
+
+GRUPO 89:
+  arus/main.py
+  _backup_antes_fase14/arus/main.py
+  _backup_antes_fase13/arus/main.py
+  _backup_antes_fase16/arus/main.py
+  _backup_fase4/20260811_204635/arus/main.py
+  _backup_antes_fase4/20260811_204755/arus/main.py
+  _backup_antes_fase4/20260811_204742/arus/main.py
+  _backup_antes_fase4/20260811_204733/arus/main.py
+  _backup_antes_fase12/arus/main.py
+  _backup_antes_fase15/arus/main.py
+
+GRUPO 90:
+  database/conversation_repository.py
+  _backup_antes_fase3/database/conversation_repository.py
+  _backup_antes_fase8/database/conversation_repository.py
+  _backup_fase4/20260811_204635/database/conversation_repository.py
+  _backup_antes_fase4/20260811_204755/database/conversation_repository.py
+  _backup_antes_fase4/20260811_204742/database/conversation_repository.py
+  _backup_antes_fase4/20260811_204733/database/conversation_repository.py
+
+GRUPO 91:
+  database/memory_repository.py
+  _backup_antes_fase8/database/memory_repository.py
+
+GRUPO 92:
+  database/history_repository.py
+  _backup_antes_fase3/database/history_repository.py
+  _backup_antes_fase8/database/history_repository.py
+  _backup_fase4/20260811_204635/database/history_repository.py
+  _backup_antes_fase4/20260811_204755/database/history_repository.py
+  _backup_antes_fase4/20260811_204742/database/history_repository.py
+  _backup_antes_fase4/20260811_204733/database/history_repository.py
+
+GRUPO 93:
+  database/database_manager.py
+  _backup_antes_fase3/database/database_manager.py
+  _backup_antes_fase8/database/database_manager.py
+  _backup_fase4/20260811_204635/database/database_manager.py
+  _backup_antes_fase4/20260811_204755/database/database_manager.py
+  _backup_antes_fase4/20260811_204742/database/database_manager.py
+  _backup_antes_fase4/20260811_204733/database/database_manager.py
+
+GRUPO 94:
+  database/repository.py
+  _backup_antes_fase3/database/repository.py
+  _backup_antes_fase8/database/repository.py
+  _backup_fase4/20260811_204635/database/repository.py
+  _backup_antes_fase4/20260811_204755/database/repository.py
+  _backup_antes_fase4/20260811_204742/database/repository.py
+  _backup_antes_fase4/20260811_204733/database/repository.py
+
+GRUPO 95:
+  database/conversation_session_repository.py
+  _backup_antes_fase3/database/conversation_session_repository.py
+  _backup_antes_fase8/database/conversation_session_repository.py
+  _backup_fase4/20260811_204635/database/conversation_session_repository.py
+  _backup_antes_fase4/20260811_204755/database/conversation_session_repository.py
+  _backup_antes_fase4/20260811_204742/database/conversation_session_repository.py
+  _backup_antes_fase4/20260811_204733/database/conversation_session_repository.py
+
+GRUPO 96:
+  database/knowledge_repository.py
+  _backup_antes_fase3/database/knowledge_repository.py
+  _backup_antes_fase8/database/knowledge_repository.py
+  _backup_fase4/20260811_204635/database/knowledge_repository.py
+  _backup_antes_fase4/20260811_204755/database/knowledge_repository.py
+  _backup_antes_fase4/20260811_204742/database/knowledge_repository.py
+  _backup_antes_fase4/20260811_204733/database/knowledge_repository.py
+
+GRUPO 97:
+  database/settings_repository.py
+  _backup_antes_fase3/database/settings_repository.py
+  _backup_antes_fase8/database/settings_repository.py
+  _backup_fase4/20260811_204635/database/settings_repository.py
+  _backup_antes_fase4/20260811_204755/database/settings_repository.py
+  _backup_antes_fase4/20260811_204742/database/settings_repository.py
+  _backup_antes_fase4/20260811_204733/database/settings_repository.py
+
+GRUPO 98:
+  database/database.py
+  _backup_antes_fase3/database/database.py
+  _backup_antes_fase8/database/database.py
+  _backup_fase4/20260811_204635/database/database.py
+  _backup_antes_fase4/20260811_204755/database/database.py
+  _backup_antes_fase4/20260811_204742/database/database.py
+  _backup_antes_fase4/20260811_204733/database/database.py
+
+GRUPO 99:
+  _backup_antes_fase6/20260812_141923/tools/tool_manager.py
+  _backup_antes_fase14/tools/tool_manager.py
+  _backup_antes_fase13/tools/tool_manager.py
+  _backup_antes_fase11/tools/tool_manager.py
+  _backup_antes_fase12/tools/tool_manager.py
+  _backup_antes_fase15/tools/tool_manager.py
+  _backup_antes_fase10/tools/tool_manager.py
+
+GRUPO 100:
+  _backup_antes_fase6/20260812_141923/tools/web_tool.py
+  _backup_antes_fase14/tools/web_tool.py
+  _backup_antes_fase13/tools/web_tool.py
+  _backup_antes_fase11/tools/web_tool.py
+  _backup_antes_fase16/tools/web_tool.py
+  _backup_antes_fase12/tools/web_tool.py
+  _backup_antes_fase15/tools/web_tool.py
+  _backup_antes_fase10/tools/web_tool.py
+
+GRUPO 101:
+  _backup_antes_fase6/20260812_141923/tools/search_tool.py
+  _backup_antes_fase14/tools/search_tool.py
+  _backup_antes_fase13/tools/search_tool.py
+  _backup_antes_fase11/tools/search_tool.py
+  _backup_antes_fase16/tools/search_tool.py
+  _backup_antes_fase12/tools/search_tool.py
+  _backup_antes_fase15/tools/search_tool.py
+  _backup_antes_fase10/tools/search_tool.py
+
+GRUPO 102:
+  _backup_antes_fase6/20260812_141923/tools/shell_tool.py
+  _backup_antes_fase14/tools/shell_tool.py
+  _backup_antes_fase13/tools/shell_tool.py
+  _backup_antes_fase11/tools/shell_tool.py
+  _backup_antes_fase12/tools/shell_tool.py
+  _backup_antes_fase10/tools/shell_tool.py
+
+GRUPO 103:
+  _backup_antes_fase6/20260812_141923/tools/file_tool.py
+  _backup_antes_fase14/tools/file_tool.py
+  _backup_antes_fase13/tools/file_tool.py
+  _backup_antes_fase11/tools/file_tool.py
+  _backup_antes_fase12/tools/file_tool.py
+  _backup_antes_fase10/tools/file_tool.py
+
+GRUPO 104:
+  _backup_antes_fase6/20260812_141923/tools/file_writer_tool.py
+  _backup_antes_fase14/tools/file_writer_tool.py
+  _backup_antes_fase13/tools/file_writer_tool.py
+  _backup_antes_fase11/tools/file_writer_tool.py
+  _backup_antes_fase12/tools/file_writer_tool.py
+  _backup_antes_fase10/tools/file_writer_tool.py
+
+GRUPO 105:
+  _backup_antes_fase6/20260812_141923/tools/replace_text_tool.py
+  _backup_antes_fase14/tools/replace_text_tool.py
+  _backup_antes_fase13/tools/replace_text_tool.py
+  _backup_antes_fase11/tools/replace_text_tool.py
+  _backup_antes_fase12/tools/replace_text_tool.py
+  _backup_antes_fase10/tools/replace_text_tool.py
+
+GRUPO 106:
+  arus/devices/capabilities.py
+  _backup_antes_fase14/arus/devices/capabilities.py
+  _backup_antes_fase13/arus/devices/capabilities.py
+  _backup_antes_fase16/arus/devices/capabilities.py
+  _backup_fase4/20260811_204635/arus/devices/capabilities.py
+  _backup_antes_fase4/20260811_204755/arus/devices/capabilities.py
+  _backup_antes_fase4/20260811_204742/arus/devices/capabilities.py
+  _backup_antes_fase4/20260811_204733/arus/devices/capabilities.py
+  _backup_antes_fase12/arus/devices/capabilities.py
+  _backup_antes_fase15/arus/devices/capabilities.py
+
+GRUPO 107:
+  arus/devices/discovery.py
+  _backup_antes_fase14/arus/devices/discovery.py
+  _backup_antes_fase13/arus/devices/discovery.py
+  _backup_antes_fase16/arus/devices/discovery.py
+  _backup_fase4/20260811_204635/arus/devices/discovery.py
+  _backup_antes_fase4/20260811_204755/arus/devices/discovery.py
+  _backup_antes_fase4/20260811_204742/arus/devices/discovery.py
+  _backup_antes_fase4/20260811_204733/arus/devices/discovery.py
+  _backup_antes_fase12/arus/devices/discovery.py
+  _backup_antes_fase15/arus/devices/discovery.py
+
+GRUPO 108:
+  arus/devices/types.py
+  _backup_antes_fase14/arus/devices/types.py
+  _backup_antes_fase13/arus/devices/types.py
+  _backup_antes_fase16/arus/devices/types.py
+  _backup_fase4/20260811_204635/arus/devices/types.py
+  _backup_antes_fase4/20260811_204755/arus/devices/types.py
+  _backup_antes_fase4/20260811_204742/arus/devices/types.py
+  _backup_antes_fase4/20260811_204733/arus/devices/types.py
+  _backup_antes_fase12/arus/devices/types.py
+  _backup_antes_fase15/arus/devices/types.py
+
+GRUPO 109:
+  arus/devices/device.py
+  _backup_antes_fase14/arus/devices/device.py
+  _backup_antes_fase13/arus/devices/device.py
+  _backup_antes_fase16/arus/devices/device.py
+  _backup_fase4/20260811_204635/arus/devices/device.py
+  _backup_antes_fase4/20260811_204755/arus/devices/device.py
+  _backup_antes_fase4/20260811_204742/arus/devices/device.py
+  _backup_antes_fase4/20260811_204733/arus/devices/device.py
+  _backup_antes_fase12/arus/devices/device.py
+  _backup_antes_fase15/arus/devices/device.py
+
+GRUPO 110:
+  arus/devices/repository.py
+  _backup_antes_fase14/arus/devices/repository.py
+  _backup_antes_fase13/arus/devices/repository.py
+  _backup_antes_fase16/arus/devices/repository.py
+  _backup_fase4/20260811_204635/arus/devices/repository.py
+  _backup_antes_fase4/20260811_204755/arus/devices/repository.py
+  _backup_antes_fase4/20260811_204742/arus/devices/repository.py
+  _backup_antes_fase4/20260811_204733/arus/devices/repository.py
+  _backup_antes_fase12/arus/devices/repository.py
+  _backup_antes_fase15/arus/devices/repository.py
+
+GRUPO 111:
+  arus/devices/manager.py
+  _backup_antes_fase14/arus/devices/manager.py
+  _backup_antes_fase13/arus/devices/manager.py
+  _backup_antes_fase16/arus/devices/manager.py
+  _backup_fase4/20260811_204635/arus/devices/manager.py
+  _backup_antes_fase4/20260811_204755/arus/devices/manager.py
+  _backup_antes_fase4/20260811_204742/arus/devices/manager.py
+  _backup_antes_fase4/20260811_204733/arus/devices/manager.py
+  _backup_antes_fase12/arus/devices/manager.py
+  _backup_antes_fase15/arus/devices/manager.py
+
+GRUPO 112:
+  arus/devices/profile.py
+  _backup_antes_fase14/arus/devices/profile.py
+  _backup_antes_fase13/arus/devices/profile.py
+  _backup_antes_fase16/arus/devices/profile.py
+  _backup_fase4/20260811_204635/arus/devices/profile.py
+  _backup_antes_fase4/20260811_204755/arus/devices/profile.py
+  _backup_antes_fase4/20260811_204742/arus/devices/profile.py
+  _backup_antes_fase4/20260811_204733/arus/devices/profile.py
+  _backup_antes_fase12/arus/devices/profile.py
+  _backup_antes_fase15/arus/devices/profile.py
+
+GRUPO 113:
+  arus/devices/__init__.py
+  _backup_antes_fase14/arus/devices/__init__.py
+  _backup_antes_fase13/arus/devices/__init__.py
+  _backup_antes_fase16/arus/devices/__init__.py
+  _backup_fase4/20260811_204635/arus/devices/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/devices/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/devices/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/devices/__init__.py
+  _backup_antes_fase12/arus/devices/__init__.py
+  _backup_antes_fase15/arus/devices/__init__.py
+
+GRUPO 114:
+  arus/devices/detector.py
+  _backup_antes_fase14/arus/devices/detector.py
+  _backup_antes_fase13/arus/devices/detector.py
+  _backup_antes_fase16/arus/devices/detector.py
+  _backup_fase4/20260811_204635/arus/devices/detector.py
+  _backup_antes_fase4/20260811_204755/arus/devices/detector.py
+  _backup_antes_fase4/20260811_204742/arus/devices/detector.py
+  _backup_antes_fase4/20260811_204733/arus/devices/detector.py
+  _backup_antes_fase12/arus/devices/detector.py
+  _backup_antes_fase15/arus/devices/detector.py
+
+GRUPO 115:
+  arus/voice/text_cleaner.py
+  _backup_antes_fase14/arus/voice/text_cleaner.py
+  _backup_antes_fase13/arus/voice/text_cleaner.py
+  _backup_antes_fase16/arus/voice/text_cleaner.py
+  _backup_antes_fase12/arus/voice/text_cleaner.py
+  _backup_antes_fase15/arus/voice/text_cleaner.py
+
+GRUPO 116:
+  arus/voice/recognizer.py
+  _backup_antes_fase14/arus/voice/recognizer.py
+  _backup_antes_fase13/arus/voice/recognizer.py
+  _backup_antes_fase16/arus/voice/recognizer.py
+  _backup_fase4/20260811_204635/arus/voice/recognizer.py
+  _backup_antes_fase4/20260811_204755/arus/voice/recognizer.py
+  _backup_antes_fase4/20260811_204742/arus/voice/recognizer.py
+  _backup_antes_fase4/20260811_204733/arus/voice/recognizer.py
+  _backup_antes_fase12/arus/voice/recognizer.py
+  _backup_antes_fase15/arus/voice/recognizer.py
+
+GRUPO 117:
+  arus/voice/speaker.py
+  _backup_antes_fase14/arus/voice/speaker.py
+  _backup_antes_fase13/arus/voice/speaker.py
+  _backup_antes_fase16/arus/voice/speaker.py
+  _backup_antes_fase12/arus/voice/speaker.py
+  _backup_antes_fase15/arus/voice/speaker.py
+
+GRUPO 118:
+  arus/voice/tts_provider.py
+  _backup_antes_fase14/arus/voice/tts_provider.py
+  _backup_antes_fase13/arus/voice/tts_provider.py
+  _backup_antes_fase16/arus/voice/tts_provider.py
+  _backup_antes_fase12/arus/voice/tts_provider.py
+  _backup_antes_fase15/arus/voice/tts_provider.py
+
+GRUPO 119:
+  arus/voice/__init__.py
+  _backup_antes_fase14/arus/voice/__init__.py
+  _backup_antes_fase13/arus/voice/__init__.py
+  _backup_antes_fase16/arus/voice/__init__.py
+  _backup_antes_fase12/arus/voice/__init__.py
+  _backup_antes_fase15/arus/voice/__init__.py
+
+GRUPO 120:
+  arus/laboratory/evolution.py
+  _backup_antes_fase14/arus/laboratory/evolution.py
+  _backup_antes_fase13/arus/laboratory/evolution.py
+  _backup_antes_fase16/arus/laboratory/evolution.py
+  _backup_fase4/20260811_204635/arus/laboratory/evolution.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/evolution.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/evolution.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/evolution.py
+  _backup_antes_fase12/arus/laboratory/evolution.py
+  _backup_antes_fase15/arus/laboratory/evolution.py
+
+GRUPO 121:
+  arus/laboratory/controller.py
+  _backup_antes_fase14/arus/laboratory/controller.py
+  _backup_antes_fase13/arus/laboratory/controller.py
+  _backup_antes_fase16/arus/laboratory/controller.py
+  _backup_fase4/20260811_204635/arus/laboratory/controller.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/controller.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/controller.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/controller.py
+  _backup_antes_fase12/arus/laboratory/controller.py
+  _backup_antes_fase15/arus/laboratory/controller.py
+
+GRUPO 122:
+  arus/laboratory/__init__.py
+  _backup_antes_fase14/arus/laboratory/__init__.py
+  _backup_antes_fase13/arus/laboratory/__init__.py
+  _backup_antes_fase16/arus/laboratory/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/__init__.py
+  _backup_antes_fase12/arus/laboratory/__init__.py
+  _backup_antes_fase15/arus/laboratory/__init__.py
+
+GRUPO 123:
+  arus/interface/main_window.py.antes_restauracion_20260814_104022
+  arus/interface/main_window.py.roto_20260814_104130
+  arus/interface/main_window.py.broken_20260814_103853.bak
+  _archivo_backups/20260810_132003/arus__interface__main_window_backup.py
+
+GRUPO 124:
+  arus/interface/states.py
+  _backup_antes_fase14/arus/interface/states.py
+  _backup_antes_fase13/arus/interface/states.py
+  _backup_antes_fase16/arus/interface/states.py
+  _backup_fase4/20260811_204635/arus/interface/states.py
+  _backup_antes_fase4/20260811_204755/arus/interface/states.py
+  _backup_antes_fase4/20260811_204742/arus/interface/states.py
+  _backup_antes_fase4/20260811_204733/arus/interface/states.py
+  _backup_antes_fase12/arus/interface/states.py
+  _backup_antes_fase15/arus/interface/states.py
+
+GRUPO 125:
+  arus/interface/core_visual.py
+  _backup_antes_fase14/arus/interface/core_visual.py
+  _backup_antes_fase13/arus/interface/core_visual.py
+  _backup_antes_fase16/arus/interface/core_visual.py
+  _backup_fase4/20260811_204635/arus/interface/core_visual.py
+  _backup_antes_fase4/20260811_204755/arus/interface/core_visual.py
+  _backup_antes_fase4/20260811_204742/arus/interface/core_visual.py
+  _backup_antes_fase4/20260811_204733/arus/interface/core_visual.py
+  _backup_antes_fase12/arus/interface/core_visual.py
+  _backup_antes_fase15/arus/interface/core_visual.py
+
+GRUPO 126:
+  arus/interface/controller.py
+  _backup_antes_fase14/arus/interface/controller.py
+  _backup_antes_fase13/arus/interface/controller.py
+  _backup_antes_fase16/arus/interface/controller.py
+  ARUS_BACKUP/fase2_integracion_20260810_194225/arus/interface/controller.py
+  _backup_fase4/20260811_204635/arus/interface/controller.py
+  _backup_antes_fase4/20260811_204755/arus/interface/controller.py
+  _backup_antes_fase4/20260811_204742/arus/interface/controller.py
+  _backup_antes_fase4/20260811_204733/arus/interface/controller.py
+  _backup_antes_fase12/arus/interface/controller.py
+  _backup_antes_fase15/arus/interface/controller.py
+
+GRUPO 127:
+  arus/interface/adaptive.py
+  _backup_antes_fase14/arus/interface/adaptive.py
+  _backup_antes_fase13/arus/interface/adaptive.py
+  _backup_antes_fase16/arus/interface/adaptive.py
+  _backup_fase4/20260811_204635/arus/interface/adaptive.py
+  _backup_antes_fase4/20260811_204755/arus/interface/adaptive.py
+  _backup_antes_fase4/20260811_204742/arus/interface/adaptive.py
+  _backup_antes_fase4/20260811_204733/arus/interface/adaptive.py
+  _backup_antes_fase12/arus/interface/adaptive.py
+  _backup_antes_fase15/arus/interface/adaptive.py
+
+GRUPO 128:
+  arus/interface/__init__.py
+  _backup_antes_fase14/arus/interface/__init__.py
+  _backup_antes_fase13/arus/interface/__init__.py
+  _backup_antes_fase16/arus/interface/__init__.py
+  _backup_fase4/20260811_204635/arus/interface/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/interface/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/interface/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/interface/__init__.py
+  _backup_antes_fase12/arus/interface/__init__.py
+  _backup_antes_fase15/arus/interface/__init__.py
+
+GRUPO 129:
+  arus/interface/chat.py
+  _backup_antes_fase14/arus/interface/chat.py
+  _backup_antes_fase13/arus/interface/chat.py
+  _backup_antes_fase16/arus/interface/chat.py
+  _backup_antes_fase4/20260811_204755/arus/interface/chat.py
+  _backup_antes_fase4/20260811_204742/arus/interface/chat.py
+  _backup_antes_fase4/20260811_205026/arus/interface/chat.py
+  _backup_antes_fase4/20260811_204733/arus/interface/chat.py
+  _backup_antes_fase12/arus/interface/chat.py
+  _backup_antes_fase15/arus/interface/chat.py
+
+GRUPO 130:
+  arus/interface/window.py
+  _backup_antes_fase14/arus/interface/window.py
+  _backup_antes_fase13/arus/interface/window.py
+  _backup_antes_fase16/arus/interface/window.py
+  _backup_fase4/20260811_204635/arus/interface/window.py
+  _backup_antes_fase4/20260811_204755/arus/interface/window.py
+  _backup_antes_fase4/20260811_204742/arus/interface/window.py
+  _backup_antes_fase4/20260811_204733/arus/interface/window.py
+  _backup_antes_fase12/arus/interface/window.py
+  _backup_antes_fase15/arus/interface/window.py
+
+GRUPO 131:
+  arus/database/learning_log.json
+  _backup_antes_fase14/arus/database/learning_log.json
+  _backup_antes_fase13/arus/database/learning_log.json
+  _backup_antes_fase16/arus/database/learning_log.json
+  _backup_fase4/20260811_204635/arus/database/learning_log.json
+  _backup_antes_fase4/20260811_204755/arus/database/learning_log.json
+  _backup_antes_fase4/20260811_204742/arus/database/learning_log.json
+  _backup_antes_fase4/20260811_204733/arus/database/learning_log.json
+  _backup_antes_fase12/arus/database/learning_log.json
+  _backup_antes_fase15/arus/database/learning_log.json
+
+GRUPO 132:
+  arus/core/logger.py
+  _backup_antes_fase14/arus/core/logger.py
+  _backup_antes_fase13/arus/core/logger.py
+  _backup_antes_fase16/arus/core/logger.py
+  _backup_fase4/20260811_204635/arus/core/logger.py
+  _backup_antes_fase4/20260811_204755/arus/core/logger.py
+  _backup_antes_fase4/20260811_204742/arus/core/logger.py
+  _backup_antes_fase4/20260811_204733/arus/core/logger.py
+  _backup_antes_fase12/arus/core/logger.py
+  _backup_antes_fase15/arus/core/logger.py
+
+GRUPO 133:
+  arus/core/voice.py
+  _backup_antes_fase14/arus/core/voice.py
+  _backup_antes_fase13/arus/core/voice.py
+  _backup_antes_fase16/arus/core/voice.py
+  _backup_antes_fase12/arus/core/voice.py
+  _backup_antes_fase15/arus/core/voice.py
+
+GRUPO 134:
+  arus/core/paths.py
+  _backup_antes_fase14/arus/core/paths.py
+  _backup_antes_fase13/arus/core/paths.py
+  _backup_antes_fase16/arus/core/paths.py
+  _backup_fase4/20260811_204635/arus/core/paths.py
+  _backup_antes_fase4/20260811_204755/arus/core/paths.py
+  _backup_antes_fase4/20260811_204742/arus/core/paths.py
+  _backup_antes_fase4/20260811_204733/arus/core/paths.py
+  _backup_antes_fase12/arus/core/paths.py
+  _backup_antes_fase15/arus/core/paths.py
+
+GRUPO 135:
+  arus/core/system.py
+  _backup_antes_fase14/arus/core/system.py
+  _backup_antes_fase13/arus/core/system.py
+  _backup_antes_fase16/arus/core/system.py
+  _backup_fase4/20260811_204635/arus/core/system.py
+  _backup_antes_fase4/20260811_204755/arus/core/system.py
+  _backup_antes_fase4/20260811_204742/arus/core/system.py
+  _backup_antes_fase4/20260811_204733/arus/core/system.py
+  _backup_antes_fase12/arus/core/system.py
+  _backup_antes_fase15/arus/core/system.py
+
+GRUPO 136:
+  arus/core/brain.py
+  _backup_antes_fase14/arus/core/brain.py
+  _backup_antes_fase13/arus/core/brain.py
+  _backup_antes_fase16/arus/core/brain.py
+  _backup_fase4/20260811_204635/arus/core/brain.py
+  _backup_antes_fase4/20260811_204755/arus/core/brain.py
+  _backup_antes_fase4/20260811_204742/arus/core/brain.py
+  _backup_antes_fase4/20260811_204733/arus/core/brain.py
+  _backup_antes_fase12/arus/core/brain.py
+  _backup_antes_fase15/arus/core/brain.py
+
+GRUPO 137:
+  arus/core/__init__.py
+  _backup_antes_fase14/arus/core/__init__.py
+  _backup_antes_fase13/arus/core/__init__.py
+  _backup_antes_fase16/arus/core/__init__.py
+  _backup_fase4/20260811_204635/arus/core/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/core/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/core/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/core/__init__.py
+  _backup_antes_fase12/arus/core/__init__.py
+  _backup_antes_fase15/arus/core/__init__.py
+
+GRUPO 138:
+  arus/laboratory/models/configuration.py
+  _backup_antes_fase14/arus/laboratory/models/configuration.py
+  _backup_antes_fase13/arus/laboratory/models/configuration.py
+  _backup_antes_fase16/arus/laboratory/models/configuration.py
+  _backup_fase4/20260811_204635/arus/laboratory/models/configuration.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/models/configuration.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/models/configuration.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/models/configuration.py
+  _backup_antes_fase12/arus/laboratory/models/configuration.py
+  _backup_antes_fase15/arus/laboratory/models/configuration.py
+
+GRUPO 139:
+  arus/laboratory/models/laboratory.py
+  _backup_antes_fase14/arus/laboratory/models/laboratory.py
+  _backup_antes_fase13/arus/laboratory/models/laboratory.py
+  _backup_antes_fase16/arus/laboratory/models/laboratory.py
+  _backup_fase4/20260811_204635/arus/laboratory/models/laboratory.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/models/laboratory.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/models/laboratory.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/models/laboratory.py
+  _backup_antes_fase12/arus/laboratory/models/laboratory.py
+  _backup_antes_fase15/arus/laboratory/models/laboratory.py
+
+GRUPO 140:
+  arus/laboratory/models/status.py
+  _backup_antes_fase14/arus/laboratory/models/status.py
+  _backup_antes_fase13/arus/laboratory/models/status.py
+  _backup_antes_fase16/arus/laboratory/models/status.py
+  _backup_fase4/20260811_204635/arus/laboratory/models/status.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/models/status.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/models/status.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/models/status.py
+  _backup_antes_fase12/arus/laboratory/models/status.py
+  _backup_antes_fase15/arus/laboratory/models/status.py
+
+GRUPO 141:
+  arus/laboratory/models/__init__.py
+  _backup_antes_fase14/arus/laboratory/models/__init__.py
+  _backup_antes_fase13/arus/laboratory/models/__init__.py
+  _backup_antes_fase16/arus/laboratory/models/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/models/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/models/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/models/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/models/__init__.py
+  _backup_antes_fase12/arus/laboratory/models/__init__.py
+  _backup_antes_fase15/arus/laboratory/models/__init__.py
+
+GRUPO 142:
+  arus/laboratory/models/workspace.py
+  _backup_antes_fase14/arus/laboratory/models/workspace.py
+  _backup_antes_fase13/arus/laboratory/models/workspace.py
+  _backup_antes_fase16/arus/laboratory/models/workspace.py
+  _backup_fase4/20260811_204635/arus/laboratory/models/workspace.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/models/workspace.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/models/workspace.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/models/workspace.py
+  _backup_antes_fase12/arus/laboratory/models/workspace.py
+  _backup_antes_fase15/arus/laboratory/models/workspace.py
+
+GRUPO 143:
+  arus/laboratory/managers/laboratory_manager.py
+  _backup_antes_fase14/arus/laboratory/managers/laboratory_manager.py
+  _backup_antes_fase13/arus/laboratory/managers/laboratory_manager.py
+  _backup_antes_fase16/arus/laboratory/managers/laboratory_manager.py
+  _backup_fase4/20260811_204635/arus/laboratory/managers/laboratory_manager.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/managers/laboratory_manager.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/managers/laboratory_manager.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/managers/laboratory_manager.py
+  _backup_antes_fase12/arus/laboratory/managers/laboratory_manager.py
+  _backup_antes_fase15/arus/laboratory/managers/laboratory_manager.py
+
+GRUPO 144:
+  arus/laboratory/managers/experiment_manager.py
+  _backup_antes_fase14/arus/laboratory/managers/experiment_manager.py
+  _backup_antes_fase13/arus/laboratory/managers/experiment_manager.py
+  _backup_antes_fase16/arus/laboratory/managers/experiment_manager.py
+  _backup_fase4/20260811_204635/arus/laboratory/managers/experiment_manager.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/managers/experiment_manager.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/managers/experiment_manager.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/managers/experiment_manager.py
+  _backup_antes_fase12/arus/laboratory/managers/experiment_manager.py
+  _backup_antes_fase15/arus/laboratory/managers/experiment_manager.py
+
+GRUPO 145:
+  arus/laboratory/managers/agent_manager.py
+  _backup_antes_fase14/arus/laboratory/managers/agent_manager.py
+  _backup_antes_fase13/arus/laboratory/managers/agent_manager.py
+  _backup_antes_fase16/arus/laboratory/managers/agent_manager.py
+  _backup_fase4/20260811_204635/arus/laboratory/managers/agent_manager.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/managers/agent_manager.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/managers/agent_manager.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/managers/agent_manager.py
+  _backup_antes_fase12/arus/laboratory/managers/agent_manager.py
+  _backup_antes_fase15/arus/laboratory/managers/agent_manager.py
+
+GRUPO 146:
+  arus/laboratory/managers/__init__.py
+  _backup_antes_fase14/arus/laboratory/managers/__init__.py
+  _backup_antes_fase13/arus/laboratory/managers/__init__.py
+  _backup_antes_fase16/arus/laboratory/managers/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/managers/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/managers/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/managers/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/managers/__init__.py
+  _backup_antes_fase12/arus/laboratory/managers/__init__.py
+  _backup_antes_fase15/arus/laboratory/managers/__init__.py
+
+GRUPO 147:
+  arus/laboratory/managers/runtime_manager.py
+  _backup_antes_fase14/arus/laboratory/managers/runtime_manager.py
+  _backup_antes_fase13/arus/laboratory/managers/runtime_manager.py
+  _backup_antes_fase16/arus/laboratory/managers/runtime_manager.py
+  _backup_fase4/20260811_204635/arus/laboratory/managers/runtime_manager.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/managers/runtime_manager.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/managers/runtime_manager.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/managers/runtime_manager.py
+  _backup_antes_fase12/arus/laboratory/managers/runtime_manager.py
+  _backup_antes_fase15/arus/laboratory/managers/runtime_manager.py
+
+GRUPO 148:
+  arus/laboratory/managers/workspace_manager.py
+  _backup_antes_fase14/arus/laboratory/managers/workspace_manager.py
+  _backup_antes_fase13/arus/laboratory/managers/workspace_manager.py
+  _backup_antes_fase16/arus/laboratory/managers/workspace_manager.py
+  _backup_fase4/20260811_204635/arus/laboratory/managers/workspace_manager.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/managers/workspace_manager.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/managers/workspace_manager.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/managers/workspace_manager.py
+  _backup_antes_fase12/arus/laboratory/managers/workspace_manager.py
+  _backup_antes_fase15/arus/laboratory/managers/workspace_manager.py
+
+GRUPO 149:
+  arus/laboratory/repositories/agent_repository.py
+  _backup_antes_fase14/arus/laboratory/repositories/agent_repository.py
+  _backup_antes_fase13/arus/laboratory/repositories/agent_repository.py
+  _backup_antes_fase16/arus/laboratory/repositories/agent_repository.py
+  _backup_fase4/20260811_204635/arus/laboratory/repositories/agent_repository.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/repositories/agent_repository.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/repositories/agent_repository.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/repositories/agent_repository.py
+  _backup_antes_fase12/arus/laboratory/repositories/agent_repository.py
+  _backup_antes_fase15/arus/laboratory/repositories/agent_repository.py
+
+GRUPO 150:
+  arus/laboratory/repositories/sqlite_repository.py
+  _backup_antes_fase14/arus/laboratory/repositories/sqlite_repository.py
+  _backup_antes_fase13/arus/laboratory/repositories/sqlite_repository.py
+  _backup_antes_fase16/arus/laboratory/repositories/sqlite_repository.py
+  _backup_fase4/20260811_204635/arus/laboratory/repositories/sqlite_repository.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/repositories/sqlite_repository.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/repositories/sqlite_repository.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/repositories/sqlite_repository.py
+  _backup_antes_fase12/arus/laboratory/repositories/sqlite_repository.py
+  _backup_antes_fase15/arus/laboratory/repositories/sqlite_repository.py
+
+GRUPO 151:
+  arus/laboratory/repositories/runtime_repository.py
+  _backup_antes_fase14/arus/laboratory/repositories/runtime_repository.py
+  _backup_antes_fase13/arus/laboratory/repositories/runtime_repository.py
+  _backup_antes_fase16/arus/laboratory/repositories/runtime_repository.py
+  _backup_fase4/20260811_204635/arus/laboratory/repositories/runtime_repository.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/repositories/runtime_repository.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/repositories/runtime_repository.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/repositories/runtime_repository.py
+  _backup_antes_fase12/arus/laboratory/repositories/runtime_repository.py
+  _backup_antes_fase15/arus/laboratory/repositories/runtime_repository.py
+
+GRUPO 152:
+  arus/laboratory/repositories/__init__.py
+  _backup_antes_fase14/arus/laboratory/repositories/__init__.py
+  _backup_antes_fase13/arus/laboratory/repositories/__init__.py
+  _backup_antes_fase16/arus/laboratory/repositories/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/repositories/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/repositories/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/repositories/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/repositories/__init__.py
+  _backup_antes_fase12/arus/laboratory/repositories/__init__.py
+  _backup_antes_fase15/arus/laboratory/repositories/__init__.py
+
+GRUPO 153:
+  arus/laboratory/repositories/experiment_repository.py
+  _backup_antes_fase14/arus/laboratory/repositories/experiment_repository.py
+  _backup_antes_fase13/arus/laboratory/repositories/experiment_repository.py
+  _backup_antes_fase16/arus/laboratory/repositories/experiment_repository.py
+  _backup_fase4/20260811_204635/arus/laboratory/repositories/experiment_repository.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/repositories/experiment_repository.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/repositories/experiment_repository.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/repositories/experiment_repository.py
+  _backup_antes_fase12/arus/laboratory/repositories/experiment_repository.py
+  _backup_antes_fase15/arus/laboratory/repositories/experiment_repository.py
+
+GRUPO 154:
+  arus/laboratory/runtime/runtime.py
+  _backup_antes_fase14/arus/laboratory/runtime/runtime.py
+  _backup_antes_fase13/arus/laboratory/runtime/runtime.py
+  _backup_antes_fase16/arus/laboratory/runtime/runtime.py
+  _backup_fase4/20260811_204635/arus/laboratory/runtime/runtime.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/runtime/runtime.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/runtime/runtime.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/runtime/runtime.py
+  _backup_antes_fase12/arus/laboratory/runtime/runtime.py
+  _backup_antes_fase15/arus/laboratory/runtime/runtime.py
+
+GRUPO 155:
+  arus/laboratory/runtime/state.py
+  _backup_antes_fase14/arus/laboratory/runtime/state.py
+  _backup_antes_fase13/arus/laboratory/runtime/state.py
+  _backup_antes_fase16/arus/laboratory/runtime/state.py
+  _backup_fase4/20260811_204635/arus/laboratory/runtime/state.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/runtime/state.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/runtime/state.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/runtime/state.py
+  _backup_antes_fase12/arus/laboratory/runtime/state.py
+  _backup_antes_fase15/arus/laboratory/runtime/state.py
+
+GRUPO 156:
+  arus/laboratory/runtime/__init__.py
+  _backup_antes_fase14/arus/laboratory/runtime/__init__.py
+  _backup_antes_fase13/arus/laboratory/runtime/__init__.py
+  _backup_antes_fase16/arus/laboratory/runtime/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/runtime/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/runtime/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/runtime/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/runtime/__init__.py
+  _backup_antes_fase12/arus/laboratory/runtime/__init__.py
+  _backup_antes_fase15/arus/laboratory/runtime/__init__.py
+
+GRUPO 157:
+  arus/laboratory/runtime/session.py
+  _backup_antes_fase14/arus/laboratory/runtime/session.py
+  _backup_antes_fase13/arus/laboratory/runtime/session.py
+  _backup_antes_fase16/arus/laboratory/runtime/session.py
+  _backup_fase4/20260811_204635/arus/laboratory/runtime/session.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/runtime/session.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/runtime/session.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/runtime/session.py
+  _backup_antes_fase12/arus/laboratory/runtime/session.py
+  _backup_antes_fase15/arus/laboratory/runtime/session.py
+
+GRUPO 158:
+  arus/laboratory/files/types.py
+  _backup_antes_fase14/arus/laboratory/files/types.py
+  _backup_antes_fase13/arus/laboratory/files/types.py
+  _backup_antes_fase16/arus/laboratory/files/types.py
+  _backup_fase4/20260811_204635/arus/laboratory/files/types.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/files/types.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/files/types.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/files/types.py
+  _backup_antes_fase12/arus/laboratory/files/types.py
+  _backup_antes_fase15/arus/laboratory/files/types.py
+
+GRUPO 159:
+  arus/laboratory/files/repository.py
+  _backup_antes_fase14/arus/laboratory/files/repository.py
+  _backup_antes_fase13/arus/laboratory/files/repository.py
+  _backup_antes_fase16/arus/laboratory/files/repository.py
+  _backup_fase4/20260811_204635/arus/laboratory/files/repository.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/files/repository.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/files/repository.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/files/repository.py
+  _backup_antes_fase12/arus/laboratory/files/repository.py
+  _backup_antes_fase15/arus/laboratory/files/repository.py
+
+GRUPO 160:
+  arus/laboratory/files/manager.py
+  _backup_antes_fase14/arus/laboratory/files/manager.py
+  _backup_antes_fase13/arus/laboratory/files/manager.py
+  _backup_antes_fase16/arus/laboratory/files/manager.py
+  _backup_fase4/20260811_204635/arus/laboratory/files/manager.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/files/manager.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/files/manager.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/files/manager.py
+  _backup_antes_fase12/arus/laboratory/files/manager.py
+  _backup_antes_fase15/arus/laboratory/files/manager.py
+
+GRUPO 161:
+  arus/laboratory/files/__init__.py
+  _backup_antes_fase14/arus/laboratory/files/__init__.py
+  _backup_antes_fase13/arus/laboratory/files/__init__.py
+  _backup_antes_fase16/arus/laboratory/files/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/files/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/files/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/files/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/files/__init__.py
+  _backup_antes_fase12/arus/laboratory/files/__init__.py
+  _backup_antes_fase15/arus/laboratory/files/__init__.py
+
+GRUPO 162:
+  arus/laboratory/files/file.py
+  _backup_antes_fase14/arus/laboratory/files/file.py
+  _backup_antes_fase13/arus/laboratory/files/file.py
+  _backup_antes_fase16/arus/laboratory/files/file.py
+  _backup_fase4/20260811_204635/arus/laboratory/files/file.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/files/file.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/files/file.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/files/file.py
+  _backup_antes_fase12/arus/laboratory/files/file.py
+  _backup_antes_fase15/arus/laboratory/files/file.py
+
+GRUPO 163:
+  arus/laboratory/multimedia/types.py
+  _backup_antes_fase14/arus/laboratory/multimedia/types.py
+  _backup_antes_fase13/arus/laboratory/multimedia/types.py
+  _backup_antes_fase16/arus/laboratory/multimedia/types.py
+  _backup_fase4/20260811_204635/arus/laboratory/multimedia/types.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/types.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/types.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/types.py
+  _backup_antes_fase12/arus/laboratory/multimedia/types.py
+  _backup_antes_fase15/arus/laboratory/multimedia/types.py
+
+GRUPO 164:
+  arus/laboratory/multimedia/media.py
+  _backup_antes_fase14/arus/laboratory/multimedia/media.py
+  _backup_antes_fase13/arus/laboratory/multimedia/media.py
+  _backup_antes_fase16/arus/laboratory/multimedia/media.py
+  _backup_fase4/20260811_204635/arus/laboratory/multimedia/media.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/media.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/media.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/media.py
+  _backup_antes_fase12/arus/laboratory/multimedia/media.py
+  _backup_antes_fase15/arus/laboratory/multimedia/media.py
+
+GRUPO 165:
+  arus/laboratory/multimedia/repository.py
+  _backup_antes_fase14/arus/laboratory/multimedia/repository.py
+  _backup_antes_fase13/arus/laboratory/multimedia/repository.py
+  _backup_antes_fase16/arus/laboratory/multimedia/repository.py
+  _backup_fase4/20260811_204635/arus/laboratory/multimedia/repository.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/repository.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/repository.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/repository.py
+  _backup_antes_fase12/arus/laboratory/multimedia/repository.py
+  _backup_antes_fase15/arus/laboratory/multimedia/repository.py
+
+GRUPO 166:
+  arus/laboratory/multimedia/manager.py
+  _backup_antes_fase14/arus/laboratory/multimedia/manager.py
+  _backup_antes_fase13/arus/laboratory/multimedia/manager.py
+  _backup_antes_fase16/arus/laboratory/multimedia/manager.py
+  _backup_fase4/20260811_204635/arus/laboratory/multimedia/manager.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/manager.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/manager.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/manager.py
+  _backup_antes_fase12/arus/laboratory/multimedia/manager.py
+  _backup_antes_fase15/arus/laboratory/multimedia/manager.py
+
+GRUPO 167:
+  arus/laboratory/multimedia/player.py
+  _backup_antes_fase14/arus/laboratory/multimedia/player.py
+  _backup_antes_fase13/arus/laboratory/multimedia/player.py
+  _backup_antes_fase16/arus/laboratory/multimedia/player.py
+  _backup_fase4/20260811_204635/arus/laboratory/multimedia/player.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/player.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/player.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/player.py
+  _backup_antes_fase12/arus/laboratory/multimedia/player.py
+  _backup_antes_fase15/arus/laboratory/multimedia/player.py
+
+GRUPO 168:
+  arus/laboratory/multimedia/__init__.py
+  _backup_antes_fase14/arus/laboratory/multimedia/__init__.py
+  _backup_antes_fase13/arus/laboratory/multimedia/__init__.py
+  _backup_antes_fase16/arus/laboratory/multimedia/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/multimedia/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/__init__.py
+  _backup_antes_fase12/arus/laboratory/multimedia/__init__.py
+  _backup_antes_fase15/arus/laboratory/multimedia/__init__.py
+
+GRUPO 169:
+  arus/laboratory/experiments/experiment.py
+  _backup_antes_fase14/arus/laboratory/experiments/experiment.py
+  _backup_antes_fase13/arus/laboratory/experiments/experiment.py
+  _backup_antes_fase16/arus/laboratory/experiments/experiment.py
+  _backup_fase4/20260811_204635/arus/laboratory/experiments/experiment.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/experiments/experiment.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/experiments/experiment.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/experiments/experiment.py
+  _backup_antes_fase12/arus/laboratory/experiments/experiment.py
+  _backup_antes_fase15/arus/laboratory/experiments/experiment.py
+
+GRUPO 170:
+  arus/laboratory/experiments/status.py
+  _backup_antes_fase14/arus/laboratory/experiments/status.py
+  _backup_antes_fase13/arus/laboratory/experiments/status.py
+  _backup_antes_fase16/arus/laboratory/experiments/status.py
+  _backup_fase4/20260811_204635/arus/laboratory/experiments/status.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/experiments/status.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/experiments/status.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/experiments/status.py
+  _backup_antes_fase12/arus/laboratory/experiments/status.py
+  _backup_antes_fase15/arus/laboratory/experiments/status.py
+
+GRUPO 171:
+  arus/laboratory/experiments/__init__.py
+  _backup_antes_fase14/arus/laboratory/experiments/__init__.py
+  _backup_antes_fase13/arus/laboratory/experiments/__init__.py
+  _backup_antes_fase16/arus/laboratory/experiments/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/experiments/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/experiments/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/experiments/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/experiments/__init__.py
+  _backup_antes_fase12/arus/laboratory/experiments/__init__.py
+  _backup_antes_fase15/arus/laboratory/experiments/__init__.py
+
+GRUPO 172:
+  arus/laboratory/agents/agent.py
+  _backup_antes_fase14/arus/laboratory/agents/agent.py
+  _backup_antes_fase13/arus/laboratory/agents/agent.py
+  _backup_antes_fase16/arus/laboratory/agents/agent.py
+  _backup_fase4/20260811_204635/arus/laboratory/agents/agent.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/agents/agent.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/agents/agent.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/agents/agent.py
+  _backup_antes_fase12/arus/laboratory/agents/agent.py
+  _backup_antes_fase15/arus/laboratory/agents/agent.py
+
+GRUPO 173:
+  arus/laboratory/agents/status.py
+  _backup_antes_fase14/arus/laboratory/agents/status.py
+  _backup_antes_fase13/arus/laboratory/agents/status.py
+  _backup_antes_fase16/arus/laboratory/agents/status.py
+  _backup_fase4/20260811_204635/arus/laboratory/agents/status.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/agents/status.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/agents/status.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/agents/status.py
+  _backup_antes_fase12/arus/laboratory/agents/status.py
+  _backup_antes_fase15/arus/laboratory/agents/status.py
+
+GRUPO 174:
+  arus/laboratory/agents/__init__.py
+  _backup_antes_fase14/arus/laboratory/agents/__init__.py
+  _backup_antes_fase13/arus/laboratory/agents/__init__.py
+  _backup_antes_fase16/arus/laboratory/agents/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/agents/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/agents/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/agents/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/agents/__init__.py
+  _backup_antes_fase12/arus/laboratory/agents/__init__.py
+  _backup_antes_fase15/arus/laboratory/agents/__init__.py
+
+GRUPO 175:
+  arus/laboratory/exceptions/__init__.py
+  _backup_antes_fase14/arus/laboratory/exceptions/__init__.py
+  _backup_antes_fase13/arus/laboratory/exceptions/__init__.py
+  _backup_antes_fase16/arus/laboratory/exceptions/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/exceptions/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/exceptions/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/exceptions/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/exceptions/__init__.py
+  _backup_antes_fase12/arus/laboratory/exceptions/__init__.py
+  _backup_antes_fase15/arus/laboratory/exceptions/__init__.py
+
+GRUPO 176:
+  arus/laboratory/exceptions/laboratory_exceptions.py
+  _backup_antes_fase14/arus/laboratory/exceptions/laboratory_exceptions.py
+  _backup_antes_fase13/arus/laboratory/exceptions/laboratory_exceptions.py
+  _backup_antes_fase16/arus/laboratory/exceptions/laboratory_exceptions.py
+  _backup_fase4/20260811_204635/arus/laboratory/exceptions/laboratory_exceptions.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/exceptions/laboratory_exceptions.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/exceptions/laboratory_exceptions.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/exceptions/laboratory_exceptions.py
+  _backup_antes_fase12/arus/laboratory/exceptions/laboratory_exceptions.py
+  _backup_antes_fase15/arus/laboratory/exceptions/laboratory_exceptions.py
+
+GRUPO 177:
+  arus/laboratory/interfaces/laboratory_repository.py
+  _backup_antes_fase14/arus/laboratory/interfaces/laboratory_repository.py
+  _backup_antes_fase13/arus/laboratory/interfaces/laboratory_repository.py
+  _backup_antes_fase16/arus/laboratory/interfaces/laboratory_repository.py
+  _backup_fase4/20260811_204635/arus/laboratory/interfaces/laboratory_repository.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/interfaces/laboratory_repository.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/interfaces/laboratory_repository.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/interfaces/laboratory_repository.py
+  _backup_antes_fase12/arus/laboratory/interfaces/laboratory_repository.py
+  _backup_antes_fase15/arus/laboratory/interfaces/laboratory_repository.py
+
+GRUPO 178:
+  arus/laboratory/interfaces/__init__.py
+  _backup_antes_fase14/arus/laboratory/interfaces/__init__.py
+  _backup_antes_fase13/arus/laboratory/interfaces/__init__.py
+  _backup_antes_fase16/arus/laboratory/interfaces/__init__.py
+  _backup_fase4/20260811_204635/arus/laboratory/interfaces/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/laboratory/interfaces/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/laboratory/interfaces/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/laboratory/interfaces/__init__.py
+  _backup_antes_fase12/arus/laboratory/interfaces/__init__.py
+  _backup_antes_fase15/arus/laboratory/interfaces/__init__.py
+
+GRUPO 179:
+  ai/providers/local_provider.py
+  _backup_antes_fase14/ai/providers/local_provider.py
+  _backup_antes_fase13/ai/providers/local_provider.py
+  _backup_antes_fase11/ai/providers/local_provider.py
+  _backup_antes_fase16/ai/providers/local_provider.py
+  _backup_antes_fase8/ai/providers/local_provider.py
+  _backup_antes_fase12/ai/providers/local_provider.py
+  _backup_antes_fase15/ai/providers/local_provider.py
+  _backup_antes_fase10/ai/providers/local_provider.py
+
+GRUPO 180:
+  ai/providers/base_provider.py
+  _backup_antes_fase14/ai/providers/base_provider.py
+  _backup_antes_fase13/ai/providers/base_provider.py
+  _backup_antes_fase11/ai/providers/base_provider.py
+  _backup_antes_fase16/ai/providers/base_provider.py
+  _backup_antes_fase8/ai/providers/base_provider.py
+  _backup_antes_fase12/ai/providers/base_provider.py
+  _backup_antes_fase15/ai/providers/base_provider.py
+  _backup_antes_fase10/ai/providers/base_provider.py
+
+GRUPO 181:
+  _backup_antes_fase14/tools/test_runner_tool.py
+  _backup_antes_fase13/tools/test_runner_tool.py
+  _backup_antes_fase11/tools/test_runner_tool.py
+  _backup_antes_fase12/tools/test_runner_tool.py
+
+GRUPO 182:
+  _backup_antes_fase14/arus/logs/arus.log
+  _backup_antes_fase16/arus/logs/arus.log
+  _backup_antes_fase15/arus/logs/arus.log
+
+GRUPO 183:
+  _backup_antes_fase14/arus/data/arus.db
+  _backup_antes_fase16/arus/data/arus.db
+  _backup_antes_fase15/arus/data/arus.db
+
+GRUPO 184:
+  _backup_antes_fase13/arus/logs/arus.log
+  _backup_antes_fase12/arus/logs/arus.log
+
+GRUPO 185:
+  _backup_antes_fase13/arus/data/arus.db
+  _backup_antes_fase12/arus/data/arus.db
+
+GRUPO 186:
+  _backup_antes_fase5/20260812_141259/brain/brain.py
+  _backup_fase4/20260811_204635/brain/brain.py
+  _backup_antes_fase4/20260811_204755/brain/brain.py
+  _backup_antes_fase4/20260811_204742/brain/brain.py
+  _backup_antes_fase4/20260811_204733/brain/brain.py
+
+GRUPO 187:
+  _backup_antes_fase11/brain/brain.py
+  _backup_antes_fase12/brain/brain.py
+  _backup_antes_fase10/brain/brain.py
+
+GRUPO 188:
+  _backup_antes_fase16/plugins/examples/test_plugin.py
+  plugins/examples/test_plugin.py
+
+GRUPO 189:
+  _backup_antes_fase16/plugins/installed/__init__.py
+  plugins/installed/__init__.py
+
+GRUPO 190:
+  ARUS_BACKUP/fase2_definitiva_20260810_194658/chat.py
+  ARUS_BACKUP/fase2_chat_20260810_194428/chat.py
+  ARUS_BACKUP/fase2_chat_v2_20260810_194538/chat.py
+  ARUS_BACKUP/fase2_integracion_20260810_194225/arus/interface/chat.py
+
+GRUPO 191:
+  _backup_antes_fase3/database/learning.db
+  _backup_fase4/20260811_204635/database/learning.db
+  _backup_antes_fase4/20260811_204755/database/learning.db
+  _backup_antes_fase4/20260811_204742/database/learning.db
+  _backup_antes_fase4/20260811_204733/database/learning.db
+
+GRUPO 192:
+  _backup_antes_fase3/database/test_repository.db
+  _backup_fase4/20260811_204635/database/test_repository.db
+  _backup_antes_fase4/20260811_204755/database/test_repository.db
+  _backup_antes_fase4/20260811_204742/database/test_repository.db
+  _backup_antes_fase4/20260811_204733/database/test_repository.db
+
+GRUPO 193:
+  models/vosk-es/README
+  _backup_antes_fase4/20260811_204755/models/vosk-es/README
+  _backup_antes_fase4/20260811_204742/models/vosk-es/README
+  _backup_antes_fase4/20260811_204733/models/vosk-es/README
+
+GRUPO 194:
+  models/vosk-es/graph/HCLr.fst
+  _backup_antes_fase4/20260811_204755/models/vosk-es/graph/HCLr.fst
+  _backup_antes_fase4/20260811_204742/models/vosk-es/graph/HCLr.fst
+  _backup_antes_fase4/20260811_204733/models/vosk-es/graph/HCLr.fst
+
+GRUPO 195:
+  models/vosk-es/graph/Gr.fst
+  _backup_antes_fase4/20260811_204755/models/vosk-es/graph/Gr.fst
+  _backup_antes_fase4/20260811_204742/models/vosk-es/graph/Gr.fst
+  _backup_antes_fase4/20260811_204733/models/vosk-es/graph/Gr.fst
+
+GRUPO 196:
+  models/vosk-es/graph/disambig_tid.int
+  _backup_antes_fase4/20260811_204755/models/vosk-es/graph/disambig_tid.int
+  _backup_antes_fase4/20260811_204742/models/vosk-es/graph/disambig_tid.int
+  _backup_antes_fase4/20260811_204733/models/vosk-es/graph/disambig_tid.int
+
+GRUPO 197:
+  models/vosk-es/am/final.mdl
+  _backup_antes_fase4/20260811_204755/models/vosk-es/am/final.mdl
+  _backup_antes_fase4/20260811_204742/models/vosk-es/am/final.mdl
+  _backup_antes_fase4/20260811_204733/models/vosk-es/am/final.mdl
+
+GRUPO 198:
+  models/vosk-es/ivector/global_cmvn.stats
+  _backup_antes_fase4/20260811_204755/models/vosk-es/ivector/global_cmvn.stats
+  _backup_antes_fase4/20260811_204742/models/vosk-es/ivector/global_cmvn.stats
+  _backup_antes_fase4/20260811_204733/models/vosk-es/ivector/global_cmvn.stats
+
+GRUPO 199:
+  models/vosk-es/ivector/final.dubm
+  _backup_antes_fase4/20260811_204755/models/vosk-es/ivector/final.dubm
+  _backup_antes_fase4/20260811_204742/models/vosk-es/ivector/final.dubm
+  _backup_antes_fase4/20260811_204733/models/vosk-es/ivector/final.dubm
+
+GRUPO 200:
+  models/vosk-es/ivector/final.mat
+  _backup_antes_fase4/20260811_204755/models/vosk-es/ivector/final.mat
+  _backup_antes_fase4/20260811_204742/models/vosk-es/ivector/final.mat
+  _backup_antes_fase4/20260811_204733/models/vosk-es/ivector/final.mat
+
+GRUPO 201:
+  models/vosk-es/ivector/online_cmvn.conf
+  _backup_antes_fase4/20260811_204755/models/vosk-es/ivector/online_cmvn.conf
+  _backup_antes_fase4/20260811_204742/models/vosk-es/ivector/online_cmvn.conf
+  _backup_antes_fase4/20260811_204733/models/vosk-es/ivector/online_cmvn.conf
+
+GRUPO 202:
+  models/vosk-es/ivector/splice.conf
+  _backup_antes_fase4/20260811_204755/models/vosk-es/ivector/splice.conf
+  _backup_antes_fase4/20260811_204742/models/vosk-es/ivector/splice.conf
+  _backup_antes_fase4/20260811_204733/models/vosk-es/ivector/splice.conf
+
+GRUPO 203:
+  models/vosk-es/ivector/final.ie
+  _backup_antes_fase4/20260811_204755/models/vosk-es/ivector/final.ie
+  _backup_antes_fase4/20260811_204742/models/vosk-es/ivector/final.ie
+  _backup_antes_fase4/20260811_204733/models/vosk-es/ivector/final.ie
+
+GRUPO 204:
+  models/vosk-es/conf/mfcc.conf
+  _backup_antes_fase4/20260811_204755/models/vosk-es/conf/mfcc.conf
+  _backup_antes_fase4/20260811_204742/models/vosk-es/conf/mfcc.conf
+  _backup_antes_fase4/20260811_204733/models/vosk-es/conf/mfcc.conf
+
+GRUPO 205:
+  models/vosk-es/conf/model.conf
+  _backup_antes_fase4/20260811_204755/models/vosk-es/conf/model.conf
+  _backup_antes_fase4/20260811_204742/models/vosk-es/conf/model.conf
+  _backup_antes_fase4/20260811_204733/models/vosk-es/conf/model.conf
+
+GRUPO 206:
+  models/vosk-es/graph/phones/word_boundary.int
+  _backup_antes_fase4/20260811_204755/models/vosk-es/graph/phones/word_boundary.int
+  _backup_antes_fase4/20260811_204742/models/vosk-es/graph/phones/word_boundary.int
+  _backup_antes_fase4/20260811_204733/models/vosk-es/graph/phones/word_boundary.int
+
+GRUPO 207:
+  _backup_fase4/20260811_204635/arus/logs/arus.log
+  _backup_antes_fase4/20260811_204755/arus/logs/arus.log
+  _backup_antes_fase4/20260811_204742/arus/logs/arus.log
+  _backup_antes_fase4/20260811_204733/arus/logs/arus.log
+
+GRUPO 208:
+  _backup_fase4/20260811_204635/arus/voice/speaker.py
+  _backup_antes_fase4/20260811_204755/arus/voice/speaker.py
+  _backup_antes_fase4/20260811_204742/arus/voice/speaker.py
+  _backup_antes_fase4/20260811_204733/arus/voice/speaker.py
+
+GRUPO 209:
+  _backup_fase4/20260811_204635/arus/voice/__init__.py
+  _backup_antes_fase4/20260811_204755/arus/voice/__init__.py
+  _backup_antes_fase4/20260811_204742/arus/voice/__init__.py
+  _backup_antes_fase4/20260811_204733/arus/voice/__init__.py
+
+GRUPO 210:
+  _backup_fase4/20260811_204635/arus/data/arus.db
+  _backup_antes_fase4/20260811_204755/arus/data/arus.db
+  _backup_antes_fase4/20260811_204742/arus/data/arus.db
+  _backup_antes_fase4/20260811_204733/arus/data/arus.db
+
+GRUPO 211:
+  _backup_fase4/20260811_204635/arus/core/voice.py
+  _backup_antes_fase4/20260811_204755/arus/core/voice.py
+  _backup_antes_fase4/20260811_204742/arus/core/voice.py
+  _backup_antes_fase4/20260811_204733/arus/core/voice.py
+
+GRUPO 212:
+  _archivo_backups/20260810_132003/arus__interface__main_window_seguro.py
+  _archivo_backups/20260810_132003/arus__interface__main_window_colores_backup.py
+
+======================================================================
+ESTRUCTURA PYTHON
+======================================================================
+ARUS_BACKUP/fase2_chat_20260810_194428/chat.py
+ARUS_BACKUP/fase2_chat_v2_20260810_194538/chat.py
+ARUS_BACKUP/fase2_definitiva_20260810_194658/chat.py
+ARUS_BACKUP/fase2_integracion_20260810_194225/arus/interface/chat.py
+ARUS_BACKUP/fase2_integracion_20260810_194225/arus/interface/controller.py
+_archivo_backups/20260810_132003/arus__interface__chat_seguro.py
+_archivo_backups/20260810_132003/arus__interface__core_visual_seguro.py
+_archivo_backups/20260810_132003/arus__interface__main_window_antes_limpiar_estilos.py
+_archivo_backups/20260810_132003/arus__interface__main_window_backup.py
+_archivo_backups/20260810_132003/arus__interface__main_window_backup_diseño.py
+_archivo_backups/20260810_132003/arus__interface__main_window_colores_backup.py
+_archivo_backups/20260810_132003/arus__interface__main_window_seguro.py
+_archivo_backups/20260810_132003/main.py
+_archivo_backups/20260810_133611/arus__brain/__init__.py
+_archivo_backups/20260810_133611/arus__brain/core.py
+_archivo_backups/20260810_133611/arus__core__admin_panel.py
+_archivo_backups/20260810_133611/arus__core__agents.py
+_archivo_backups/20260810_133611/arus__core__application.py
+_archivo_backups/20260810_133611/arus__core__automation.py
+_archivo_backups/20260810_133611/arus__core__autonomous_learning.py
+_archivo_backups/20260810_133611/arus__core__bootstrap.py
+_archivo_backups/20260810_133611/arus__core__constants.py
+_archivo_backups/20260810_133611/arus__core__core.py
+_archivo_backups/20260810_133611/arus__core__health.py
+_archivo_backups/20260810_133611/arus__core__logging_config.py
+_archivo_backups/20260810_133611/arus__core__mk1_core.py
+_archivo_backups/20260810_133611/arus__core__repository.py
+_archivo_backups/20260810_133611/arus__core__visual_memory.py
+_archivo_backups/20260810_133611/arus__core_controller.py
+_archivo_backups/20260810_133611/arus__decision/__init__.py
+_archivo_backups/20260810_133611/arus__decision/action.py
+_archivo_backups/20260810_133611/arus__decision/engine.py
+_archivo_backups/20260810_133611/arus__decision/manager.py
+_archivo_backups/20260810_133611/arus__decision/repository.py
+_archivo_backups/20260810_133611/arus__decision/rules.py
+_archivo_backups/20260810_133611/arus__hardware/__init__.py
+_archivo_backups/20260810_133611/arus__hardware/adaptive_engine.py
+_archivo_backups/20260810_133611/arus__hardware/detector.py
+_archivo_backups/20260810_133611/arus__hardware/hardwaremonitor.py
+_archivo_backups/20260810_133611/arus__hardware/monitor.py
+_archivo_backups/20260810_133611/arus__hardware/optimizer.py
+_archivo_backups/20260810_133611/arus__hardware/profile.py
+_archivo_backups/20260810_133611/arus__hardware/types.py
+_archivo_backups/20260810_133611/arus__identity.py
+_archivo_backups/20260810_133611/arus__improvement/__init__.py
+_archivo_backups/20260810_133611/arus__improvement/cycle.py
+_archivo_backups/20260810_133611/arus__improvement/evaluator.py
+_archivo_backups/20260810_133611/arus__improvement/improver.py
+_archivo_backups/20260810_133611/arus__improvement/manager.py
+_archivo_backups/20260810_133611/arus__improvement/metrics.py
+_archivo_backups/20260810_133611/arus__improvement/repository.py
+_archivo_backups/20260810_133611/arus__installation/__init__.py
+_archivo_backups/20260810_133611/arus__installation/install.py
+_archivo_backups/20260810_133611/arus__installation/installer.py
+_archivo_backups/20260810_133611/arus__installation/types.py
+_archivo_backups/20260810_133611/arus__intelligence/__init__.py
+_archivo_backups/20260810_133611/arus__intelligence/decision.py
+_archivo_backups/20260810_133611/arus__intelligence/dialogue.py
+_archivo_backups/20260810_133611/arus__intelligence/knowledge.py
+_archivo_backups/20260810_133611/arus__intelligence/memory.py
+_archivo_backups/20260810_133611/arus__intelligence/reasoning.py
+_archivo_backups/20260810_133611/arus__intelligence/repository.py
+_archivo_backups/20260810_133611/arus__learning/__init__.py
+_archivo_backups/20260810_133611/arus__learning/adaptive.py
+_archivo_backups/20260810_133611/arus__learning/cycle.py
+_archivo_backups/20260810_133611/arus__learning/evaluator.py
+_archivo_backups/20260810_133611/arus__learning/pattern.py
+_archivo_backups/20260810_133611/arus__learning/repository.py
+_archivo_backups/20260810_133611/arus__learning/trainer.py
+_archivo_backups/20260810_133611/arus__memory/__init__.py
+_archivo_backups/20260810_133611/arus__memory/store.py
+_archivo_backups/20260810_133611/arus__network/__init__.py
+_archivo_backups/20260810_133611/arus__network/manager.py
+_archivo_backups/20260810_133611/arus__network/message.py
+_archivo_backups/20260810_133611/arus__network/node.py
+_archivo_backups/20260810_133611/arus__network/repository.py
+_archivo_backups/20260810_133611/arus__network/types.py
+_archivo_backups/20260810_133611/arus__orchestration/__init__.py
+_archivo_backups/20260810_133611/arus__orchestration/orchestrator.py
+_archivo_backups/20260810_133611/arus__orchestration/repository.py
+_archivo_backups/20260810_133611/arus__orchestration/scheduler.py
+_archivo_backups/20260810_133611/arus__orchestration/task.py
+_archivo_backups/20260810_133611/arus__runtime/__init__.py
+_archivo_backups/20260810_133611/arus__runtime/engine.py
+_archivo_backups/20260810_133611/arus__runtime/manager.py
+_archivo_backups/20260810_133611/arus__runtime/repository.py
+_archivo_backups/20260810_133611/arus__security/__init__.py
+_archivo_backups/20260810_133611/arus__security/access.py
+_archivo_backups/20260810_133611/arus__security/audit.py
+_archivo_backups/20260810_133611/arus__security/event.py
+_archivo_backups/20260810_133611/arus__security/identity.py
+_archivo_backups/20260810_133611/arus__security/manager.py
+_archivo_backups/20260810_133611/arus__security/permissions.py
+_archivo_backups/20260810_133611/arus__security/repository.py
+_archivo_backups/20260810_133611/arus__security/types.py
+_archivo_backups/20260810_133611/arus__system/__init__.py
+_archivo_backups/20260810_133611/arus__system/executor.py
+_archivo_backups/20260810_133611/arus__system/manager.py
+_archivo_backups/20260810_133611/arus__system/monitor.py
+_archivo_backups/20260810_133611/arus__system/repository.py
+_archivo_backups/20260810_133611/arus__system/service.py
+_archivo_backups/20260810_133611/brain__brain_backup_fase4.py
+_archivo_backups/20260810_133611/probar_arus.py
+_backup_antes_fase10/agents/__init__.py
+_backup_antes_fase10/agents/agent_registry.py
+_backup_antes_fase10/agents/agent_request.py
+_backup_antes_fase10/agents/agent_response.py
+_backup_antes_fase10/agents/agent_router.py
+_backup_antes_fase10/agents/base_agent.py
+_backup_antes_fase10/agents/coder_agent.py
+_backup_antes_fase10/agents/coordinator_agent.py
+_backup_antes_fase10/agents/file_agent.py
+_backup_antes_fase10/agents/research_agent.py
+_backup_antes_fase10/agents/tool_agent.py
+_backup_antes_fase10/ai/__init__.py
+_backup_antes_fase10/ai/model_manager.py
+_backup_antes_fase10/ai/ollama_manager.py
+_backup_antes_fase10/ai/providers/base_provider.py
+_backup_antes_fase10/ai/providers/local_provider.py
+_backup_antes_fase10/brain/__init__.py
+_backup_antes_fase10/brain/agent.py
+_backup_antes_fase10/brain/agent_manager.py
+_backup_antes_fase10/brain/agent_router.py
+_backup_antes_fase10/brain/brain.py
+_backup_antes_fase10/brain/intent_detector.py
+_backup_antes_fase10/brain/message.py
+_backup_antes_fase10/brain/message_bus.py
+_backup_antes_fase10/brain/plan_result.py
+_backup_antes_fase10/brain/planner.py
+_backup_antes_fase10/brain/router.py
+_backup_antes_fase10/brain/task.py
+_backup_antes_fase10/brain/task_manager.py
+_backup_antes_fase10/brain/tool_parser.py
+_backup_antes_fase10/brain/verifier.py
+_backup_antes_fase10/planning/plan.py
+_backup_antes_fase10/planning/plan_executor.py
+_backup_antes_fase10/planning/planner.py
+_backup_antes_fase10/tools/__init__.py
+_backup_antes_fase10/tools/base_tool.py
+_backup_antes_fase10/tools/calculator_tool.py
+_backup_antes_fase10/tools/file_tool.py
+_backup_antes_fase10/tools/file_writer_tool.py
+_backup_antes_fase10/tools/find_file_tool.py
+_backup_antes_fase10/tools/git_tool.py
+_backup_antes_fase10/tools/github_clone_tool.py
+_backup_antes_fase10/tools/github_search_tool.py
+_backup_antes_fase10/tools/list_directory_tool.py
+_backup_antes_fase10/tools/project_tool.py
+_backup_antes_fase10/tools/python_check_tool.py
+_backup_antes_fase10/tools/replace_text_tool.py
+_backup_antes_fase10/tools/search_tool.py
+_backup_antes_fase10/tools/shell_tool.py
+_backup_antes_fase10/tools/time_tool.py
+_backup_antes_fase10/tools/tool_manager.py
+_backup_antes_fase10/tools/web_reader_tool.py
+_backup_antes_fase10/tools/web_tool.py
+_backup_antes_fase11/ai/__init__.py
+_backup_antes_fase11/ai/model_manager.py
+_backup_antes_fase11/ai/ollama_manager.py
+_backup_antes_fase11/ai/providers/base_provider.py
+_backup_antes_fase11/ai/providers/local_provider.py
+_backup_antes_fase11/brain/__init__.py
+_backup_antes_fase11/brain/agent.py
+_backup_antes_fase11/brain/agent_manager.py
+_backup_antes_fase11/brain/agent_router.py
+_backup_antes_fase11/brain/brain.py
+_backup_antes_fase11/brain/intent_detector.py
+_backup_antes_fase11/brain/message.py
+_backup_antes_fase11/brain/message_bus.py
+_backup_antes_fase11/brain/plan_result.py
+_backup_antes_fase11/brain/planner.py
+_backup_antes_fase11/brain/router.py
+_backup_antes_fase11/brain/task.py
+_backup_antes_fase11/brain/task_manager.py
+_backup_antes_fase11/brain/tool_parser.py
+_backup_antes_fase11/brain/verifier.py
+_backup_antes_fase11/tools/__init__.py
+_backup_antes_fase11/tools/base_tool.py
+_backup_antes_fase11/tools/calculator_tool.py
+_backup_antes_fase11/tools/file_tool.py
+_backup_antes_fase11/tools/file_writer_tool.py
+_backup_antes_fase11/tools/find_file_tool.py
+_backup_antes_fase11/tools/git_tool.py
+_backup_antes_fase11/tools/github_clone_tool.py
+_backup_antes_fase11/tools/github_search_tool.py
+_backup_antes_fase11/tools/list_directory_tool.py
+_backup_antes_fase11/tools/project_tool.py
+_backup_antes_fase11/tools/python_check_tool.py
+_backup_antes_fase11/tools/replace_text_tool.py
+_backup_antes_fase11/tools/search_tool.py
+_backup_antes_fase11/tools/shell_tool.py
+_backup_antes_fase11/tools/test_runner_tool.py
+_backup_antes_fase11/tools/time_tool.py
+_backup_antes_fase11/tools/tool_manager.py
+_backup_antes_fase11/tools/web_reader_tool.py
+_backup_antes_fase11/tools/web_tool.py
+_backup_antes_fase12/ai/__init__.py
+_backup_antes_fase12/ai/model_manager.py
+_backup_antes_fase12/ai/ollama_manager.py
+_backup_antes_fase12/ai/providers/base_provider.py
+_backup_antes_fase12/ai/providers/local_provider.py
+_backup_antes_fase12/arus/__init__.py
+_backup_antes_fase12/arus/core/__init__.py
+_backup_antes_fase12/arus/core/brain.py
+_backup_antes_fase12/arus/core/logger.py
+_backup_antes_fase12/arus/core/paths.py
+_backup_antes_fase12/arus/core/system.py
+_backup_antes_fase12/arus/core/voice.py
+_backup_antes_fase12/arus/devices/__init__.py
+_backup_antes_fase12/arus/devices/capabilities.py
+_backup_antes_fase12/arus/devices/detector.py
+_backup_antes_fase12/arus/devices/device.py
+_backup_antes_fase12/arus/devices/discovery.py
+_backup_antes_fase12/arus/devices/manager.py
+_backup_antes_fase12/arus/devices/profile.py
+_backup_antes_fase12/arus/devices/repository.py
+_backup_antes_fase12/arus/devices/types.py
+_backup_antes_fase12/arus/interface/__init__.py
+_backup_antes_fase12/arus/interface/adaptive.py
+_backup_antes_fase12/arus/interface/chat.py
+_backup_antes_fase12/arus/interface/controller.py
+_backup_antes_fase12/arus/interface/core_visual.py
+_backup_antes_fase12/arus/interface/main_window.py
+_backup_antes_fase12/arus/interface/states.py
+_backup_antes_fase12/arus/interface/window.py
+_backup_antes_fase12/arus/laboratory/__init__.py
+_backup_antes_fase12/arus/laboratory/agents/__init__.py
+_backup_antes_fase12/arus/laboratory/agents/agent.py
+_backup_antes_fase12/arus/laboratory/agents/status.py
+_backup_antes_fase12/arus/laboratory/controller.py
+_backup_antes_fase12/arus/laboratory/evolution.py
+_backup_antes_fase12/arus/laboratory/exceptions/__init__.py
+_backup_antes_fase12/arus/laboratory/exceptions/laboratory_exceptions.py
+_backup_antes_fase12/arus/laboratory/experiments/__init__.py
+_backup_antes_fase12/arus/laboratory/experiments/experiment.py
+_backup_antes_fase12/arus/laboratory/experiments/status.py
+_backup_antes_fase12/arus/laboratory/files/__init__.py
+_backup_antes_fase12/arus/laboratory/files/file.py
+_backup_antes_fase12/arus/laboratory/files/manager.py
+_backup_antes_fase12/arus/laboratory/files/repository.py
+_backup_antes_fase12/arus/laboratory/files/types.py
+_backup_antes_fase12/arus/laboratory/interfaces/__init__.py
+_backup_antes_fase12/arus/laboratory/interfaces/laboratory_repository.py
+_backup_antes_fase12/arus/laboratory/managers/__init__.py
+_backup_antes_fase12/arus/laboratory/managers/agent_manager.py
+_backup_antes_fase12/arus/laboratory/managers/experiment_manager.py
+_backup_antes_fase12/arus/laboratory/managers/laboratory_manager.py
+_backup_antes_fase12/arus/laboratory/managers/runtime_manager.py
+_backup_antes_fase12/arus/laboratory/managers/workspace_manager.py
+_backup_antes_fase12/arus/laboratory/models/__init__.py
+_backup_antes_fase12/arus/laboratory/models/configuration.py
+_backup_antes_fase12/arus/laboratory/models/laboratory.py
+_backup_antes_fase12/arus/laboratory/models/status.py
+_backup_antes_fase12/arus/laboratory/models/workspace.py
+_backup_antes_fase12/arus/laboratory/multimedia/__init__.py
+_backup_antes_fase12/arus/laboratory/multimedia/manager.py
+_backup_antes_fase12/arus/laboratory/multimedia/media.py
+_backup_antes_fase12/arus/laboratory/multimedia/player.py
+_backup_antes_fase12/arus/laboratory/multimedia/repository.py
+_backup_antes_fase12/arus/laboratory/multimedia/types.py
+_backup_antes_fase12/arus/laboratory/repositories/__init__.py
+_backup_antes_fase12/arus/laboratory/repositories/agent_repository.py
+_backup_antes_fase12/arus/laboratory/repositories/experiment_repository.py
+_backup_antes_fase12/arus/laboratory/repositories/runtime_repository.py
+_backup_antes_fase12/arus/laboratory/repositories/sqlite_repository.py
+_backup_antes_fase12/arus/laboratory/runtime/__init__.py
+_backup_antes_fase12/arus/laboratory/runtime/runtime.py
+_backup_antes_fase12/arus/laboratory/runtime/session.py
+_backup_antes_fase12/arus/laboratory/runtime/state.py
+_backup_antes_fase12/arus/main.py
+_backup_antes_fase12/arus/voice/__init__.py
+_backup_antes_fase12/arus/voice/recognizer.py
+_backup_antes_fase12/arus/voice/speaker.py
+_backup_antes_fase12/arus/voice/text_cleaner.py
+_backup_antes_fase12/arus/voice/tts_provider.py
+_backup_antes_fase12/brain/__init__.py
+_backup_antes_fase12/brain/agent.py
+_backup_antes_fase12/brain/agent_manager.py
+_backup_antes_fase12/brain/agent_router.py
+_backup_antes_fase12/brain/brain.py
+_backup_antes_fase12/brain/intent_detector.py
+_backup_antes_fase12/brain/message.py
+_backup_antes_fase12/brain/message_bus.py
+_backup_antes_fase12/brain/plan_result.py
+_backup_antes_fase12/brain/planner.py
+_backup_antes_fase12/brain/router.py
+_backup_antes_fase12/brain/task.py
+_backup_antes_fase12/brain/task_manager.py
+_backup_antes_fase12/brain/tool_parser.py
+_backup_antes_fase12/brain/verifier.py
+_backup_antes_fase12/tools/__init__.py
+_backup_antes_fase12/tools/base_tool.py
+_backup_antes_fase12/tools/calculator_tool.py
+_backup_antes_fase12/tools/file_tool.py
+_backup_antes_fase12/tools/file_writer_tool.py
+_backup_antes_fase12/tools/find_file_tool.py
+_backup_antes_fase12/tools/git_tool.py
+_backup_antes_fase12/tools/github_clone_tool.py
+_backup_antes_fase12/tools/github_search_tool.py
+_backup_antes_fase12/tools/list_directory_tool.py
+_backup_antes_fase12/tools/project_tool.py
+_backup_antes_fase12/tools/python_check_tool.py
+_backup_antes_fase12/tools/replace_text_tool.py
+_backup_antes_fase12/tools/search_tool.py
+_backup_antes_fase12/tools/shell_tool.py
+_backup_antes_fase12/tools/test_runner_tool.py
+_backup_antes_fase12/tools/time_tool.py
+_backup_antes_fase12/tools/tool_manager.py
+_backup_antes_fase12/tools/web_reader_tool.py
+_backup_antes_fase12/tools/web_tool.py
+_backup_antes_fase13/agents/__init__.py
+_backup_antes_fase13/agents/agent_registry.py
+_backup_antes_fase13/agents/agent_request.py
+_backup_antes_fase13/agents/agent_response.py
+_backup_antes_fase13/agents/agent_router.py
+_backup_antes_fase13/agents/base_agent.py
+_backup_antes_fase13/agents/coder_agent.py
+_backup_antes_fase13/agents/coordinator_agent.py
+_backup_antes_fase13/agents/file_agent.py
+_backup_antes_fase13/agents/research_agent.py
+_backup_antes_fase13/agents/tool_agent.py
+_backup_antes_fase13/ai/__init__.py
+_backup_antes_fase13/ai/model_manager.py
+_backup_antes_fase13/ai/ollama_manager.py
+_backup_antes_fase13/ai/providers/base_provider.py
+_backup_antes_fase13/ai/providers/local_provider.py
+_backup_antes_fase13/arus/__init__.py
+_backup_antes_fase13/arus/core/__init__.py
+_backup_antes_fase13/arus/core/brain.py
+_backup_antes_fase13/arus/core/logger.py
+_backup_antes_fase13/arus/core/paths.py
+_backup_antes_fase13/arus/core/system.py
+_backup_antes_fase13/arus/core/voice.py
+_backup_antes_fase13/arus/devices/__init__.py
+_backup_antes_fase13/arus/devices/capabilities.py
+_backup_antes_fase13/arus/devices/detector.py
+_backup_antes_fase13/arus/devices/device.py
+_backup_antes_fase13/arus/devices/discovery.py
+_backup_antes_fase13/arus/devices/manager.py
+_backup_antes_fase13/arus/devices/profile.py
+_backup_antes_fase13/arus/devices/repository.py
+_backup_antes_fase13/arus/devices/types.py
+_backup_antes_fase13/arus/interface/__init__.py
+_backup_antes_fase13/arus/interface/adaptive.py
+_backup_antes_fase13/arus/interface/chat.py
+_backup_antes_fase13/arus/interface/controller.py
+_backup_antes_fase13/arus/interface/core_visual.py
+_backup_antes_fase13/arus/interface/main_window.py
+_backup_antes_fase13/arus/interface/states.py
+_backup_antes_fase13/arus/interface/window.py
+_backup_antes_fase13/arus/laboratory/__init__.py
+_backup_antes_fase13/arus/laboratory/agents/__init__.py
+_backup_antes_fase13/arus/laboratory/agents/agent.py
+_backup_antes_fase13/arus/laboratory/agents/status.py
+_backup_antes_fase13/arus/laboratory/controller.py
+_backup_antes_fase13/arus/laboratory/evolution.py
+_backup_antes_fase13/arus/laboratory/exceptions/__init__.py
+_backup_antes_fase13/arus/laboratory/exceptions/laboratory_exceptions.py
+_backup_antes_fase13/arus/laboratory/experiments/__init__.py
+_backup_antes_fase13/arus/laboratory/experiments/experiment.py
+_backup_antes_fase13/arus/laboratory/experiments/status.py
+_backup_antes_fase13/arus/laboratory/files/__init__.py
+_backup_antes_fase13/arus/laboratory/files/file.py
+_backup_antes_fase13/arus/laboratory/files/manager.py
+_backup_antes_fase13/arus/laboratory/files/repository.py
+_backup_antes_fase13/arus/laboratory/files/types.py
+_backup_antes_fase13/arus/laboratory/interfaces/__init__.py
+_backup_antes_fase13/arus/laboratory/interfaces/laboratory_repository.py
+_backup_antes_fase13/arus/laboratory/managers/__init__.py
+_backup_antes_fase13/arus/laboratory/managers/agent_manager.py
+_backup_antes_fase13/arus/laboratory/managers/experiment_manager.py
+_backup_antes_fase13/arus/laboratory/managers/laboratory_manager.py
+_backup_antes_fase13/arus/laboratory/managers/runtime_manager.py
+_backup_antes_fase13/arus/laboratory/managers/workspace_manager.py
+_backup_antes_fase13/arus/laboratory/models/__init__.py
+_backup_antes_fase13/arus/laboratory/models/configuration.py
+_backup_antes_fase13/arus/laboratory/models/laboratory.py
+_backup_antes_fase13/arus/laboratory/models/status.py
+_backup_antes_fase13/arus/laboratory/models/workspace.py
+_backup_antes_fase13/arus/laboratory/multimedia/__init__.py
+_backup_antes_fase13/arus/laboratory/multimedia/manager.py
+_backup_antes_fase13/arus/laboratory/multimedia/media.py
+_backup_antes_fase13/arus/laboratory/multimedia/player.py
+_backup_antes_fase13/arus/laboratory/multimedia/repository.py
+_backup_antes_fase13/arus/laboratory/multimedia/types.py
+_backup_antes_fase13/arus/laboratory/repositories/__init__.py
+_backup_antes_fase13/arus/laboratory/repositories/agent_repository.py
+_backup_antes_fase13/arus/laboratory/repositories/experiment_repository.py
+_backup_antes_fase13/arus/laboratory/repositories/runtime_repository.py
+_backup_antes_fase13/arus/laboratory/repositories/sqlite_repository.py
+_backup_antes_fase13/arus/laboratory/runtime/__init__.py
+_backup_antes_fase13/arus/laboratory/runtime/runtime.py
+_backup_antes_fase13/arus/laboratory/runtime/session.py
+_backup_antes_fase13/arus/laboratory/runtime/state.py
+_backup_antes_fase13/arus/main.py
+_backup_antes_fase13/arus/voice/__init__.py
+_backup_antes_fase13/arus/voice/recognizer.py
+_backup_antes_fase13/arus/voice/speaker.py
+_backup_antes_fase13/arus/voice/text_cleaner.py
+_backup_antes_fase13/arus/voice/tts_provider.py
+_backup_antes_fase13/brain/__init__.py
+_backup_antes_fase13/brain/agent.py
+_backup_antes_fase13/brain/agent_manager.py
+_backup_antes_fase13/brain/agent_router.py
+_backup_antes_fase13/brain/brain.py
+_backup_antes_fase13/brain/intent_detector.py
+_backup_antes_fase13/brain/message.py
+_backup_antes_fase13/brain/message_bus.py
+_backup_antes_fase13/brain/plan_result.py
+_backup_antes_fase13/brain/planner.py
+_backup_antes_fase13/brain/router.py
+_backup_antes_fase13/brain/task.py
+_backup_antes_fase13/brain/task_manager.py
+_backup_antes_fase13/brain/tool_parser.py
+_backup_antes_fase13/brain/verifier.py
+_backup_antes_fase13/memory/__init__.py
+_backup_antes_fase13/memory/long_memory.py
+_backup_antes_fase13/memory/memory_manager.py
+_backup_antes_fase13/memory/persistent_memory.py
+_backup_antes_fase13/memory/semantic_memory.py
+_backup_antes_fase13/memory/task_memory.py
+_backup_antes_fase13/memory/user_preferences.py
+_backup_antes_fase13/memory/working_memory.py
+_backup_antes_fase13/planning/plan.py
+_backup_antes_fase13/planning/plan_executor.py
+_backup_antes_fase13/planning/planner.py
+_backup_antes_fase13/tools/__init__.py
+_backup_antes_fase13/tools/base_tool.py
+_backup_antes_fase13/tools/calculator_tool.py
+_backup_antes_fase13/tools/file_tool.py
+_backup_antes_fase13/tools/file_writer_tool.py
+_backup_antes_fase13/tools/find_file_tool.py
+_backup_antes_fase13/tools/git_tool.py
+_backup_antes_fase13/tools/github_clone_tool.py
+_backup_antes_fase13/tools/github_search_tool.py
+_backup_antes_fase13/tools/list_directory_tool.py
+_backup_antes_fase13/tools/project_tool.py
+_backup_antes_fase13/tools/python_check_tool.py
+_backup_antes_fase13/tools/replace_text_tool.py
+_backup_antes_fase13/tools/screenshot_tool.py
+_backup_antes_fase13/tools/search_tool.py
+_backup_antes_fase13/tools/shell_tool.py
+_backup_antes_fase13/tools/test_runner_tool.py
+_backup_antes_fase13/tools/time_tool.py
+_backup_antes_fase13/tools/tool_manager.py
+_backup_antes_fase13/tools/web_reader_tool.py
+_backup_antes_fase13/tools/web_tool.py
+_backup_antes_fase13/verification/__init__.py
+_backup_antes_fase13/verification/verifier.py
+_backup_antes_fase14/agents/__init__.py
+_backup_antes_fase14/agents/agent_registry.py
+_backup_antes_fase14/agents/agent_request.py
+_backup_antes_fase14/agents/agent_response.py
+_backup_antes_fase14/agents/agent_router.py
+_backup_antes_fase14/agents/base_agent.py
+_backup_antes_fase14/agents/coder_agent.py
+_backup_antes_fase14/agents/coordinator_agent.py
+_backup_antes_fase14/agents/file_agent.py
+_backup_antes_fase14/agents/research_agent.py
+_backup_antes_fase14/agents/tool_agent.py
+_backup_antes_fase14/ai/__init__.py
+_backup_antes_fase14/ai/model_manager.py
+_backup_antes_fase14/ai/ollama_manager.py
+_backup_antes_fase14/ai/providers/base_provider.py
+_backup_antes_fase14/ai/providers/local_provider.py
+_backup_antes_fase14/arus/__init__.py
+_backup_antes_fase14/arus/core/__init__.py
+_backup_antes_fase14/arus/core/brain.py
+_backup_antes_fase14/arus/core/logger.py
+_backup_antes_fase14/arus/core/paths.py
+_backup_antes_fase14/arus/core/system.py
+_backup_antes_fase14/arus/core/voice.py
+_backup_antes_fase14/arus/devices/__init__.py
+_backup_antes_fase14/arus/devices/capabilities.py
+_backup_antes_fase14/arus/devices/detector.py
+_backup_antes_fase14/arus/devices/device.py
+_backup_antes_fase14/arus/devices/discovery.py
+_backup_antes_fase14/arus/devices/manager.py
+_backup_antes_fase14/arus/devices/profile.py
+_backup_antes_fase14/arus/devices/repository.py
+_backup_antes_fase14/arus/devices/types.py
+_backup_antes_fase14/arus/interface/__init__.py
+_backup_antes_fase14/arus/interface/adaptive.py
+_backup_antes_fase14/arus/interface/chat.py
+_backup_antes_fase14/arus/interface/controller.py
+_backup_antes_fase14/arus/interface/core_visual.py
+_backup_antes_fase14/arus/interface/e.py
+_backup_antes_fase14/arus/interface/main_window.py
+_backup_antes_fase14/arus/interface/states.py
+_backup_antes_fase14/arus/interface/window.py
+_backup_antes_fase14/arus/laboratory/__init__.py
+_backup_antes_fase14/arus/laboratory/agents/__init__.py
+_backup_antes_fase14/arus/laboratory/agents/agent.py
+_backup_antes_fase14/arus/laboratory/agents/status.py
+_backup_antes_fase14/arus/laboratory/controller.py
+_backup_antes_fase14/arus/laboratory/evolution.py
+_backup_antes_fase14/arus/laboratory/exceptions/__init__.py
+_backup_antes_fase14/arus/laboratory/exceptions/laboratory_exceptions.py
+_backup_antes_fase14/arus/laboratory/experiments/__init__.py
+_backup_antes_fase14/arus/laboratory/experiments/experiment.py
+_backup_antes_fase14/arus/laboratory/experiments/status.py
+_backup_antes_fase14/arus/laboratory/files/__init__.py
+_backup_antes_fase14/arus/laboratory/files/file.py
+_backup_antes_fase14/arus/laboratory/files/manager.py
+_backup_antes_fase14/arus/laboratory/files/repository.py
+_backup_antes_fase14/arus/laboratory/files/types.py
+_backup_antes_fase14/arus/laboratory/interfaces/__init__.py
+_backup_antes_fase14/arus/laboratory/interfaces/laboratory_repository.py
+_backup_antes_fase14/arus/laboratory/managers/__init__.py
+_backup_antes_fase14/arus/laboratory/managers/agent_manager.py
+_backup_antes_fase14/arus/laboratory/managers/experiment_manager.py
+_backup_antes_fase14/arus/laboratory/managers/laboratory_manager.py
+_backup_antes_fase14/arus/laboratory/managers/runtime_manager.py
+_backup_antes_fase14/arus/laboratory/managers/workspace_manager.py
+_backup_antes_fase14/arus/laboratory/models/__init__.py
+_backup_antes_fase14/arus/laboratory/models/configuration.py
+_backup_antes_fase14/arus/laboratory/models/laboratory.py
+_backup_antes_fase14/arus/laboratory/models/status.py
+_backup_antes_fase14/arus/laboratory/models/workspace.py
+_backup_antes_fase14/arus/laboratory/multimedia/__init__.py
+_backup_antes_fase14/arus/laboratory/multimedia/manager.py
+_backup_antes_fase14/arus/laboratory/multimedia/media.py
+_backup_antes_fase14/arus/laboratory/multimedia/player.py
+_backup_antes_fase14/arus/laboratory/multimedia/repository.py
+_backup_antes_fase14/arus/laboratory/multimedia/types.py
+_backup_antes_fase14/arus/laboratory/repositories/__init__.py
+_backup_antes_fase14/arus/laboratory/repositories/agent_repository.py
+_backup_antes_fase14/arus/laboratory/repositories/experiment_repository.py
+_backup_antes_fase14/arus/laboratory/repositories/runtime_repository.py
+_backup_antes_fase14/arus/laboratory/repositories/sqlite_repository.py
+_backup_antes_fase14/arus/laboratory/runtime/__init__.py
+_backup_antes_fase14/arus/laboratory/runtime/runtime.py
+_backup_antes_fase14/arus/laboratory/runtime/session.py
+_backup_antes_fase14/arus/laboratory/runtime/state.py
+_backup_antes_fase14/arus/main.py
+_backup_antes_fase14/arus/voice/__init__.py
+_backup_antes_fase14/arus/voice/recognizer.py
+_backup_antes_fase14/arus/voice/speaker.py
+_backup_antes_fase14/arus/voice/text_cleaner.py
+_backup_antes_fase14/arus/voice/tts_provider.py
+_backup_antes_fase14/brain/__init__.py
+_backup_antes_fase14/brain/agent.py
+_backup_antes_fase14/brain/agent_manager.py
+_backup_antes_fase14/brain/agent_router.py
+_backup_antes_fase14/brain/brain.py
+_backup_antes_fase14/brain/intent_detector.py
+_backup_antes_fase14/brain/long_task_manager.py
+_backup_antes_fase14/brain/message.py
+_backup_antes_fase14/brain/message_bus.py
+_backup_antes_fase14/brain/plan_result.py
+_backup_antes_fase14/brain/planner.py
+_backup_antes_fase14/brain/router.py
+_backup_antes_fase14/brain/task.py
+_backup_antes_fase14/brain/task_manager.py
+_backup_antes_fase14/brain/tool_parser.py
+_backup_antes_fase14/brain/verifier.py
+_backup_antes_fase14/memory/__init__.py
+_backup_antes_fase14/memory/long_memory.py
+_backup_antes_fase14/memory/memory_manager.py
+_backup_antes_fase14/memory/persistent_memory.py
+_backup_antes_fase14/memory/semantic_memory.py
+_backup_antes_fase14/memory/task_memory.py
+_backup_antes_fase14/memory/user_preferences.py
+_backup_antes_fase14/memory/working_memory.py
+_backup_antes_fase14/planning/plan.py
+_backup_antes_fase14/planning/plan_executor.py
+_backup_antes_fase14/planning/planner.py
+_backup_antes_fase14/tools/__init__.py
+_backup_antes_fase14/tools/base_tool.py
+_backup_antes_fase14/tools/calculator_tool.py
+_backup_antes_fase14/tools/file_tool.py
+_backup_antes_fase14/tools/file_writer_tool.py
+_backup_antes_fase14/tools/find_file_tool.py
+_backup_antes_fase14/tools/git_tool.py
+_backup_antes_fase14/tools/github_clone_tool.py
+_backup_antes_fase14/tools/github_search_tool.py
+_backup_antes_fase14/tools/list_directory_tool.py
+_backup_antes_fase14/tools/project_tool.py
+_backup_antes_fase14/tools/python_check_tool.py
+_backup_antes_fase14/tools/replace_text_tool.py
+_backup_antes_fase14/tools/screenshot_tool.py
+_backup_antes_fase14/tools/search_tool.py
+_backup_antes_fase14/tools/shell_tool.py
+_backup_antes_fase14/tools/test_runner_tool.py
+_backup_antes_fase14/tools/time_tool.py
+_backup_antes_fase14/tools/tool_manager.py
+_backup_antes_fase14/tools/web_reader_tool.py
+_backup_antes_fase14/tools/web_tool.py
+_backup_antes_fase14/verification/__init__.py
+_backup_antes_fase14/verification/verifier.py
+_backup_antes_fase15/agents/__init__.py
+_backup_antes_fase15/agents/agent_registry.py
+_backup_antes_fase15/agents/agent_request.py
+_backup_antes_fase15/agents/agent_response.py
+_backup_antes_fase15/agents/agent_router.py
+_backup_antes_fase15/agents/base_agent.py
+_backup_antes_fase15/agents/coder_agent.py
+_backup_antes_fase15/agents/coordinator_agent.py
+_backup_antes_fase15/agents/file_agent.py
+_backup_antes_fase15/agents/research_agent.py
+_backup_antes_fase15/agents/tool_agent.py
+_backup_antes_fase15/ai/__init__.py
+_backup_antes_fase15/ai/model_manager.py
+_backup_antes_fase15/ai/ollama_manager.py
+_backup_antes_fase15/ai/providers/base_provider.py
+_backup_antes_fase15/ai/providers/local_provider.py
+_backup_antes_fase15/arus/__init__.py
+_backup_antes_fase15/arus/core/__init__.py
+_backup_antes_fase15/arus/core/brain.py
+_backup_antes_fase15/arus/core/logger.py
+_backup_antes_fase15/arus/core/paths.py
+_backup_antes_fase15/arus/core/system.py
+_backup_antes_fase15/arus/core/voice.py
+_backup_antes_fase15/arus/devices/__init__.py
+_backup_antes_fase15/arus/devices/capabilities.py
+_backup_antes_fase15/arus/devices/detector.py
+_backup_antes_fase15/arus/devices/device.py
+_backup_antes_fase15/arus/devices/discovery.py
+_backup_antes_fase15/arus/devices/manager.py
+_backup_antes_fase15/arus/devices/profile.py
+_backup_antes_fase15/arus/devices/repository.py
+_backup_antes_fase15/arus/devices/types.py
+_backup_antes_fase15/arus/interface/__init__.py
+_backup_antes_fase15/arus/interface/adaptive.py
+_backup_antes_fase15/arus/interface/chat.py
+_backup_antes_fase15/arus/interface/controller.py
+_backup_antes_fase15/arus/interface/core_visual.py
+_backup_antes_fase15/arus/interface/e.py
+_backup_antes_fase15/arus/interface/main_window.py
+_backup_antes_fase15/arus/interface/states.py
+_backup_antes_fase15/arus/interface/window.py
+_backup_antes_fase15/arus/laboratory/__init__.py
+_backup_antes_fase15/arus/laboratory/agents/__init__.py
+_backup_antes_fase15/arus/laboratory/agents/agent.py
+_backup_antes_fase15/arus/laboratory/agents/status.py
+_backup_antes_fase15/arus/laboratory/controller.py
+_backup_antes_fase15/arus/laboratory/evolution.py
+_backup_antes_fase15/arus/laboratory/exceptions/__init__.py
+_backup_antes_fase15/arus/laboratory/exceptions/laboratory_exceptions.py
+_backup_antes_fase15/arus/laboratory/experiments/__init__.py
+_backup_antes_fase15/arus/laboratory/experiments/experiment.py
+_backup_antes_fase15/arus/laboratory/experiments/status.py
+_backup_antes_fase15/arus/laboratory/files/__init__.py
+_backup_antes_fase15/arus/laboratory/files/file.py
+_backup_antes_fase15/arus/laboratory/files/manager.py
+_backup_antes_fase15/arus/laboratory/files/repository.py
+_backup_antes_fase15/arus/laboratory/files/types.py
+_backup_antes_fase15/arus/laboratory/interfaces/__init__.py
+_backup_antes_fase15/arus/laboratory/interfaces/laboratory_repository.py
+_backup_antes_fase15/arus/laboratory/managers/__init__.py
+_backup_antes_fase15/arus/laboratory/managers/agent_manager.py
+_backup_antes_fase15/arus/laboratory/managers/experiment_manager.py
+_backup_antes_fase15/arus/laboratory/managers/laboratory_manager.py
+_backup_antes_fase15/arus/laboratory/managers/runtime_manager.py
+_backup_antes_fase15/arus/laboratory/managers/workspace_manager.py
+_backup_antes_fase15/arus/laboratory/models/__init__.py
+_backup_antes_fase15/arus/laboratory/models/configuration.py
+_backup_antes_fase15/arus/laboratory/models/laboratory.py
+_backup_antes_fase15/arus/laboratory/models/status.py
+_backup_antes_fase15/arus/laboratory/models/workspace.py
+_backup_antes_fase15/arus/laboratory/multimedia/__init__.py
+_backup_antes_fase15/arus/laboratory/multimedia/manager.py
+_backup_antes_fase15/arus/laboratory/multimedia/media.py
+_backup_antes_fase15/arus/laboratory/multimedia/player.py
+_backup_antes_fase15/arus/laboratory/multimedia/repository.py
+_backup_antes_fase15/arus/laboratory/multimedia/types.py
+_backup_antes_fase15/arus/laboratory/repositories/__init__.py
+_backup_antes_fase15/arus/laboratory/repositories/agent_repository.py
+_backup_antes_fase15/arus/laboratory/repositories/experiment_repository.py
+_backup_antes_fase15/arus/laboratory/repositories/runtime_repository.py
+_backup_antes_fase15/arus/laboratory/repositories/sqlite_repository.py
+_backup_antes_fase15/arus/laboratory/runtime/__init__.py
+_backup_antes_fase15/arus/laboratory/runtime/runtime.py
+_backup_antes_fase15/arus/laboratory/runtime/session.py
+_backup_antes_fase15/arus/laboratory/runtime/state.py
+_backup_antes_fase15/arus/main.py
+_backup_antes_fase15/arus/voice/__init__.py
+_backup_antes_fase15/arus/voice/recognizer.py
+_backup_antes_fase15/arus/voice/speaker.py
+_backup_antes_fase15/arus/voice/text_cleaner.py
+_backup_antes_fase15/arus/voice/tts_provider.py
+_backup_antes_fase15/brain/__init__.py
+_backup_antes_fase15/brain/agent.py
+_backup_antes_fase15/brain/agent_manager.py
+_backup_antes_fase15/brain/agent_router.py
+_backup_antes_fase15/brain/brain.py
+_backup_antes_fase15/brain/intent_detector.py
+_backup_antes_fase15/brain/long_task_manager.py
+_backup_antes_fase15/brain/message.py
+_backup_antes_fase15/brain/message_bus.py
+_backup_antes_fase15/brain/plan_result.py
+_backup_antes_fase15/brain/planner.py
+_backup_antes_fase15/brain/router.py
+_backup_antes_fase15/brain/task.py
+_backup_antes_fase15/brain/task_manager.py
+_backup_antes_fase15/brain/tool_parser.py
+_backup_antes_fase15/brain/verifier.py
+_backup_antes_fase15/memory/__init__.py
+_backup_antes_fase15/memory/long_memory.py
+_backup_antes_fase15/memory/memory_manager.py
+_backup_antes_fase15/memory/persistent_memory.py
+_backup_antes_fase15/memory/semantic_memory.py
+_backup_antes_fase15/memory/task_memory.py
+_backup_antes_fase15/memory/user_preferences.py
+_backup_antes_fase15/memory/working_memory.py
+_backup_antes_fase15/planning/plan.py
+_backup_antes_fase15/planning/plan_executor.py
+_backup_antes_fase15/planning/planner.py
+_backup_antes_fase15/security/__init__.py
+_backup_antes_fase15/security/audit_logger.py
+_backup_antes_fase15/security/json_validator.py
+_backup_antes_fase15/security/path_guard.py
+_backup_antes_fase15/security/permission_manager.py
+_backup_antes_fase15/security/rate_limiter.py
+_backup_antes_fase15/security/sandbox.py
+_backup_antes_fase15/security/shell_guard.py
+_backup_antes_fase15/tools/__init__.py
+_backup_antes_fase15/tools/base_tool.py
+_backup_antes_fase15/tools/calculator_tool.py
+_backup_antes_fase15/tools/file_tool.py
+_backup_antes_fase15/tools/file_writer_tool.py
+_backup_antes_fase15/tools/find_file_tool.py
+_backup_antes_fase15/tools/git_tool.py
+_backup_antes_fase15/tools/github_clone_tool.py
+_backup_antes_fase15/tools/github_search_tool.py
+_backup_antes_fase15/tools/list_directory_tool.py
+_backup_antes_fase15/tools/project_tool.py
+_backup_antes_fase15/tools/python_check_tool.py
+_backup_antes_fase15/tools/replace_text_tool.py
+_backup_antes_fase15/tools/screenshot_tool.py
+_backup_antes_fase15/tools/search_tool.py
+_backup_antes_fase15/tools/shell_tool.py
+_backup_antes_fase15/tools/test_runner_tool.py
+_backup_antes_fase15/tools/time_tool.py
+_backup_antes_fase15/tools/tool_manager.py
+_backup_antes_fase15/tools/web_reader_tool.py
+_backup_antes_fase15/tools/web_tool.py
+_backup_antes_fase15/verification/__init__.py
+_backup_antes_fase15/verification/verifier.py
+_backup_antes_fase16/agents/__init__.py
+_backup_antes_fase16/agents/agent_registry.py
+_backup_antes_fase16/agents/agent_request.py
+_backup_antes_fase16/agents/agent_response.py
+_backup_antes_fase16/agents/agent_router.py
+_backup_antes_fase16/agents/base_agent.py
+_backup_antes_fase16/agents/coder_agent.py
+_backup_antes_fase16/agents/coordinator_agent.py
+_backup_antes_fase16/agents/file_agent.py
+_backup_antes_fase16/agents/research_agent.py
+_backup_antes_fase16/agents/tool_agent.py
+_backup_antes_fase16/ai/__init__.py
+_backup_antes_fase16/ai/model_manager.py
+_backup_antes_fase16/ai/ollama_manager.py
+_backup_antes_fase16/ai/providers/base_provider.py
+_backup_antes_fase16/ai/providers/local_provider.py
+_backup_antes_fase16/arus/__init__.py
+_backup_antes_fase16/arus/core/__init__.py
+_backup_antes_fase16/arus/core/brain.py
+_backup_antes_fase16/arus/core/logger.py
+_backup_antes_fase16/arus/core/paths.py
+_backup_antes_fase16/arus/core/system.py
+_backup_antes_fase16/arus/core/voice.py
+_backup_antes_fase16/arus/devices/__init__.py
+_backup_antes_fase16/arus/devices/capabilities.py
+_backup_antes_fase16/arus/devices/detector.py
+_backup_antes_fase16/arus/devices/device.py
+_backup_antes_fase16/arus/devices/discovery.py
+_backup_antes_fase16/arus/devices/manager.py
+_backup_antes_fase16/arus/devices/profile.py
+_backup_antes_fase16/arus/devices/repository.py
+_backup_antes_fase16/arus/devices/types.py
+_backup_antes_fase16/arus/interface/__init__.py
+_backup_antes_fase16/arus/interface/adaptive.py
+_backup_antes_fase16/arus/interface/chat.py
+_backup_antes_fase16/arus/interface/controller.py
+_backup_antes_fase16/arus/interface/core_visual.py
+_backup_antes_fase16/arus/interface/e.py
+_backup_antes_fase16/arus/interface/main_window.py
+_backup_antes_fase16/arus/interface/states.py
+_backup_antes_fase16/arus/interface/window.py
+_backup_antes_fase16/arus/laboratory/__init__.py
+_backup_antes_fase16/arus/laboratory/agents/__init__.py
+_backup_antes_fase16/arus/laboratory/agents/agent.py
+_backup_antes_fase16/arus/laboratory/agents/status.py
+_backup_antes_fase16/arus/laboratory/controller.py
+_backup_antes_fase16/arus/laboratory/evolution.py
+_backup_antes_fase16/arus/laboratory/exceptions/__init__.py
+_backup_antes_fase16/arus/laboratory/exceptions/laboratory_exceptions.py
+_backup_antes_fase16/arus/laboratory/experiments/__init__.py
+_backup_antes_fase16/arus/laboratory/experiments/experiment.py
+_backup_antes_fase16/arus/laboratory/experiments/status.py
+_backup_antes_fase16/arus/laboratory/files/__init__.py
+_backup_antes_fase16/arus/laboratory/files/file.py
+_backup_antes_fase16/arus/laboratory/files/manager.py
+_backup_antes_fase16/arus/laboratory/files/repository.py
+_backup_antes_fase16/arus/laboratory/files/types.py
+_backup_antes_fase16/arus/laboratory/interfaces/__init__.py
+_backup_antes_fase16/arus/laboratory/interfaces/laboratory_repository.py
+_backup_antes_fase16/arus/laboratory/managers/__init__.py
+_backup_antes_fase16/arus/laboratory/managers/agent_manager.py
+_backup_antes_fase16/arus/laboratory/managers/experiment_manager.py
+_backup_antes_fase16/arus/laboratory/managers/laboratory_manager.py
+_backup_antes_fase16/arus/laboratory/managers/runtime_manager.py
+_backup_antes_fase16/arus/laboratory/managers/workspace_manager.py
+_backup_antes_fase16/arus/laboratory/models/__init__.py
+_backup_antes_fase16/arus/laboratory/models/configuration.py
+_backup_antes_fase16/arus/laboratory/models/laboratory.py
+_backup_antes_fase16/arus/laboratory/models/status.py
+_backup_antes_fase16/arus/laboratory/models/workspace.py
+_backup_antes_fase16/arus/laboratory/multimedia/__init__.py
+_backup_antes_fase16/arus/laboratory/multimedia/manager.py
+_backup_antes_fase16/arus/laboratory/multimedia/media.py
+_backup_antes_fase16/arus/laboratory/multimedia/player.py
+_backup_antes_fase16/arus/laboratory/multimedia/repository.py
+_backup_antes_fase16/arus/laboratory/multimedia/types.py
+_backup_antes_fase16/arus/laboratory/repositories/__init__.py
+_backup_antes_fase16/arus/laboratory/repositories/agent_repository.py
+_backup_antes_fase16/arus/laboratory/repositories/experiment_repository.py
+_backup_antes_fase16/arus/laboratory/repositories/runtime_repository.py
+_backup_antes_fase16/arus/laboratory/repositories/sqlite_repository.py
+_backup_antes_fase16/arus/laboratory/runtime/__init__.py
+_backup_antes_fase16/arus/laboratory/runtime/runtime.py
+_backup_antes_fase16/arus/laboratory/runtime/session.py
+_backup_antes_fase16/arus/laboratory/runtime/state.py
+_backup_antes_fase16/arus/main.py
+_backup_antes_fase16/arus/voice/__init__.py
+_backup_antes_fase16/arus/voice/recognizer.py
+_backup_antes_fase16/arus/voice/speaker.py
+_backup_antes_fase16/arus/voice/text_cleaner.py
+_backup_antes_fase16/arus/voice/tts_provider.py
+_backup_antes_fase16/brain/__init__.py
+_backup_antes_fase16/brain/agent.py
+_backup_antes_fase16/brain/agent_manager.py
+_backup_antes_fase16/brain/agent_router.py
+_backup_antes_fase16/brain/brain.py
+_backup_antes_fase16/brain/intent_detector.py
+_backup_antes_fase16/brain/long_task_manager.py
+_backup_antes_fase16/brain/message.py
+_backup_antes_fase16/brain/message_bus.py
+_backup_antes_fase16/brain/plan_result.py
+_backup_antes_fase16/brain/planner.py
+_backup_antes_fase16/brain/router.py
+_backup_antes_fase16/brain/task.py
+_backup_antes_fase16/brain/task_manager.py
+_backup_antes_fase16/brain/tool_parser.py
+_backup_antes_fase16/brain/verifier.py
+_backup_antes_fase16/memory/__init__.py
+_backup_antes_fase16/memory/long_memory.py
+_backup_antes_fase16/memory/memory_manager.py
+_backup_antes_fase16/memory/persistent_memory.py
+_backup_antes_fase16/memory/semantic_memory.py
+_backup_antes_fase16/memory/task_memory.py
+_backup_antes_fase16/memory/user_preferences.py
+_backup_antes_fase16/memory/working_memory.py
+_backup_antes_fase16/planning/plan.py
+_backup_antes_fase16/planning/plan_executor.py
+_backup_antes_fase16/planning/planner.py
+_backup_antes_fase16/plugins/__init__.py
+_backup_antes_fase16/plugins/examples/test_plugin.py
+_backup_antes_fase16/plugins/installed/__init__.py
+_backup_antes_fase16/plugins/plugin.py
+_backup_antes_fase16/plugins/plugin_manager.py
+_backup_antes_fase16/plugins/plugin_registry.py
+_backup_antes_fase16/security/__init__.py
+_backup_antes_fase16/security/audit_logger.py
+_backup_antes_fase16/security/json_validator.py
+_backup_antes_fase16/security/path_guard.py
+_backup_antes_fase16/security/permission_manager.py
+_backup_antes_fase16/security/rate_limiter.py
+_backup_antes_fase16/security/sandbox.py
+_backup_antes_fase16/security/shell_guard.py
+_backup_antes_fase16/tools/__init__.py
+_backup_antes_fase16/tools/base_tool.py
+_backup_antes_fase16/tools/calculator_tool.py
+_backup_antes_fase16/tools/file_tool.py
+_backup_antes_fase16/tools/file_writer_tool.py
+_backup_antes_fase16/tools/find_file_tool.py
+_backup_antes_fase16/tools/git_tool.py
+_backup_antes_fase16/tools/github_clone_tool.py
+_backup_antes_fase16/tools/github_search_tool.py
+_backup_antes_fase16/tools/list_directory_tool.py
+_backup_antes_fase16/tools/project_tool.py
+_backup_antes_fase16/tools/python_check_tool.py
+_backup_antes_fase16/tools/replace_text_tool.py
+_backup_antes_fase16/tools/screenshot_tool.py
+_backup_antes_fase16/tools/search_tool.py
+_backup_antes_fase16/tools/shell_tool.py
+_backup_antes_fase16/tools/test_runner_tool.py
+_backup_antes_fase16/tools/time_tool.py
+_backup_antes_fase16/tools/tool_manager.py
+_backup_antes_fase16/tools/web_reader_tool.py
+_backup_antes_fase16/tools/web_tool.py
+_backup_antes_fase16/verification/__init__.py
+_backup_antes_fase16/verification/verifier.py
+_backup_antes_fase3/20260811_203142/context/__init__.py
+_backup_antes_fase3/20260811_203142/context/context_builder.py
+_backup_antes_fase3/20260811_203142/context/context_formatter.py
+_backup_antes_fase3/20260811_203142/context/context_manager.py
+_backup_antes_fase3/20260811_203142/context/context_retriever.py
+_backup_antes_fase3/20260811_203142/context/context_window.py
+_backup_antes_fase3/conversations/__init__.py
+_backup_antes_fase3/conversations/conversation_manager.py
+_backup_antes_fase3/database/conversation_repository.py
+_backup_antes_fase3/database/conversation_session_repository.py
+_backup_antes_fase3/database/database.py
+_backup_antes_fase3/database/database_manager.py
+_backup_antes_fase3/database/history_repository.py
+_backup_antes_fase3/database/knowledge_repository.py
+_backup_antes_fase3/database/repository.py
+_backup_antes_fase3/database/settings_repository.py
+_backup_antes_fase4/20260811_204733/arus/__init__.py
+_backup_antes_fase4/20260811_204733/arus/core/__init__.py
+_backup_antes_fase4/20260811_204733/arus/core/brain.py
+_backup_antes_fase4/20260811_204733/arus/core/logger.py
+_backup_antes_fase4/20260811_204733/arus/core/paths.py
+_backup_antes_fase4/20260811_204733/arus/core/system.py
+_backup_antes_fase4/20260811_204733/arus/core/voice.py
+_backup_antes_fase4/20260811_204733/arus/devices/__init__.py
+_backup_antes_fase4/20260811_204733/arus/devices/capabilities.py
+_backup_antes_fase4/20260811_204733/arus/devices/detector.py
+_backup_antes_fase4/20260811_204733/arus/devices/device.py
+_backup_antes_fase4/20260811_204733/arus/devices/discovery.py
+_backup_antes_fase4/20260811_204733/arus/devices/manager.py
+_backup_antes_fase4/20260811_204733/arus/devices/profile.py
+_backup_antes_fase4/20260811_204733/arus/devices/repository.py
+_backup_antes_fase4/20260811_204733/arus/devices/types.py
+_backup_antes_fase4/20260811_204733/arus/interface/__init__.py
+_backup_antes_fase4/20260811_204733/arus/interface/adaptive.py
+_backup_antes_fase4/20260811_204733/arus/interface/chat.py
+_backup_antes_fase4/20260811_204733/arus/interface/controller.py
+_backup_antes_fase4/20260811_204733/arus/interface/core_visual.py
+_backup_antes_fase4/20260811_204733/arus/interface/main_window.py
+_backup_antes_fase4/20260811_204733/arus/interface/states.py
+_backup_antes_fase4/20260811_204733/arus/interface/window.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/agents/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/agents/agent.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/agents/status.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/controller.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/evolution.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/exceptions/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/exceptions/laboratory_exceptions.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/experiments/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/experiments/experiment.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/experiments/status.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/files/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/files/file.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/files/manager.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/files/repository.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/files/types.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/interfaces/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/interfaces/laboratory_repository.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/managers/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/managers/agent_manager.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/managers/experiment_manager.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/managers/laboratory_manager.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/managers/runtime_manager.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/managers/workspace_manager.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/models/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/models/configuration.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/models/laboratory.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/models/status.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/models/workspace.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/manager.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/media.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/player.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/repository.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/multimedia/types.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/repositories/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/repositories/agent_repository.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/repositories/experiment_repository.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/repositories/runtime_repository.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/repositories/sqlite_repository.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/runtime/__init__.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/runtime/runtime.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/runtime/session.py
+_backup_antes_fase4/20260811_204733/arus/laboratory/runtime/state.py
+_backup_antes_fase4/20260811_204733/arus/main.py
+_backup_antes_fase4/20260811_204733/arus/voice/__init__.py
+_backup_antes_fase4/20260811_204733/arus/voice/recognizer.py
+_backup_antes_fase4/20260811_204733/arus/voice/speaker.py
+_backup_antes_fase4/20260811_204733/brain/__init__.py
+_backup_antes_fase4/20260811_204733/brain/agent.py
+_backup_antes_fase4/20260811_204733/brain/agent_manager.py
+_backup_antes_fase4/20260811_204733/brain/agent_router.py
+_backup_antes_fase4/20260811_204733/brain/brain.py
+_backup_antes_fase4/20260811_204733/brain/intent_detector.py
+_backup_antes_fase4/20260811_204733/brain/message.py
+_backup_antes_fase4/20260811_204733/brain/message_bus.py
+_backup_antes_fase4/20260811_204733/brain/plan_result.py
+_backup_antes_fase4/20260811_204733/brain/planner.py
+_backup_antes_fase4/20260811_204733/brain/router.py
+_backup_antes_fase4/20260811_204733/brain/task.py
+_backup_antes_fase4/20260811_204733/brain/task_manager.py
+_backup_antes_fase4/20260811_204733/brain/tool_parser.py
+_backup_antes_fase4/20260811_204733/context/__init__.py
+_backup_antes_fase4/20260811_204733/context/context_builder.py
+_backup_antes_fase4/20260811_204733/context/context_formatter.py
+_backup_antes_fase4/20260811_204733/context/context_manager.py
+_backup_antes_fase4/20260811_204733/context/context_retriever.py
+_backup_antes_fase4/20260811_204733/context/context_window.py
+_backup_antes_fase4/20260811_204733/conversations/__init__.py
+_backup_antes_fase4/20260811_204733/conversations/conversation_manager.py
+_backup_antes_fase4/20260811_204733/database/conversation_repository.py
+_backup_antes_fase4/20260811_204733/database/conversation_session_repository.py
+_backup_antes_fase4/20260811_204733/database/database.py
+_backup_antes_fase4/20260811_204733/database/database_manager.py
+_backup_antes_fase4/20260811_204733/database/history_repository.py
+_backup_antes_fase4/20260811_204733/database/knowledge_repository.py
+_backup_antes_fase4/20260811_204733/database/repository.py
+_backup_antes_fase4/20260811_204733/database/settings_repository.py
+_backup_antes_fase4/20260811_204742/arus/__init__.py
+_backup_antes_fase4/20260811_204742/arus/core/__init__.py
+_backup_antes_fase4/20260811_204742/arus/core/brain.py
+_backup_antes_fase4/20260811_204742/arus/core/logger.py
+_backup_antes_fase4/20260811_204742/arus/core/paths.py
+_backup_antes_fase4/20260811_204742/arus/core/system.py
+_backup_antes_fase4/20260811_204742/arus/core/voice.py
+_backup_antes_fase4/20260811_204742/arus/devices/__init__.py
+_backup_antes_fase4/20260811_204742/arus/devices/capabilities.py
+_backup_antes_fase4/20260811_204742/arus/devices/detector.py
+_backup_antes_fase4/20260811_204742/arus/devices/device.py
+_backup_antes_fase4/20260811_204742/arus/devices/discovery.py
+_backup_antes_fase4/20260811_204742/arus/devices/manager.py
+_backup_antes_fase4/20260811_204742/arus/devices/profile.py
+_backup_antes_fase4/20260811_204742/arus/devices/repository.py
+_backup_antes_fase4/20260811_204742/arus/devices/types.py
+_backup_antes_fase4/20260811_204742/arus/interface/__init__.py
+_backup_antes_fase4/20260811_204742/arus/interface/adaptive.py
+_backup_antes_fase4/20260811_204742/arus/interface/chat.py
+_backup_antes_fase4/20260811_204742/arus/interface/controller.py
+_backup_antes_fase4/20260811_204742/arus/interface/core_visual.py
+_backup_antes_fase4/20260811_204742/arus/interface/main_window.py
+_backup_antes_fase4/20260811_204742/arus/interface/states.py
+_backup_antes_fase4/20260811_204742/arus/interface/window.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/agents/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/agents/agent.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/agents/status.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/controller.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/evolution.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/exceptions/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/exceptions/laboratory_exceptions.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/experiments/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/experiments/experiment.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/experiments/status.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/files/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/files/file.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/files/manager.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/files/repository.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/files/types.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/interfaces/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/interfaces/laboratory_repository.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/managers/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/managers/agent_manager.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/managers/experiment_manager.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/managers/laboratory_manager.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/managers/runtime_manager.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/managers/workspace_manager.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/models/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/models/configuration.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/models/laboratory.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/models/status.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/models/workspace.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/manager.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/media.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/player.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/repository.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/multimedia/types.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/repositories/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/repositories/agent_repository.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/repositories/experiment_repository.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/repositories/runtime_repository.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/repositories/sqlite_repository.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/runtime/__init__.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/runtime/runtime.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/runtime/session.py
+_backup_antes_fase4/20260811_204742/arus/laboratory/runtime/state.py
+_backup_antes_fase4/20260811_204742/arus/main.py
+_backup_antes_fase4/20260811_204742/arus/voice/__init__.py
+_backup_antes_fase4/20260811_204742/arus/voice/recognizer.py
+_backup_antes_fase4/20260811_204742/arus/voice/speaker.py
+_backup_antes_fase4/20260811_204742/brain/__init__.py
+_backup_antes_fase4/20260811_204742/brain/agent.py
+_backup_antes_fase4/20260811_204742/brain/agent_manager.py
+_backup_antes_fase4/20260811_204742/brain/agent_router.py
+_backup_antes_fase4/20260811_204742/brain/brain.py
+_backup_antes_fase4/20260811_204742/brain/intent_detector.py
+_backup_antes_fase4/20260811_204742/brain/message.py
+_backup_antes_fase4/20260811_204742/brain/message_bus.py
+_backup_antes_fase4/20260811_204742/brain/plan_result.py
+_backup_antes_fase4/20260811_204742/brain/planner.py
+_backup_antes_fase4/20260811_204742/brain/router.py
+_backup_antes_fase4/20260811_204742/brain/task.py
+_backup_antes_fase4/20260811_204742/brain/task_manager.py
+_backup_antes_fase4/20260811_204742/brain/tool_parser.py
+_backup_antes_fase4/20260811_204742/context/__init__.py
+_backup_antes_fase4/20260811_204742/context/context_builder.py
+_backup_antes_fase4/20260811_204742/context/context_formatter.py
+_backup_antes_fase4/20260811_204742/context/context_manager.py
+_backup_antes_fase4/20260811_204742/context/context_retriever.py
+_backup_antes_fase4/20260811_204742/context/context_window.py
+_backup_antes_fase4/20260811_204742/conversations/__init__.py
+_backup_antes_fase4/20260811_204742/conversations/conversation_manager.py
+_backup_antes_fase4/20260811_204742/database/conversation_repository.py
+_backup_antes_fase4/20260811_204742/database/conversation_session_repository.py
+_backup_antes_fase4/20260811_204742/database/database.py
+_backup_antes_fase4/20260811_204742/database/database_manager.py
+_backup_antes_fase4/20260811_204742/database/history_repository.py
+_backup_antes_fase4/20260811_204742/database/knowledge_repository.py
+_backup_antes_fase4/20260811_204742/database/repository.py
+_backup_antes_fase4/20260811_204742/database/settings_repository.py
+_backup_antes_fase4/20260811_204755/arus/__init__.py
+_backup_antes_fase4/20260811_204755/arus/core/__init__.py
+_backup_antes_fase4/20260811_204755/arus/core/brain.py
+_backup_antes_fase4/20260811_204755/arus/core/logger.py
+_backup_antes_fase4/20260811_204755/arus/core/paths.py
+_backup_antes_fase4/20260811_204755/arus/core/system.py
+_backup_antes_fase4/20260811_204755/arus/core/voice.py
+_backup_antes_fase4/20260811_204755/arus/devices/__init__.py
+_backup_antes_fase4/20260811_204755/arus/devices/capabilities.py
+_backup_antes_fase4/20260811_204755/arus/devices/detector.py
+_backup_antes_fase4/20260811_204755/arus/devices/device.py
+_backup_antes_fase4/20260811_204755/arus/devices/discovery.py
+_backup_antes_fase4/20260811_204755/arus/devices/manager.py
+_backup_antes_fase4/20260811_204755/arus/devices/profile.py
+_backup_antes_fase4/20260811_204755/arus/devices/repository.py
+_backup_antes_fase4/20260811_204755/arus/devices/types.py
+_backup_antes_fase4/20260811_204755/arus/interface/__init__.py
+_backup_antes_fase4/20260811_204755/arus/interface/adaptive.py
+_backup_antes_fase4/20260811_204755/arus/interface/chat.py
+_backup_antes_fase4/20260811_204755/arus/interface/controller.py
+_backup_antes_fase4/20260811_204755/arus/interface/core_visual.py
+_backup_antes_fase4/20260811_204755/arus/interface/main_window.py
+_backup_antes_fase4/20260811_204755/arus/interface/states.py
+_backup_antes_fase4/20260811_204755/arus/interface/window.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/agents/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/agents/agent.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/agents/status.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/controller.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/evolution.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/exceptions/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/exceptions/laboratory_exceptions.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/experiments/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/experiments/experiment.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/experiments/status.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/files/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/files/file.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/files/manager.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/files/repository.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/files/types.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/interfaces/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/interfaces/laboratory_repository.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/managers/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/managers/agent_manager.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/managers/experiment_manager.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/managers/laboratory_manager.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/managers/runtime_manager.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/managers/workspace_manager.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/models/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/models/configuration.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/models/laboratory.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/models/status.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/models/workspace.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/manager.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/media.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/player.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/repository.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/multimedia/types.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/repositories/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/repositories/agent_repository.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/repositories/experiment_repository.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/repositories/runtime_repository.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/repositories/sqlite_repository.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/runtime/__init__.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/runtime/runtime.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/runtime/session.py
+_backup_antes_fase4/20260811_204755/arus/laboratory/runtime/state.py
+_backup_antes_fase4/20260811_204755/arus/main.py
+_backup_antes_fase4/20260811_204755/arus/voice/__init__.py
+_backup_antes_fase4/20260811_204755/arus/voice/recognizer.py
+_backup_antes_fase4/20260811_204755/arus/voice/speaker.py
+_backup_antes_fase4/20260811_204755/brain/__init__.py
+_backup_antes_fase4/20260811_204755/brain/agent.py
+_backup_antes_fase4/20260811_204755/brain/agent_manager.py
+_backup_antes_fase4/20260811_204755/brain/agent_router.py
+_backup_antes_fase4/20260811_204755/brain/brain.py
+_backup_antes_fase4/20260811_204755/brain/intent_detector.py
+_backup_antes_fase4/20260811_204755/brain/message.py
+_backup_antes_fase4/20260811_204755/brain/message_bus.py
+_backup_antes_fase4/20260811_204755/brain/plan_result.py
+_backup_antes_fase4/20260811_204755/brain/planner.py
+_backup_antes_fase4/20260811_204755/brain/router.py
+_backup_antes_fase4/20260811_204755/brain/task.py
+_backup_antes_fase4/20260811_204755/brain/task_manager.py
+_backup_antes_fase4/20260811_204755/brain/tool_parser.py
+_backup_antes_fase4/20260811_204755/context/__init__.py
+_backup_antes_fase4/20260811_204755/context/context_builder.py
+_backup_antes_fase4/20260811_204755/context/context_formatter.py
+_backup_antes_fase4/20260811_204755/context/context_manager.py
+_backup_antes_fase4/20260811_204755/context/context_retriever.py
+_backup_antes_fase4/20260811_204755/context/context_window.py
+_backup_antes_fase4/20260811_204755/conversations/__init__.py
+_backup_antes_fase4/20260811_204755/conversations/conversation_manager.py
+_backup_antes_fase4/20260811_204755/database/conversation_repository.py
+_backup_antes_fase4/20260811_204755/database/conversation_session_repository.py
+_backup_antes_fase4/20260811_204755/database/database.py
+_backup_antes_fase4/20260811_204755/database/database_manager.py
+_backup_antes_fase4/20260811_204755/database/history_repository.py
+_backup_antes_fase4/20260811_204755/database/knowledge_repository.py
+_backup_antes_fase4/20260811_204755/database/repository.py
+_backup_antes_fase4/20260811_204755/database/settings_repository.py
+_backup_antes_fase4/20260811_205026/ai/providers/local_provider.py
+_backup_antes_fase4/20260811_205026/arus/interface/chat.py
+_backup_antes_fase5/20260812_141259/brain/__init__.py
+_backup_antes_fase5/20260812_141259/brain/agent.py
+_backup_antes_fase5/20260812_141259/brain/agent_manager.py
+_backup_antes_fase5/20260812_141259/brain/agent_router.py
+_backup_antes_fase5/20260812_141259/brain/brain.py
+_backup_antes_fase5/20260812_141259/brain/intent_detector.py
+_backup_antes_fase5/20260812_141259/brain/message.py
+_backup_antes_fase5/20260812_141259/brain/message_bus.py
+_backup_antes_fase5/20260812_141259/brain/plan_result.py
+_backup_antes_fase5/20260812_141259/brain/planner.py
+_backup_antes_fase5/20260812_141259/brain/router.py
+_backup_antes_fase5/20260812_141259/brain/task.py
+_backup_antes_fase5/20260812_141259/brain/task_manager.py
+_backup_antes_fase5/20260812_141259/brain/tool_parser.py
+_backup_antes_fase5/20260812_141259/context/__init__.py
+_backup_antes_fase5/20260812_141259/context/context_builder.py
+_backup_antes_fase5/20260812_141259/context/context_formatter.py
+_backup_antes_fase5/20260812_141259/context/context_manager.py
+_backup_antes_fase5/20260812_141259/context/context_retriever.py
+_backup_antes_fase5/20260812_141259/context/context_window.py
+_backup_antes_fase5/20260812_141259/conversations/__init__.py
+_backup_antes_fase5/20260812_141259/conversations/conversation_manager.py
+_backup_antes_fase5/20260812_141259/memory/__init__.py
+_backup_antes_fase5/20260812_141259/memory/long_memory.py
+_backup_antes_fase5/20260812_141259/memory/memory_manager.py
+_backup_antes_fase5/20260812_141259/memory/persistent_memory.py
+_backup_antes_fase5/20260812_141259/memory/working_memory.py
+_backup_antes_fase6/20260812_141923/agents/__init__.py
+_backup_antes_fase6/20260812_141923/agents/agent_registry.py
+_backup_antes_fase6/20260812_141923/agents/agent_request.py
+_backup_antes_fase6/20260812_141923/agents/agent_response.py
+_backup_antes_fase6/20260812_141923/agents/agent_router.py
+_backup_antes_fase6/20260812_141923/agents/base_agent.py
+_backup_antes_fase6/20260812_141923/agents/coder_agent.py
+_backup_antes_fase6/20260812_141923/agents/coordinator_agent.py
+_backup_antes_fase6/20260812_141923/agents/file_agent.py
+_backup_antes_fase6/20260812_141923/agents/research_agent.py
+_backup_antes_fase6/20260812_141923/agents/tool_agent.py
+_backup_antes_fase6/20260812_141923/brain/__init__.py
+_backup_antes_fase6/20260812_141923/brain/agent.py
+_backup_antes_fase6/20260812_141923/brain/agent_manager.py
+_backup_antes_fase6/20260812_141923/brain/agent_router.py
+_backup_antes_fase6/20260812_141923/brain/brain.py
+_backup_antes_fase6/20260812_141923/brain/intent_detector.py
+_backup_antes_fase6/20260812_141923/brain/message.py
+_backup_antes_fase6/20260812_141923/brain/message_bus.py
+_backup_antes_fase6/20260812_141923/brain/plan_result.py
+_backup_antes_fase6/20260812_141923/brain/planner.py
+_backup_antes_fase6/20260812_141923/brain/router.py
+_backup_antes_fase6/20260812_141923/brain/task.py
+_backup_antes_fase6/20260812_141923/brain/task_manager.py
+_backup_antes_fase6/20260812_141923/brain/tool_parser.py
+_backup_antes_fase6/20260812_141923/tools/__init__.py
+_backup_antes_fase6/20260812_141923/tools/base_tool.py
+_backup_antes_fase6/20260812_141923/tools/calculator_tool.py
+_backup_antes_fase6/20260812_141923/tools/file_tool.py
+_backup_antes_fase6/20260812_141923/tools/file_writer_tool.py
+_backup_antes_fase6/20260812_141923/tools/find_file_tool.py
+_backup_antes_fase6/20260812_141923/tools/github_clone_tool.py
+_backup_antes_fase6/20260812_141923/tools/github_search_tool.py
+_backup_antes_fase6/20260812_141923/tools/list_directory_tool.py
+_backup_antes_fase6/20260812_141923/tools/project_tool.py
+_backup_antes_fase6/20260812_141923/tools/python_check_tool.py
+_backup_antes_fase6/20260812_141923/tools/replace_text_tool.py
+_backup_antes_fase6/20260812_141923/tools/search_tool.py
+_backup_antes_fase6/20260812_141923/tools/shell_tool.py
+_backup_antes_fase6/20260812_141923/tools/time_tool.py
+_backup_antes_fase6/20260812_141923/tools/tool_manager.py
+_backup_antes_fase6/20260812_141923/tools/web_reader_tool.py
+_backup_antes_fase6/20260812_141923/tools/web_tool.py
+_backup_antes_fase6_brain.py
+_backup_antes_fase7/agents/__init__.py
+_backup_antes_fase7/agents/agent_registry.py
+_backup_antes_fase7/agents/agent_request.py
+_backup_antes_fase7/agents/agent_response.py
+_backup_antes_fase7/agents/agent_router.py
+_backup_antes_fase7/agents/base_agent.py
+_backup_antes_fase7/agents/coder_agent.py
+_backup_antes_fase7/agents/coordinator_agent.py
+_backup_antes_fase7/agents/file_agent.py
+_backup_antes_fase7/agents/research_agent.py
+_backup_antes_fase7/agents/tool_agent.py
+_backup_antes_fase7/brain/__init__.py
+_backup_antes_fase7/brain/agent.py
+_backup_antes_fase7/brain/agent_manager.py
+_backup_antes_fase7/brain/agent_router.py
+_backup_antes_fase7/brain/brain.py
+_backup_antes_fase7/brain/intent_detector.py
+_backup_antes_fase7/brain/message.py
+_backup_antes_fase7/brain/message_bus.py
+_backup_antes_fase7/brain/plan_result.py
+_backup_antes_fase7/brain/planner.py
+_backup_antes_fase7/brain/router.py
+_backup_antes_fase7/brain/task.py
+_backup_antes_fase7/brain/task_manager.py
+_backup_antes_fase7/brain/tool_parser.py
+_backup_antes_fase7/planning/plan.py
+_backup_antes_fase7/planning/plan_executor.py
+_backup_antes_fase7/planning/planner.py
+_backup_antes_fase7/verification/__init__.py
+_backup_antes_fase7/verification/verifier.py
+_backup_antes_fase7_brain.py
+_backup_antes_fase8/ai/__init__.py
+_backup_antes_fase8/ai/model_manager.py
+_backup_antes_fase8/ai/ollama_manager.py
+_backup_antes_fase8/ai/providers/base_provider.py
+_backup_antes_fase8/ai/providers/local_provider.py
+_backup_antes_fase8/brain/__init__.py
+_backup_antes_fase8/brain/agent.py
+_backup_antes_fase8/brain/agent_manager.py
+_backup_antes_fase8/brain/agent_router.py
+_backup_antes_fase8/brain/brain.py
+_backup_antes_fase8/brain/intent_detector.py
+_backup_antes_fase8/brain/message.py
+_backup_antes_fase8/brain/message_bus.py
+_backup_antes_fase8/brain/plan_result.py
+_backup_antes_fase8/brain/planner.py
+_backup_antes_fase8/brain/router.py
+_backup_antes_fase8/brain/task.py
+_backup_antes_fase8/brain/task_manager.py
+_backup_antes_fase8/brain/tool_parser.py
+_backup_antes_fase8/brain/verifier.py
+_backup_antes_fase8/database/conversation_repository.py
+_backup_antes_fase8/database/conversation_session_repository.py
+_backup_antes_fase8/database/database.py
+_backup_antes_fase8/database/database_manager.py
+_backup_antes_fase8/database/history_repository.py
+_backup_antes_fase8/database/knowledge_repository.py
+_backup_antes_fase8/database/memory_repository.py
+_backup_antes_fase8/database/repository.py
+_backup_antes_fase8/database/settings_repository.py
+_backup_antes_fase8/memory/__init__.py
+_backup_antes_fase8/memory/long_memory.py
+_backup_antes_fase8/memory/memory_manager.py
+_backup_antes_fase8/memory/persistent_memory.py
+_backup_antes_fase8/memory/semantic_memory.py
+_backup_antes_fase8/memory/task_memory.py
+_backup_antes_fase8/memory/user_preferences.py
+_backup_antes_fase8/memory/working_memory.py
+_backup_antes_fase8/verification/__init__.py
+_backup_antes_fase8/verification/verifier.py
+_backup_antes_fix_fase6_toolagent.py
+_backup_fase2/20260810_222726/arus/interface/chat.py
+_backup_fase2/20260810_222726/arus/main.py
+_backup_fase2/20260810_222726/conversations/__init__.py
+_backup_fase4/20260811_204635/arus/__init__.py
+_backup_fase4/20260811_204635/arus/core/__init__.py
+_backup_fase4/20260811_204635/arus/core/brain.py
+_backup_fase4/20260811_204635/arus/core/logger.py
+_backup_fase4/20260811_204635/arus/core/paths.py
+_backup_fase4/20260811_204635/arus/core/system.py
+_backup_fase4/20260811_204635/arus/core/voice.py
+_backup_fase4/20260811_204635/arus/devices/__init__.py
+_backup_fase4/20260811_204635/arus/devices/capabilities.py
+_backup_fase4/20260811_204635/arus/devices/detector.py
+_backup_fase4/20260811_204635/arus/devices/device.py
+_backup_fase4/20260811_204635/arus/devices/discovery.py
+_backup_fase4/20260811_204635/arus/devices/manager.py
+_backup_fase4/20260811_204635/arus/devices/profile.py
+_backup_fase4/20260811_204635/arus/devices/repository.py
+_backup_fase4/20260811_204635/arus/devices/types.py
+_backup_fase4/20260811_204635/arus/interface/__init__.py
+_backup_fase4/20260811_204635/arus/interface/adaptive.py
+_backup_fase4/20260811_204635/arus/interface/chat.py
+_backup_fase4/20260811_204635/arus/interface/controller.py
+_backup_fase4/20260811_204635/arus/interface/core_visual.py
+_backup_fase4/20260811_204635/arus/interface/main_window.py
+_backup_fase4/20260811_204635/arus/interface/states.py
+_backup_fase4/20260811_204635/arus/interface/window.py
+_backup_fase4/20260811_204635/arus/laboratory/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/agents/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/agents/agent.py
+_backup_fase4/20260811_204635/arus/laboratory/agents/status.py
+_backup_fase4/20260811_204635/arus/laboratory/controller.py
+_backup_fase4/20260811_204635/arus/laboratory/evolution.py
+_backup_fase4/20260811_204635/arus/laboratory/exceptions/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/exceptions/laboratory_exceptions.py
+_backup_fase4/20260811_204635/arus/laboratory/experiments/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/experiments/experiment.py
+_backup_fase4/20260811_204635/arus/laboratory/experiments/status.py
+_backup_fase4/20260811_204635/arus/laboratory/files/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/files/file.py
+_backup_fase4/20260811_204635/arus/laboratory/files/manager.py
+_backup_fase4/20260811_204635/arus/laboratory/files/repository.py
+_backup_fase4/20260811_204635/arus/laboratory/files/types.py
+_backup_fase4/20260811_204635/arus/laboratory/interfaces/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/interfaces/laboratory_repository.py
+_backup_fase4/20260811_204635/arus/laboratory/managers/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/managers/agent_manager.py
+_backup_fase4/20260811_204635/arus/laboratory/managers/experiment_manager.py
+_backup_fase4/20260811_204635/arus/laboratory/managers/laboratory_manager.py
+_backup_fase4/20260811_204635/arus/laboratory/managers/runtime_manager.py
+_backup_fase4/20260811_204635/arus/laboratory/managers/workspace_manager.py
+_backup_fase4/20260811_204635/arus/laboratory/models/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/models/configuration.py
+_backup_fase4/20260811_204635/arus/laboratory/models/laboratory.py
+_backup_fase4/20260811_204635/arus/laboratory/models/status.py
+_backup_fase4/20260811_204635/arus/laboratory/models/workspace.py
+_backup_fase4/20260811_204635/arus/laboratory/multimedia/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/multimedia/manager.py
+_backup_fase4/20260811_204635/arus/laboratory/multimedia/media.py
+_backup_fase4/20260811_204635/arus/laboratory/multimedia/player.py
+_backup_fase4/20260811_204635/arus/laboratory/multimedia/repository.py
+_backup_fase4/20260811_204635/arus/laboratory/multimedia/types.py
+_backup_fase4/20260811_204635/arus/laboratory/repositories/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/repositories/agent_repository.py
+_backup_fase4/20260811_204635/arus/laboratory/repositories/experiment_repository.py
+_backup_fase4/20260811_204635/arus/laboratory/repositories/runtime_repository.py
+_backup_fase4/20260811_204635/arus/laboratory/repositories/sqlite_repository.py
+_backup_fase4/20260811_204635/arus/laboratory/runtime/__init__.py
+_backup_fase4/20260811_204635/arus/laboratory/runtime/runtime.py
+_backup_fase4/20260811_204635/arus/laboratory/runtime/session.py
+_backup_fase4/20260811_204635/arus/laboratory/runtime/state.py
+_backup_fase4/20260811_204635/arus/main.py
+_backup_fase4/20260811_204635/arus/voice/__init__.py
+_backup_fase4/20260811_204635/arus/voice/recognizer.py
+_backup_fase4/20260811_204635/arus/voice/speaker.py
+_backup_fase4/20260811_204635/brain/__init__.py
+_backup_fase4/20260811_204635/brain/agent.py
+_backup_fase4/20260811_204635/brain/agent_manager.py
+_backup_fase4/20260811_204635/brain/agent_router.py
+_backup_fase4/20260811_204635/brain/brain.py
+_backup_fase4/20260811_204635/brain/intent_detector.py
+_backup_fase4/20260811_204635/brain/message.py
+_backup_fase4/20260811_204635/brain/message_bus.py
+_backup_fase4/20260811_204635/brain/plan_result.py
+_backup_fase4/20260811_204635/brain/planner.py
+_backup_fase4/20260811_204635/brain/router.py
+_backup_fase4/20260811_204635/brain/task.py
+_backup_fase4/20260811_204635/brain/task_manager.py
+_backup_fase4/20260811_204635/brain/tool_parser.py
+_backup_fase4/20260811_204635/context/__init__.py
+_backup_fase4/20260811_204635/context/context_builder.py
+_backup_fase4/20260811_204635/context/context_formatter.py
+_backup_fase4/20260811_204635/context/context_manager.py
+_backup_fase4/20260811_204635/context/context_retriever.py
+_backup_fase4/20260811_204635/context/context_window.py
+_backup_fase4/20260811_204635/conversations/__init__.py
+_backup_fase4/20260811_204635/conversations/conversation_manager.py
+_backup_fase4/20260811_204635/database/conversation_repository.py
+_backup_fase4/20260811_204635/database/conversation_session_repository.py
+_backup_fase4/20260811_204635/database/database.py
+_backup_fase4/20260811_204635/database/database_manager.py
+_backup_fase4/20260811_204635/database/history_repository.py
+_backup_fase4/20260811_204635/database/knowledge_repository.py
+_backup_fase4/20260811_204635/database/repository.py
+_backup_fase4/20260811_204635/database/settings_repository.py
+agents/__init__.py
+agents/agent_registry.py
+agents/agent_request.py
+agents/agent_response.py
+agents/agent_router.py
+agents/base_agent.py
+agents/coder_agent.py
+agents/coordinator_agent.py
+agents/file_agent.py
+agents/research_agent.py
+agents/tool_agent.py
+ai/__init__.py
+ai/model_manager.py
+ai/ollama_manager.py
+ai/providers/base_provider.py
+ai/providers/local_provider.py
+arus/__init__.py
+arus/core/__init__.py
+arus/core/brain.py
+arus/core/logger.py
+arus/core/paths.py
+arus/core/system.py
+arus/core/voice.py
+arus/devices/__init__.py
+arus/devices/capabilities.py
+arus/devices/detector.py
+arus/devices/device.py
+arus/devices/discovery.py
+arus/devices/manager.py
+arus/devices/profile.py
+arus/devices/repository.py
+arus/devices/types.py
+arus/interface/__init__.py
+arus/interface/adaptive.py
+arus/interface/chat.py
+arus/interface/controller.py
+arus/interface/core_visual.py
+arus/interface/e.py
+arus/interface/main_window.py
+arus/interface/main_window.py.broken_20260814_103812.py
+arus/interface/states.py
+arus/interface/window.py
+arus/laboratory/__init__.py
+arus/laboratory/agents/__init__.py
+arus/laboratory/agents/agent.py
+arus/laboratory/agents/status.py
+arus/laboratory/controller.py
+arus/laboratory/evolution.py
+arus/laboratory/exceptions/__init__.py
+arus/laboratory/exceptions/laboratory_exceptions.py
+arus/laboratory/experiments/__init__.py
+arus/laboratory/experiments/experiment.py
+arus/laboratory/experiments/status.py
+arus/laboratory/files/__init__.py
+arus/laboratory/files/file.py
+arus/laboratory/files/manager.py
+arus/laboratory/files/repository.py
+arus/laboratory/files/types.py
+arus/laboratory/interfaces/__init__.py
+arus/laboratory/interfaces/laboratory_repository.py
+arus/laboratory/managers/__init__.py
+arus/laboratory/managers/agent_manager.py
+arus/laboratory/managers/experiment_manager.py
+arus/laboratory/managers/laboratory_manager.py
+arus/laboratory/managers/runtime_manager.py
+arus/laboratory/managers/workspace_manager.py
+arus/laboratory/models/__init__.py
+arus/laboratory/models/configuration.py
+arus/laboratory/models/laboratory.py
+arus/laboratory/models/status.py
+arus/laboratory/models/workspace.py
+arus/laboratory/multimedia/__init__.py
+arus/laboratory/multimedia/manager.py
+arus/laboratory/multimedia/media.py
+arus/laboratory/multimedia/player.py
+arus/laboratory/multimedia/repository.py
+arus/laboratory/multimedia/types.py
+arus/laboratory/repositories/__init__.py
+arus/laboratory/repositories/agent_repository.py
+arus/laboratory/repositories/experiment_repository.py
+arus/laboratory/repositories/runtime_repository.py
+arus/laboratory/repositories/sqlite_repository.py
+arus/laboratory/runtime/__init__.py
+arus/laboratory/runtime/runtime.py
+arus/laboratory/runtime/session.py
+arus/laboratory/runtime/state.py
+arus/main.py
+arus/voice/__init__.py
+arus/voice/recognizer.py
+arus/voice/speaker.py
+arus/voice/text_cleaner.py
+arus/voice/tts_provider.py
+autorepair/repair_manager.py
+brain/__init__.py
+brain/agent.py
+brain/agent_manager.py
+brain/agent_router.py
+brain/brain.py
+brain/intent_detector.py
+brain/long_task_manager.py
+brain/message.py
+brain/message_bus.py
+brain/plan_result.py
+brain/planner.py
+brain/router.py
+brain/task.py
+brain/task_manager.py
+brain/tool_parser.py
+brain/verifier.py
+chat_widget.py
+commands/__init__.py
+commands/builtins/help_command.py
+commands/command.py
+commands/command_manager.py
+commands/command_registry.py
+commands/status_command.py
+completar_fase2.py
+config/settings.py
+context/__init__.py
+context/context_builder.py
+context/context_formatter.py
+context/context_manager.py
+context/context_retriever.py
+context/context_window.py
+context_tests/test_fase3_context_manager.py
+conversations/__init__.py
+conversations/conversation_manager.py
+database/conversation_repository.py
+database/conversation_session_repository.py
+database/database.py
+database/database_manager.py
+database/history_repository.py
+database/knowledge_repository.py
+database/memory_repository.py
+database/rag_chunk_repository.py
+database/repository.py
+database/settings_repository.py
+diagnostics/__init__.py
+diagnostics/system_check.py
+evaluation/__init__.py
+evaluation/check.py
+evaluation/suite.py
+events/__init__.py
+events/event.py
+events/event_bus.py
+events/event_handler.py
+finalizar_fase2.py
+fix_arus.py
+fix_arus_v2.py
+integrar_fase2.py
+integrar_fase2_real.py
+integrar_fase2_real_v2.py
+interfaz.py
+learning/__init__.py
+learning/domain/enums.py
+learning/domain/event.py
+learning/domain/exceptions.py
+learning/domain/knowledge.py
+learning/domain/relation.py
+learning/domain/repository.py
+learning/manager/learning_manager.py
+learning/repositories/memory_repository.py
+learning/repositories/sqlite_repository.py
+learning/tests/test_learning_manager.py
+learning/tests/test_repository.py
+main_window.py
+main_window_backup.py
+main_window_respaldo.py
+memory/__init__.py
+memory/long_memory.py
+memory/memory_manager.py
+memory/persistent_memory.py
+memory/semantic_memory.py
+memory/task_memory.py
+memory/user_preferences.py
+memory/working_memory.py
+planning/plan.py
+planning/plan_executor.py
+planning/planner.py
+plugins/__init__.py
+plugins/examples/test_plugin.py
+plugins/installed/__init__.py
+plugins/plugin.py
+plugins/plugin_manager.py
+plugins/plugin_registry.py
+probar_canales.py
+probar_canales2.py
+probar_vosk.py
+rag/__init__.py
+rag/chunker.py
+rag/document_parser.py
+rag/embeddings.py
+rag/project_scanner.py
+rag/rag_manager.py
+rag/retriever.py
+rag/vector_store.py
+reparar_arus.py
+run.py
+security/__init__.py
+security/audit_logger.py
+security/json_validator.py
+security/path_guard.py
+security/permission_manager.py
+security/rate_limiter.py
+security/sandbox.py
+security/shell_guard.py
+services/__init__.py
+services/container.py
+services/default_services.py
+services/service_manager.py
+services/service_provider.py
+skills/ai_chat/__init__.py
+skills/ai_chat/ai_chat_skill.py
+skills/base_skill.py
+skills/chat/__init__.py
+skills/chat/chat_skill.py
+skills/registry/__init__.py
+skills/registry/skill_bootstrap.py
+skills/registry/skill_detector.py
+skills/registry/skill_discovery.py
+skills/registry/skill_loader.py
+skills/registry/skill_registry.py
+skills/skill_manager.py
+skills/skill_router.py
+speech/__init__.py
+speech/speech_recognizer.py
+test_brain.py
+tests/laboratory/test_laboratory_manager.py
+tests/laboratory/test_load_repository.py
+tests/laboratory/test_repository_contract.py
+tests/laboratory/test_repository_interface.py
+tests/laboratory/test_sqlite_repository.py
+tests/test_memory_phase5.py
+tests/test_plan_executor_phase6.py
+tests/test_planner_phase6.py
+tests/test_speech.py
+tests/test_tools.py
+tests/test_verifier.py
+tools/__init__.py
+tools/base_tool.py
+tools/calculator_tool.py
+tools/file_tool.py
+tools/file_writer_tool.py
+tools/find_file_tool.py
+tools/git_tool.py
+tools/github_clone_tool.py
+tools/github_search_tool.py
+tools/list_directory_tool.py
+tools/project_tool.py
+tools/python_check_tool.py
+tools/replace_text_tool.py
+tools/screenshot_tool.py
+tools/search_tool.py
+tools/shell_tool.py
+tools/test_runner_tool.py
+tools/time_tool.py
+tools/tool_manager.py
+tools/web_reader_tool.py
+tools/web_tool.py
+utils/__init__.py
+utils/json_validator.py
+verification/__init__.py
+verification/verifier.py
+vision/__init__.py
+vision/image_loader.py
+vision/vision_manager.py
+vision/vision_provider.py

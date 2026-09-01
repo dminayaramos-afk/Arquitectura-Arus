@@ -1,0 +1,901 @@
+"""
+ARUS
+Main Interface
+Nueva interfaz
+"""
+
+from datetime import datetime
+
+import psutil
+
+from PySide6.QtCore import (
+    Qt,
+    QTimer
+)
+
+from PySide6.QtWidgets import (
+    QMainWindow,
+    QWidget,
+    QHBoxLayout,
+    QVBoxLayout,
+    QLabel,
+    QPushButton,
+    QFrame,
+    QProgressBar
+)
+
+from arus.interface.core_visual import NeuralCore
+from arus.interface.chat import ChatWidget
+from arus.interface.controller import ARUSController
+from arus.interface.adaptive import AdaptiveInterface
+
+from arus.devices.profile import DeviceProfile
+from arus.core.voice import VoiceCore
+
+
+class ARUSWindow(QMainWindow):
+
+    def __init__(self):
+
+        super().__init__()
+
+        # -----------------------------
+        # MÓDULOS
+        # -----------------------------
+
+        self.voice = VoiceCore()
+
+        self.adaptive = AdaptiveInterface()
+
+        self.device_profile = DeviceProfile()
+
+        self.device = self.device_profile.create()
+
+        self.interface_mode = self.adaptive.select(
+            self.device.capabilities
+        )
+
+        # -----------------------------
+        # VENTANA
+        # -----------------------------
+
+        self.setWindowTitle(
+            "ARUS"
+        )
+
+        self.resize(
+            1500,
+            900
+        )
+
+        self.setMinimumSize(
+            1200,
+            700
+        )
+
+        self.setStyleSheet("""
+            QMainWindow {
+                background-color:#010814;
+            }
+
+            QWidget {
+                background-color:#010814;
+                color:#00E5FF;
+                font-family:'Segoe UI';
+                font-size:13px;
+            }
+
+            QFrame {
+                background-color:#020B18;
+                border:1px solid #003B55;
+                border-radius:14px;
+            }
+
+            QLabel {
+                background:transparent;
+                color:#00E5FF;
+            }
+
+            QTextEdit {
+                background-color:#000914;
+                color:#00FFFF;
+                border:1px solid #004D73;
+                border-radius:12px;
+            }
+
+            QLineEdit {
+                background-color:#000914;
+                color:#00FFFF;
+                border:1px solid #004D73;
+                border-radius:12px;
+            }
+
+            QProgressBar {
+                background-color:#00040A;
+                border:1px solid #003B55;
+                border-radius:8px;
+                height:14px;
+            }
+
+            QProgressBar::chunk {
+                background-color:#00AEEF;
+                border-radius:8px;
+            }
+
+            QPushButton {
+                background-color:#02182D;
+                color:#00E5FF;
+                border:1px solid #005577;
+                border-radius:10px;
+                padding:8px;
+            }
+
+            QPushButton:hover {
+                background-color:#043A5C;
+            }
+        """)
+
+
+
+        self.setStyleSheet("""
+
+)
+
+        QMainWindow{
+
+            background:#010B1A;
+
+        }
+
+        QWidget{
+
+            background:#010B1A;
+
+            color:#00E5FF;
+
+            font-family:Segoe UI;
+
+            font-size:14px;
+
+        }
+
+        """)
+        # =============================
+        # WIDGET CENTRAL
+        # =============================
+
+        self.central = QWidget()
+
+        self.setCentralWidget(
+            self.central
+        )
+
+        self.main_layout = QVBoxLayout()
+
+        self.central.setLayout(
+            self.main_layout
+        )
+
+
+        # =============================
+        # BARRA SUPERIOR
+        # =============================
+
+        self.top_bar = QFrame()
+
+        self.top_bar.setFixedHeight(
+            70
+        )
+
+        self.top_layout = QHBoxLayout()
+
+        self.top_bar.setLayout(
+            self.top_layout
+        )
+
+
+        self.lbl_title = QLabel(
+            "◈  ARUS  ◈"
+        )
+
+        self.lbl_title.setAlignment(
+            Qt.AlignCenter
+        )
+
+        self.lbl_title.setAlignment(
+            Qt.AlignCenter
+        )
+
+
+
+
+        """)
+
+
+        self.lbl_state = QLabel(
+            "Estado: IDLE"
+        )
+
+        self.lbl_clock = QLabel(
+            "--:--:--"
+        )
+
+
+        self.top_layout.addWidget(
+            self.lbl_title
+        )
+
+        self.top_layout.addStretch()
+
+        self.top_layout.addWidget(
+            self.lbl_state
+        )
+
+        self.top_layout.addSpacing(
+            20
+        )
+
+        self.top_layout.addWidget(
+            self.lbl_clock
+        )
+
+
+        self.main_layout.addWidget(
+            self.top_bar
+        )
+
+
+        # =============================
+        # CUERPO PRINCIPAL
+        # =============================
+
+        self.center_widget = QWidget()
+
+        self.center_layout = QHBoxLayout()
+
+        self.center_widget.setLayout(
+            self.center_layout
+        )
+
+        self.main_layout.addWidget(
+            self.center_widget
+        )
+        # =============================
+        # PANEL IZQUIERDO
+        # =============================
+
+        self.left_panel = QFrame()
+
+
+
+
+
+
+
+        self.left_panel.setFixedWidth(
+            280
+        )
+
+        self.left_layout = QVBoxLayout()
+
+        self.left_panel.setLayout(
+            self.left_layout
+        )
+
+
+        self.center_layout.addWidget(
+            self.left_panel
+        )
+
+
+        # =============================
+        # NÚCLEO DE ARUS
+        # =============================
+
+        self.core = NeuralCore()
+
+        self.core.setMinimumSize(
+            560,
+            560
+        )
+
+        self.center_layout.addWidget(
+            self.core,
+            1
+        )
+
+
+        # =============================
+        # PANEL DERECHO
+        # =============================
+
+        self.right_panel = QFrame()
+
+        self.right_panel.setFixedWidth(
+            430
+        )
+
+        self.right_layout = QVBoxLayout()
+
+        self.right_panel.setLayout(
+            self.right_layout
+        )
+
+        self.center_layout.addWidget(
+            self.right_panel
+        )
+
+
+        # =============================
+        # INFORMACIÓN DEL SISTEMA
+        # =============================
+
+        self.lbl_system = QLabel(
+            "SISTEMA"
+        )
+
+        self.right_layout.addWidget(
+            self.lbl_system
+        )
+
+
+        self.cpu_label = QLabel(
+            "CPU: 0%"
+        )
+
+        self.cpu_bar = QProgressBar()
+
+        self.cpu_bar.setRange(
+            0,
+            100
+        )
+
+        self.right_layout.addWidget(
+            self.cpu_label
+        )
+
+        self.right_layout.addWidget(
+            self.cpu_bar
+        )
+
+
+        self.ram_label = QLabel(
+            "RAM: 0%"
+        )
+
+        self.ram_bar = QProgressBar()
+
+        self.ram_bar.setRange(
+            0,
+            100
+        )
+
+        self.right_layout.addWidget(
+            self.ram_label
+        )
+
+        self.right_layout.addWidget(
+            self.ram_bar
+        )
+
+
+        self.voice_state = QLabel(
+            "🎤 Voz: Inactiva"
+        )
+
+        self.ai_state = QLabel(
+            "🧠 IA: Esperando"
+        )
+
+        self.mode_state = QLabel(
+            f"Modo: {self.interface_mode}"
+        )
+
+        self.right_layout.addWidget(
+            self.voice_state
+        )
+
+        self.right_layout.addWidget(
+            self.ai_state
+        )
+
+        self.right_layout.addWidget(
+            self.mode_state
+        )
+        self.right_layout.addStretch()
+        # =============================
+        # BOTONES DEL PANEL DERECHO
+        # =============================
+
+        self.memory_button = QPushButton(
+            "Memoria"
+        )
+
+        self.learning_button = QPushButton(
+            "Aprendizaje"
+        )
+
+        self.voice_button = QPushButton(
+            "Voz"
+        )
+
+        self.settings_button = QPushButton(
+            "Configuración"
+        )
+
+        self.right_layout.addWidget(
+            self.memory_button
+        )
+
+        self.right_layout.addWidget(
+            self.learning_button
+        )
+
+        self.right_layout.addWidget(
+            self.voice_button
+        )
+
+        self.right_layout.addWidget(
+            self.settings_button
+        )
+
+
+        # =============================
+        # CONTROLADOR
+        # =============================
+
+        self.controller = ARUSController(
+            self.core
+        )
+
+
+        # =============================
+        # CHAT
+        # =============================
+
+        self.chat = ChatWidget(
+            self.controller
+        )
+
+        self.chat.setMinimumHeight(
+            650
+        )
+
+        self.right_layout.addWidget(
+            self.chat,
+            10
+        )
+
+        self.chat.setMinimumHeight(
+            220
+        )
+
+        # chat integrado en panel derecho
+
+
+        # =============================
+        # CONEXIÓN DE BOTONES
+        # =============================
+
+        self.voice_button.clicked.connect(
+            self.toggle_voice
+        )
+
+        self.memory_button.clicked.connect(
+            self.open_memory
+        )
+
+        self.learning_button.clicked.connect(
+            self.open_learning
+        )
+
+        self.settings_button.clicked.connect(
+            self.open_settings
+        )
+
+
+        # =============================
+        # ESTADO INICIAL
+        # =============================
+
+        self.core.set_state(
+            "idle"
+        )
+
+        self.lbl_state.setText(
+            "Estado: IDLE"
+        )
+
+        self.voice_state.setText(
+            "🎤 Voz: Lista"
+        )
+        # =============================
+        # TEMPORIZADOR DEL SISTEMA
+        # =============================
+
+        self.system_timer = QTimer()
+
+        self.system_timer.timeout.connect(
+            self.update_system
+        )
+
+        self.system_timer.start(
+            1000
+        )
+
+
+        # =============================
+        # TEMPORIZADOR DE INTERFAZ
+        # =============================
+
+        self.ui_timer = QTimer()
+
+        self.ui_timer.timeout.connect(
+            self.refresh_interface
+        )
+
+        self.ui_timer.start(
+            200
+        )
+
+
+        # =============================
+        # MENSAJE DE INICIO
+        # =============================
+
+        self.chat.add_message(
+            "ARUS: Sistema iniciado correctamente."
+        )
+
+        self.chat.input.setFocus()
+    # =============================
+    # ACTUALIZAR SISTEMA
+    # =============================
+
+    def update_system(self):
+
+        cpu = psutil.cpu_percent()
+
+        ram = psutil.virtual_memory().percent
+
+
+        self.cpu_bar.setValue(
+            int(cpu)
+        )
+
+        self.cpu_label.setText(
+            f"CPU: {cpu:.0f}%"
+        )
+
+
+        self.ram_bar.setValue(
+            int(ram)
+        )
+
+        self.ram_label.setText(
+            f"RAM: {ram:.0f}%"
+        )
+
+
+        self.lbl_clock.setText(
+            datetime.now().strftime(
+                "%H:%M:%S"
+            )
+        )
+
+
+    # =============================
+    # REFRESCAR INTERFAZ
+    # =============================
+
+    def refresh_interface(self):
+
+        self.mode_state.setText(
+            f"Modo: {self.interface_mode}"
+        )
+    # =============================
+    # TECLADO GLOBAL
+    # =============================
+
+    def keyPressEvent(self, event):
+
+        key = event.key()
+        text = event.text()
+
+        # ENTER -> enviar mensaje
+
+        if key in (
+            Qt.Key_Return,
+            Qt.Key_Enter
+        ):
+
+            self.chat.send()
+
+            return
+
+        # ESC -> limpiar
+
+        if key == Qt.Key_Escape:
+
+            self.chat.input.clear()
+
+            return
+
+        # Si es un carácter normal,
+        # activar automáticamente el chat
+
+        if text and text.isprintable():
+
+            self.chat.input.setFocus()
+
+            self.chat.input.insert(
+                text
+            )
+
+            self.core.set_state(
+                "listening"
+            )
+
+            self.lbl_state.setText(
+                "Estado: ESCRIBIENDO"
+            )
+
+            return
+
+        super().keyPressEvent(
+            event
+        )
+
+
+    # =============================
+    # CUANDO EL CHAT CAMBIA
+    # =============================
+
+    def chat_active(self):
+
+        self.core.set_state(
+            "listening"
+        )
+
+        self.lbl_state.setText(
+            "Estado: ESCUCHANDO"
+        )
+
+
+    def chat_idle(self):
+
+        self.core.set_state(
+            "idle"
+        )
+
+        self.lbl_state.setText(
+            "Estado: IDLE"
+        )
+
+    # =============================
+    # BOTÓN VOZ
+    # =============================
+
+    def toggle_voice(self):
+
+        try:
+
+            if hasattr(
+                self.voice,
+                "start"
+            ):
+
+                self.voice.start()
+
+
+            self.voice_state.setText(
+                "🎤 Voz: Activa"
+            )
+
+
+            self.core.set_state(
+                "listening"
+            )
+
+
+            self.lbl_state.setText(
+                "Estado: ESCUCHANDO"
+            )
+
+
+        except Exception as e:
+
+            self.voice_state.setText(
+                "🎤 Voz: No disponible"
+            )
+
+
+
+    # =============================
+    # BOTÓN MEMORIA
+    # =============================
+
+    def open_memory(self):
+
+        self.ai_state.setText(
+            "🧠 IA: Memoria"
+        )
+
+
+        self.chat.add_message(
+            "ARUS: Módulo de memoria abierto."
+        )
+
+
+
+    # =============================
+    # BOTÓN APRENDIZAJE
+    # =============================
+
+    def open_learning(self):
+
+        self.ai_state.setText(
+            "🧠 IA: Aprendiendo"
+        )
+
+
+        self.core.set_state(
+            "learning"
+        )
+
+
+        self.chat.add_message(
+            "ARUS: Ciclo de aprendizaje iniciado."
+        )
+
+
+
+    # =============================
+    # BOTÓN CONFIGURACIÓN
+    # =============================
+
+    def open_settings(self):
+
+        self.chat.add_message(
+            "ARUS: Configuración del sistema."
+        )
+
+
+        self.ai_state.setText(
+            "🧠 IA: Configuración"
+        )
+    # =============================
+    # ESTADO DE ARUS
+    # =============================
+
+    def set_arus_state(self, state):
+
+        self.core.set_state(
+            state
+        )
+
+
+        self.lbl_state.setText(
+            "Estado: "
+            + state.upper()
+        )
+
+
+
+    # =============================
+    # PROCESAR CHAT
+    # =============================
+
+    def process_chat(self, text):
+
+        try:
+
+            self.set_arus_state(
+                "thinking"
+            )
+
+
+            response = self.controller.process(
+                text
+            )
+
+
+            self.set_arus_state(
+                "idle"
+            )
+
+
+            return response
+
+
+        except Exception as e:
+
+
+            self.set_arus_state(
+                "idle"
+            )
+
+
+            return (
+                "Error ARUS: "
+                + str(e)
+            )
+
+
+
+    # =============================
+    # MENSAJE DEL SISTEMA
+    # =============================
+
+    def system_message(self, text):
+
+        self.chat.add_message(
+            "ARUS: " + text
+        )
+
+
+
+    # =============================
+    # LIMPIAR ESTADO
+    # =============================
+
+    def reset_state(self):
+
+        self.core.set_state(
+            "idle"
+        )
+
+
+        self.lbl_state.setText(
+            "Estado: IDLE"
+        )
+    # =============================
+    # CIERRE DE ARUS
+    # =============================
+
+    def closeEvent(self, event):
+
+        try:
+
+            if hasattr(
+                self,
+                "voice"
+            ):
+
+                if hasattr(
+                    self.voice,
+                    "stop"
+                ):
+
+                    self.voice.stop()
+
+
+        except Exception:
+
+            pass
+
+
+        self.core.set_state(
+            "idle"
+        )
+
+
+        event.accept()
+
+
+
+    # =============================
+    # ACTIVAR VENTANA
+    # =============================
+
+    def showEvent(self, event):
+
+        self.chat.input.setFocus()
+
+        self.core.set_state(
+            "idle"
+        )
+
+        super().showEvent(
+            event
+        )

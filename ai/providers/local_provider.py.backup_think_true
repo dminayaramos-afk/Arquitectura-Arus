@@ -1,0 +1,212 @@
+"""
+ARUS
+Local Provider
+
+Proveedor local mediante Ollama.
+Configurado para respuestas cortas y hardware de bajos recursos.
+"""
+
+from __future__ import annotations
+
+import ollama
+
+from ai.providers.base_provider import BaseProvider
+from tools.tool_manager import ToolManager
+from brain.planner import Planner
+from brain.task_manager import TaskManager
+from brain.verifier import Verifier
+
+
+ARUS_SYSTEM_PROMPT = (
+    "Eres ARUS, un asistente virtual avanzado integrado en una interfaz "
+    "HUD de ciencia ficción. Tu nombre es siempre ARUS. "
+    "Fuiste creado por Danny Jesús Minaya Ramos. "
+    "Responde de forma breve, clara y directa. "
+    "No muestres razonamientos internos ni procesos de pensamiento. "
+    "Normalmente responde en 1 a 4 frases. "
+    "Solo desarrolla respuestas largas cuando el usuario lo solicite."
+)
+
+
+class LocalProvider(BaseProvider):
+
+    name = "ollama"
+
+    def __init__(
+        self,
+        model: str = "qwen3:4b",
+    ):
+        self.model = model
+
+        self.client = ollama.Client(
+            host="http://127.0.0.1:11434"
+        )
+
+        self.tools = ToolManager()
+
+        self.options = {
+            "num_ctx": 2048,
+            "num_predict": 48,
+            "temperature": 0.4,
+        }
+
+    def generate(
+        self,
+        prompt: str,
+        history=None,
+    ):
+
+        messages = []
+
+        if not history or history[0].get("role") != "system":
+            messages.append(
+                {
+                    "role": "system",
+                    "content": ARUS_SYSTEM_PROMPT,
+                }
+            )
+
+        if history:
+            messages.extend(history)
+
+        messages.append(
+            {
+                "role": "user",
+                "content": "/no_think\n" + str(prompt),
+            }
+        )
+
+        response = self.client.chat(
+            model=self.model,
+            messages=messages,
+            tools=self.tools.schemas(),
+            options=self.options,
+            think=False,
+        )
+
+        return self._resolver_respuesta(messages, response)
+
+    def _respuesta_final(self, contenido):
+        """
+        Devuelve solamente la respuesta destinada al usuario.
+
+        Qwen3 puede devolver razonamiento dentro de `content` incluso
+        cuando `think=False`. ARUS no debe mostrar ese razonamiento.
+        """
+        if not contenido:
+            return "No he recibido una respuesta."
+
+        texto = str(contenido).strip()
+
+        # Cortar razonamiento típico de Qwen que termina antes
+        # de la respuesta final.
+        separadores = [
+            "\n\nI'm ",
+            "\n\nI need to ",
+            "\n\nLet me ",
+            "\n\nThe user ",
+            "\n\nOkay, the user ",
+        ]
+
+        for separador in separadores:
+            if separador in texto:
+                texto = texto.split(separador, 1)[0].strip()
+
+        # Evitar respuestas excesivamente largas en la interfaz.
+        palabras = texto.split()
+
+        if len(palabras) > 45:
+            texto = " ".join(palabras[:45]).rstrip(".,;:") + "..."
+
+        return texto
+
+
+    def _resolver_respuesta(
+        self,
+        messages: list,
+        response,
+        profundidad: int = 0,
+    ):
+        mensaje = response.message
+
+        llamadas = getattr(
+            mensaje,
+            "tool_calls",
+            None,
+        )
+
+        if not llamadas or profundidad >= 4:
+            return self._respuesta_final(mensaje.content)
+
+        planner = Planner()
+        ejecutor = TaskManager()
+
+        tareas = []
+
+        for llamada in llamadas:
+
+            nombre = llamada.function.name
+
+            argumentos = (
+                llamada.function.arguments or {}
+            )
+
+            if not isinstance(argumentos, dict):
+                argumentos = dict(argumentos)
+
+            tarea = planner.create_plan(
+                nombre,
+                argumentos,
+            )[0]
+
+            ejecutor.add(tarea)
+            tareas.append(tarea)
+
+        ejecutor.execute_plan(self.tools)
+
+        verificador = Verifier()
+
+        ok, resultados = (
+            verificador.verify_plan(tareas)
+        )
+
+        if not ok:
+
+            for resultado in resultados:
+
+                if not resultado.ok:
+                    verificador.repair_task(
+                        resultado.subject,
+                        self.tools.execute,
+                    )
+
+        messages.append(
+            {
+                "role": "assistant",
+                "content": mensaje.content or "",
+                "tool_calls": llamadas,
+            }
+        )
+
+        for tarea in tareas:
+
+            messages.append(
+                {
+                    "role": "tool",
+                    "content": str(tarea.result),
+                }
+            )
+
+        siguiente = self.client.chat(
+            model=self.model,
+            messages=messages,
+            tools=self.tools.schemas(),
+            options=self.options,
+            think=False,
+        )
+
+        return self._resolver_respuesta(
+            messages,
+            siguiente,
+            profundidad + 1,
+        )
